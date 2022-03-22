@@ -1,8 +1,21 @@
 # <p align="center"> Grupo 5 - FYI Learning Solutions💻 </p>
 &nbsp;
 
-## <p align="center">Sobre o projeto </p>
-<p align="center">1. Contexto
+# <p align="center">Sobre o projeto </p>
+## <p align="center">1. Contexto 📝 :
+  <br>
+  Por conta da carência de funcionários com o conhecimento das plataformas de serviços da Microsoft, os usuários buscariam em premissa a desenvolver as habilidades nesses cursos. Usuários Administrativos que possam gerenciar seus usuários interessados e seus respectivos cursos.
+  <br>
+</p>
+
+## <p align="center">2. Objetivo 🧐 :
+  <br>
+ A criação de um site institucional de cursos ofertados contendo a possibilidade de inscrição de interessados nos mesmos, e um painel administrativo para gerenciamento de cursos e também dos interessados.
+</p>
+
+## <p align="center">3. Publico Alvo 👥 :
+  <br>
+ Usuários em busca de formação em cursos da Microsoft e aqueles que buscam aperfeiçoar as habilidades na área de tecnologia
 </p>
 
 
