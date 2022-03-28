@@ -1,0 +1,135 @@
+
+.titulo-contato{
+color:#9355A9;
+font-size: 36px;
+width: 100%;
+max-width: 328px;
+text-align: start;
+margin-bottom: 38px;
+
+}
+
+
+.contato{
+width: 425px;
+height: 725px;
+background-color: #ebeaec;
+border-radius: 30px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+.form-contato{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+}
+
+.form-contato label{
+margin-bottom: 30px;
+
+
+}
+
+.label-form{
+width: 100%;
+max-width: 328px;
+height: 50px;
+border-radius: 30px;
+border: 1px solid #9355A9;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #ebeaec;
+padding-right: 20px;
+
+}
+
+.label-form input{
+width: 100%;
+height: 100%;
+border-radius: 30px;
+padding-left: 20px;
+border: none;
+background-color: #ebeaec;
+outline: 0;
+color: #9355A9;
+font-size: 20px;
+
+}
+
+.form-mensagem{
+background-color: #ebeaec;
+width: 100%;
+max-width: 328px;
+border-radius: 30px;
+height: 175px;
+padding: 20px;
+color: #9355A9;
+border: 1px solid #9355A9;
+outline: 0;
+font-size: 20px;
+margin-bottom: 16px;
+
+}
+
+input::placeholder{
+color: #9355A9;
+
+}
+
+.form-mensagem::placeholder{
+color: #9355A9;
+
+}
+
+input:checked{
+
+color: #9355A9;
+}
+
+.form-content-checkbox{
+width: 328px;
+margin: 0 auto;
+gap: 3px;
+font-size: 10px;
+display: flex;
+flex-direction: column;
+
+
+}
+
+.form-content-checkbox label{
+display: flex;
+align-items: center;
+margin-bottom: 5px;
+}
+
+.form-content-checkbox span{
+padding-left: 5px;
+}
+
+.button-form{
+margin-top: 31px;
+border: none;
+background-color: #9355A9;
+border-radius: 30px;
+width: 234px;
+height: 68px;
+color: #FFFF;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 24px;
+font-weight: 600;
+
+}
+
+
+
+
