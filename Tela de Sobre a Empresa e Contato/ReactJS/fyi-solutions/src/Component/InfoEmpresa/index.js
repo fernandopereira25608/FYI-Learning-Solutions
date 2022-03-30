@@ -3,21 +3,18 @@ import "./style.css"
 import Imagep05 from "../../Images/Imagep05.svg";
 import Imagep06 from "../../Images/Imagep06.svg";
 import Imagep07 from "../../Images/Imagep07.svg";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer"
 
 const InfoEmpresa = () => {
     return (
     <>
+    <Header/>
+
     <section class="Content-info">
           <div class="Content-info-article">
             <article class="info-empresa">
-              <p>
-                A FYI nasceu em 2009 com a missão de formar excelentes
-                profissionais para as principais soluções de negócios e
-                tecnologia da Microsoft.
-              </p>
-
-              <br />
-
+    
               <p>
                 A FYI nasceu em 2009 com a missão de formar excelentes
                 profissionais para as principais soluções de negócios e
@@ -120,9 +117,11 @@ const InfoEmpresa = () => {
             </article>
           </div>
         </section>
-
-
+        
+      <Footer/>
     </>
+
+    
     )
 
 }

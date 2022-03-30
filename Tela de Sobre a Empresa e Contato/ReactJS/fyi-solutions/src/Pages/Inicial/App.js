@@ -1,7 +1,9 @@
-import logo from "../../Images/Logo.svg";
+import logo from "../../Images/icons/Logo (1).svg";
 import "./App.css";
-import InfoEmpresa from "../../Component/InfoEmpresa/index.js";
-import Contato from "../../Component/Contato";
+
+import Footer from "../../Component/Footer/Footer.jsx"
+import Header from "../../Component/Header/Header.jsx";
+
 
 function Inicial() {
   return (
@@ -35,8 +37,9 @@ function Inicial() {
           </div>
         </figure>
 
-        <InfoEmpresa/>
-        <Contato/>
+      
+        <Header/>
+        <Footer/>
 
       </main>
 

@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Inicial from './Pages/Inicial/App';
+import InfoEmpresa from './Component/InfoEmpresa/index';
+import Contato from './Component/Contato/index';
 import reportWebVitals from './reportWebVitals';
 
+
+import {  Route, BrowserRouter as Router, Redirect, Switch } from 'react-router-dom';
+
+const routing = (
+  <Router>
+    <div>
+      <Switch>
+        <Route exact path="/" component={InfoEmpresa} />
+        <Route path="/Contato" component={Contato} />
+      </Switch>
+    </div>
+  </Router>
+)
 ReactDOM.render(
-  <React.StrictMode>
-    <Inicial />
-  </React.StrictMode>,
+  routing,
   document.getElementById('root')
 );
 
