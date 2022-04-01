@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "fdcfae2a-ed3a-42ba-81d4-5e4a87141b1a": {
+      "ProjectGuid": "fdcfae2a-ed3a-42ba-81d4-5e4a87141b1a",
+      "DisplayName": "FYI.webAPI",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
