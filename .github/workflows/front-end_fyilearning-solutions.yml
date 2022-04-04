@@ -53,4 +53,4 @@ jobs:
           app-name: 'fyilearning-solutions'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D40684708AF84C13A423925424C940F5 }}
-          package: .
+          package: 'build'
