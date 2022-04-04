@@ -2,7 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Inicial from './Pages/Inicial/App';
+import Cursos from './Pages/Cursos/Cursos';
 import Admin from './Pages/Adm/App';
+import Login from './Pages/Login/login';
+import Cadastro from './Pages/Cadastro/Cadastro';
+import InfoEmpresa from './Pages/InfoEmpresa';
+import Contato from './Pages/Contato';
 import reportWebVitals from './reportWebVitals';
 
 
@@ -13,7 +18,12 @@ const routing = (
     <div>
       <Switch>
         <Route exact path="/" component={Inicial} />
-        <Route path="/admin" component={Admin} />
+        <Route path="/Admin" component={Admin} />
+        <Route path="/Login" component={Login} />
+        <Route path="/Info" component={InfoEmpresa} />
+        <Route path="/Cadastro" component={Cadastro} />
+        <Route path="/Contato" component={Contato} />
+        <Route path="/Cursos" component={Cursos} />
       </Switch>
     </div>
   </Router>

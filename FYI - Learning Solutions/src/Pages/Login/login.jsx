@@ -1,8 +1,8 @@
 import './login.css';
-import imgLogin from "../assets/img/imgLogin.png"
-import Logo from "../assets/img/Logo.png"
+import imgLogin from "../../Images/Login/imgLogin.png"
+import Logo from "../../Images/Login/Logo.png"
 
-function App() {
+function Login() {
 
     return (
 
@@ -54,7 +54,7 @@ function App() {
 
 }
 
-export default App;
+export default Login;
 
 
 
