@@ -1,0 +1,51 @@
+.curso-card{
+    width: 475px;
+    height: 120px;
+    background-color: #404040;
+    opacity: 80%;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+  }
+  
+  .data-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    width: 25%;
+    height: 100%;
+    color: white;
+    font-family: 'Assistant';
+    font-size: 18px;
+    border-radius: 25px;
+  }
+  
+  
+  
+  
+  
+  .info-card{
+    background-image: url(../../Images/campaign-creators.png);
+    height: 100%;
+    width: 75%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .info-itens{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 10px;
+  }
+  
+  .clock-icon{
+    width: 25px;
+    height: 25px;
+  }
