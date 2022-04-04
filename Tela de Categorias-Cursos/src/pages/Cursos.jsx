@@ -1,0 +1,55 @@
+import '../pages/Cursos.css'
+import Header from "../Components/Header/Header.jsx"
+import Footer from "../Components/Footer/Footer.jsx"
+
+
+
+
+function Cursos() {
+
+    return (
+        <div>
+
+            <Header />
+
+            <main>
+                <div className='box-conteudo'>
+                    <h1>Categorias:</h1>
+                    <div className='box-conteudo-card '>
+                        <div class="Content-info-card"></div>
+                        <div className='conteudo-card'>
+                            <div class="curso-card">
+                                <h3>microsoft</h3>
+                            </div>
+
+                            <div class="curso-card">
+                                <h3>back-end</h3>
+                            </div>
+                        </div>
+
+                        <div className='conteudo-card'>
+
+                            <div class="curso-card">
+                                <h3>banco de dados</h3>
+                            </div>
+
+                            <div class="curso-card">
+                                <h3>front-end</h3>
+                            </div>
+                        </div>
+
+                        <div class="Content-info-card2"></div>
+
+                    </div>
+
+                </div>
+            </main >
+
+            <Footer />
+
+        </div >
+    )
+
+}
+
+export default Cursos;
