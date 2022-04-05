@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
-import IconPessoa from "../../Images/IconPessoa.svg";
-import IconTelefone from "../../Images/IconTelefone.svg";
-import Header from "../../Component/Header/Header.jsx";
-import Foooter from "../../Component/Footer/Footer.jsx"
+import IconPessoa from "../../Images/Contato/IconPessoa.svg";
+import IconTelefone from "../../Images/Contato/IconTelefone.svg";
+import Header from "../../Components/Header/Header.jsx";
+import Foooter from "../../Components/Footer/Footer.jsx"
 
 
 

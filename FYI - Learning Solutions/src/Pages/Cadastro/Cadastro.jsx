@@ -1,6 +1,6 @@
 import './Cadastro.css';
-import Logo from "../Assets/Images/Logo.png"
-import Photo from "../Assets/Images/Photo.png"
+import Logo from "../../Images/Cadastro/Logo.png"
+import Photo from "../../Images/Cadastro/Photo.png"
 
 
 

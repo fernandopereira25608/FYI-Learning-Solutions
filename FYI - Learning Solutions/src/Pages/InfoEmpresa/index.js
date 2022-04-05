@@ -1,10 +1,10 @@
 import React from "react"
 import "./style.css"
-import Imagep05 from "../../Images/Imagep05.svg";
-import Imagep06 from "../../Images/Imagep06.svg";
-import Imagep07 from "../../Images/Imagep07.svg";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer"
+import Imagep05 from "../../Images/InfoEmpresa/Imagep05.svg";
+import Imagep06 from "../../Images/InfoEmpresa/Imagep06.svg";
+import Imagep07 from "../../Images/InfoEmpresa/Imagep07.svg";
+import Header from "../../Components/Header/Header.jsx";
+import Footer from "../../Components/Footer/Footer.jsx"
 
 const InfoEmpresa = () => {
     return (
