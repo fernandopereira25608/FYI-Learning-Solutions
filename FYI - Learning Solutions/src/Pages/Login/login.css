@@ -58,12 +58,12 @@ form {
     border-color: rgba(129, 80, 163, 0.89);
 }
 
-h3{
+.box-inputs h3{
     color: rgba(129, 80, 163, 0.89);
     font-size: 2vh;
 }
 
-p{
+.conteudinho p{
     color: rgba(129, 80, 163, 0.89);
 }
 
