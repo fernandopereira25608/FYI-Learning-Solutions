@@ -19,7 +19,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v1
         with:
-          node-version: '16.x'
+          node-version: '~16'
 
       - name: npm install, build, and test
         run: |
@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'fyilearning-solutions'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D40684708AF84C13A423925424C940F5 }}
-          package: 'build'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D96E40160D444E9E8CFC19E60C7D96FE }}
+          package: .
