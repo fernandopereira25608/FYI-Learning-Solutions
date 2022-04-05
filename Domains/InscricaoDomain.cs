@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace FYI.webAPI.Domains
+namespace FYI.web.Api.Domains
 {
     public partial class InscricaoDomain
     {

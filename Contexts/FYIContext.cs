@@ -1,11 +1,11 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using FYI.webAPI.Domains;
+using FYI.web.Api.Domains;
 
 #nullable disable
 
-namespace FYI.webAPI.Contexts
+namespace FYI.web.Api.Contexts
 {
     public partial class FYIContext : DbContext
     {
@@ -18,6 +18,7 @@ namespace FYI.webAPI.Contexts
         {
         }
 
+        public virtual DbSet<CategoriumDomain> Categoria { get; set; }
         public virtual DbSet<CursoDomain> Cursos { get; set; }
         public virtual DbSet<InscricaoDomain> Inscricaos { get; set; }
         public virtual DbSet<TipoUsuarioDomain> TipoUsuarios { get; set; }
@@ -27,7 +28,8 @@ namespace FYI.webAPI.Contexts
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
-            { 
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("Data Source=servidorfyi.database.windows.net; initial catalog=DBFYI; user Id=administrador; pwd=FYIlearningsolutions@5;");
             }
         }
@@ -35,6 +37,23 @@ namespace FYI.webAPI.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
+
+            modelBuilder.Entity<CategoriumDomain>(entity =>
+            {
+                entity.HasKey(e => e.IdCategoria)
+                    .HasName("PK__categori__8A3D240C61A1D605");
+
+                entity.ToTable("categoria");
+
+                entity.Property(e => e.IdCategoria)
+                    .ValueGeneratedOnAdd()
+                    .HasColumnName("idCategoria");
+
+                entity.Property(e => e.Titulo)
+                    .HasMaxLength(30)
+                    .IsUnicode(false)
+                    .HasColumnName("titulo");
+            });
 
             modelBuilder.Entity<CursoDomain>(entity =>
             {
@@ -55,6 +74,8 @@ namespace FYI.webAPI.Contexts
                     .IsUnicode(false)
                     .HasColumnName("descricao");
 
+                entity.Property(e => e.IdCategoria).HasColumnName("idCategoria");
+
                 entity.Property(e => e.NomeCurso)
                     .IsRequired()
                     .HasMaxLength(50)
@@ -64,6 +85,11 @@ namespace FYI.webAPI.Contexts
                 entity.Property(e => e.VagasDisponiveis).HasColumnName("vagasDisponiveis");
 
                 entity.Property(e => e.VagasPreenchidas).HasColumnName("vagasPreenchidas");
+
+                entity.HasOne(d => d.IdCategoriaNavigation)
+                    .WithMany(p => p.Cursos)
+                    .HasForeignKey(d => d.IdCategoria)
+                    .HasConstraintName("FK__curso__idCategor__6FE99F9F");
             });
 
             modelBuilder.Entity<InscricaoDomain>(entity =>

@@ -1,4 +1,4 @@
-﻿namespace FYI.webAPI.Repositories
+﻿namespace FYI.web.Api.Repositories
 {
     public class TurmaRepository
     {

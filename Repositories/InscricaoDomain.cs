@@ -1,6 +1,6 @@
 ﻿namespace FYI.web.Api.Repositories
 {
-    public class UsuarioRepository
+    public class InscricaoDomain
     {
     }
 }

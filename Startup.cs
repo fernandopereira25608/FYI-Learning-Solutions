@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,11 +13,10 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace FYI.webAPI
+namespace FYI.web.Api
 {
     public class Startup
     {
-        
         public void ConfigureServices(IServiceCollection services)
         {
             services
@@ -41,7 +40,7 @@ namespace FYI.webAPI
 
 
 
-           
+
 
             services.AddSwaggerGen(c =>
             {

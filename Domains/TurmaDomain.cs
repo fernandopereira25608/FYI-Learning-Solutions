@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
-namespace FYI.webAPI.Domains
+namespace FYI.web.Api.Domains
 {
     public partial class TurmaDomain
     {

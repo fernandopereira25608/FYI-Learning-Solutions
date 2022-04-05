@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
-namespace FYI.webAPI.Domains
+namespace FYI.web.Api.Domains
 {
     public partial class CursoDomain
     {
@@ -27,7 +27,9 @@ namespace FYI.webAPI.Domains
 
         [Required(ErrorMessage = "Informe a duração do curso!!!!")]
         public byte CargaHoraria { get; set; }
+        public byte? IdCategoria { get; set; }
 
+        public virtual CategoriumDomain IdCategoriaNavigation { get; set; }
         public virtual ICollection<TurmaDomain> Turmas { get; set; }
     }
 }

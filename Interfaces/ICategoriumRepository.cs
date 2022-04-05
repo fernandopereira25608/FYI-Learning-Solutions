@@ -2,7 +2,7 @@
 
 namespace FYI.web.Api.Interfaces
 {
-    public interface IInscricaoRepository
+    public interface ICategoriumRepository
     {
     }
 }

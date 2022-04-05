@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using FYI.web.Api.Repositories;
 
-namespace FYI.webAPI.Interfaces
+namespace FYI.web.Api.Interfaces
 {
-    interface ICursoRepository
+    public interface ICursoRepository
     {
-        void teste();
     }
 }

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
-namespace FYI.webAPI.Domains
+namespace FYI.web.Api.Domains
 {
     public partial class UsuarioDomain
     {
@@ -15,6 +15,7 @@ namespace FYI.webAPI.Domains
 
         public short IdUsuario { get; set; }
         public byte? IdTipoUsuario { get; set; }
+
 
         [Required(ErrorMessage = "Insira o nome do usuário!!!!")]
         public string Nome { get; set; }
