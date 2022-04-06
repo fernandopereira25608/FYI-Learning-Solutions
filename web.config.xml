@@ -12,6 +12,9 @@
         <add value="App.js" />
       </files>
     </defaultDocument>
-    
+    <customErrors mode="Off" />
+
+    <httpsErrors errorMode="Detailed"></httpsErrors>
   </system.webServer>
+  
 </configuration>
