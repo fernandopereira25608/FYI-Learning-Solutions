@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FYI.web.Api.Contexts;
 using FYI.web.Api.Domains;
+using FYI.web.Api.Interfaces;
+using FYI.web.Api.Repositories;
 
 namespace FYI.web.Api.Controllers
 {
@@ -16,93 +18,97 @@ namespace FYI.web.Api.Controllers
     {
         private readonly FYIContext _context;
 
-        public CursosControllers(FYIContext context)
+        private ICursoRepository _cursoRepository { get; set; }
+
+        public CursosControllers()
         {
-            _context = context;
+            _cursoRepository = new CursoRepository();
         }
 
         // GET: api/CursosControllers
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<CursoDomain>>> GetCursos()
+        public IActionResult Get()
         {
-            return await _context.Cursos.ToListAsync();
+            try
+            {
+                // Retorna a resposta da requisição fazendo a chamada para o método
+                return Ok(_cursoRepository.Listar());
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
         }
 
         // GET: api/CursosControllers/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<CursoDomain>> GetCurso(byte id)
+        public IActionResult GetById(byte id)
         {
-            var curso = await _context.Cursos.FindAsync(id);
-
-            if (curso == null)
-            {
-                return NotFound();
-            }
-
-            return curso;
-        }
-
-        // PUT: api/CursosControllers/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutCurso(byte id, CursoDomain curso)
-        {
-            if (id != curso.IdCurso)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(curso).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
+                // Retora a resposta da requisição fazendo a chamada para o método
+                return Ok(_cursoRepository.BuscarPorId(id));
             }
-            catch (DbUpdateConcurrencyException)
+            catch (Exception erro)
             {
-                if (!CursoExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return BadRequest(erro);
             }
-
-            return NoContent();
         }
 
-        // POST: api/CursosControllers
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<CursoDomain>> PostCurso(CursoDomain curso)
-        {
-            _context.Cursos.Add(curso);
-            await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCurso", new { id = curso.IdCurso }, curso);
+        [HttpPost]
+        public IActionResult Post(CursoDomain novoCurso)
+        {
+            try
+            {
+                // Faz a chamada para o método
+                _cursoRepository.Cadastrar(novoCurso);
+
+                // Retorna um status code
+                return StatusCode(201);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
+
+
+        [HttpPut("{id}")]
+        public IActionResult Atualizar(byte id, CursoDomain CursoAtualizado)
+        {
+            try
+            {
+                // Faz a chamada para o método
+                _cursoRepository.Atualizar(id, CursoAtualizado);
+
+                // Retorna um status code
+                return StatusCode(204);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         // DELETE: api/CursosControllers/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCurso(byte id)
+        public IActionResult Delete(byte id)
         {
-            var curso = await _context.Cursos.FindAsync(id);
-            if (curso == null)
+            try
             {
-                return NotFound();
+                // Faz a chamada para o método
+                _cursoRepository.Deletar(id);
+
+                // Retorna um status code
+                return StatusCode(204);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+
             }
 
-            _context.Cursos.Remove(curso);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool CursoExists(byte id)
-        {
-            return _context.Cursos.Any(e => e.IdCurso == id);
         }
     }
 }

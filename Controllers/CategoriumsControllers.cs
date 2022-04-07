@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FYI.web.Api.Contexts;
 using FYI.web.Api.Domains;
+using FYI.web.Api.Interfaces;
+using FYI.web.Api.Repositories;
 
 namespace FYI.web.Api.Controllers
 {
@@ -14,95 +16,101 @@ namespace FYI.web.Api.Controllers
     [ApiController]
     public class CategoriumsControllers : ControllerBase
     {
-        private readonly FYIContext _context;
+        private ICategoriumRepository _categoriaRepository { get; set; }
 
-        public CategoriumsControllers(FYIContext context)
+        public CategoriumsControllers()
         {
-            _context = context;
+            _categoriaRepository = new CategoriumRepository();
         }
 
         // GET: api/CategoriumsControllers
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<CategoriumDomain>>> GetCategoria()
+        public IActionResult Get()
         {
-            return await _context.Categoria.ToListAsync();
+            try
+            {
+                // Retorna a resposta da requisição fazendo a chamada para o método
+                return Ok(_categoriaRepository.Listar());
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
         }
 
         // GET: api/CategoriumsControllers/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<CategoriumDomain>> GetCategorium(byte id)
+        public IActionResult GetById(byte id)
         {
-            var categorium = await _context.Categoria.FindAsync(id);
-
-            if (categorium == null)
-            {
-                return NotFound();
-            }
-
-            return categorium;
-        }
-
-        // PUT: api/CategoriumsControllers/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutCategorium(byte id, CategoriumDomain categorium)
-        {
-            if (id != categorium.IdCategoria)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(categorium).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
+                // Retora a resposta da requisição fazendo a chamada para o método
+                return Ok(_categoriaRepository.BuscarPorId(id));
             }
-            catch (DbUpdateConcurrencyException)
+            catch (Exception erro)
             {
-                if (!CategoriumExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return BadRequest(erro);
             }
-
-            return NoContent();
         }
 
-        // POST: api/CategoriumsControllers
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<CategoriumDomain>> PostCategorium(CategoriumDomain categorium)
-        {
-            _context.Categoria.Add(categorium);
-            await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCategorium", new { id = categorium.IdCategoria }, categorium);
+        [HttpPost]
+        public IActionResult Post(CategoriumDomain novaCategoria)
+        {
+            try
+            {
+                // Faz a chamada para o método
+                _categoriaRepository.Cadastrar(novaCategoria);
+
+                // Retorna um status code
+                return StatusCode(201);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Atualizar(byte id, CategoriumDomain CategoriaAtualizada)
+        {
+            try
+            {
+                // Faz a chamada para o método
+                _categoriaRepository.Atualizar(id, CategoriaAtualizada);
+
+                // Retorna um status code
+                return StatusCode(204);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         // DELETE: api/CategoriumsControllers/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCategorium(byte id)
+        public IActionResult Delete(byte id)
         {
-            var categorium = await _context.Categoria.FindAsync(id);
-            if (categorium == null)
+            try
             {
-                return NotFound();
+                // Faz a chamada para o método
+                _categoriaRepository.Deletar(id);
+
+                // Retorna um status code
+                return StatusCode(204);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+
             }
 
-            _context.Categoria.Remove(categorium);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
         }
 
-        private bool CategoriumExists(byte id)
+        /*private bool CategoriumExists(byte id)
         {
             return _context.Categoria.Any(e => e.IdCategoria == id);
-        }
+        }*/
     }
 }

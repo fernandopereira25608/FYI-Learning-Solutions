@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FYI.web.Api.Contexts;
 using FYI.web.Api.Domains;
+using FYI.web.Api.Interfaces;
+using FYI.web.Api.Repositories;
 
 namespace FYI.web.Api.Controllers
 {
@@ -16,93 +18,118 @@ namespace FYI.web.Api.Controllers
     {
         private readonly FYIContext _context;
 
-        public UsuariosControllers(FYIContext context)
+        private IUsuarioRepository _usuarioRepository { get; set; }
+
+        /// <summary>
+        /// Instancia o objeto _usuarioRepository para que haja a referência aos métodos no repositório
+        /// </summary>
+        public UsuariosControllers()
         {
-            _context = context;
+            _usuarioRepository = new UsuarioRepository();
         }
 
-        // GET: api/UsuariosControllers
+        /// <summary>
+        /// Lista todos os usuários
+        /// </summary>
+        /// <returns>Uma lista de usuários e um status code 200 - Ok</returns>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<UsuarioDomain>>> GetUsuarios()
+        public IActionResult Get()
         {
-            return await _context.Usuarios.ToListAsync();
-        }
-
-        // GET: api/UsuariosControllers/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<UsuarioDomain>> GetUsuario(short id)
-        {
-            var usuario = await _context.Usuarios.FindAsync(id);
-
-            if (usuario == null)
-            {
-                return NotFound();
-            }
-
-            return usuario;
-        }
-
-        // PUT: api/UsuariosControllers/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutUsuario(short id, UsuarioDomain usuario)
-        {
-            if (id != usuario.IdUsuario)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(usuario).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
+                // Retorna a resposta da requisição fazendo a chamada para o método
+                return Ok(_usuarioRepository.Listar());
             }
-            catch (DbUpdateConcurrencyException)
+            catch (Exception erro)
             {
-                if (!UsuarioExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return BadRequest(erro);
             }
-
-            return NoContent();
         }
 
-        // POST: api/UsuariosControllers
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// Busca um usuário através do ID
+        /// </summary>
+        /// <param name="id">ID do usuário que será buscado</param>
+        /// <returns>Um usuário buscado e um status code 200 - Ok</returns>
+        [HttpGet("{id}")]
+        public IActionResult GetById(short id)
+        {
+            try
+            {
+                // Retora a resposta da requisição fazendo a chamada para o método
+                return Ok(_usuarioRepository.BuscarPorId(id));
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
+        }
+
+        /// <summary>
+        /// Cadastra um novo usuário
+        /// </summary>
+        /// <param name="novoUsuario">Objeto novoUsuario que será cadastrado</param>
+        /// <returns>Um status code 201 - Created</returns>
         [HttpPost]
-        public async Task<ActionResult<UsuarioDomain>> PostUsuario(UsuarioDomain usuario)
+        public IActionResult Post(UsuarioDomain novoUsuario)
         {
-            _context.Usuarios.Add(usuario);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetUsuario", new { id = usuario.IdUsuario }, usuario);
-        }
-
-        // DELETE: api/UsuariosControllers/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUsuario(short id)
-        {
-            var usuario = await _context.Usuarios.FindAsync(id);
-            if (usuario == null)
+            try
             {
-                return NotFound();
+                // Faz a chamada para o método
+                _usuarioRepository.Cadastrar(novoUsuario);
+
+                // Retorna um status code
+                return StatusCode(201);
             }
-
-            _context.Usuarios.Remove(usuario);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
-        private bool UsuarioExists(short id)
+        /// <summary>
+        /// Atualiza um usuário existente
+        /// </summary>
+        /// <param name="id">ID do usuário que será atualizado</param>
+        /// <param name="usuarioAtualizado">Objeto com as novas informações</param>
+        /// <returns>Um status code 204 - No Content</returns>
+        [HttpPut("{id}")]
+        public IActionResult Put(short id, UsuarioDomain usuarioAtualizado)
         {
-            return _context.Usuarios.Any(e => e.IdUsuario == id);
+            try
+            {
+                // Faz a chamada para o método
+                _usuarioRepository.Atualizar(id, usuarioAtualizado);
+
+                // Retorna um status code
+                return StatusCode(204);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
+
+        /// <summary>
+        /// Deleta um usuário existente
+        /// </summary>
+        /// <param name="id">ID do usuário que será deletado</param>
+        /// <returns>Um status code 204 - No Content</returns>
+        [HttpDelete("{id}")]
+        public IActionResult Delete(short id)
+        {
+            try
+            {
+                // Faz a chamada para o método
+                _usuarioRepository.Deletar(id);
+
+                // Retorna um status code
+                return StatusCode(204);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
     }
 }
