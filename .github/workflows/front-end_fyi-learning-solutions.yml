@@ -22,7 +22,7 @@ jobs:
           node-version: '16.x'
 
       - name: npm install, build, and test
-        run: |
+        run: 
           npm install
           npm run build --if-present
           npm run test --if-present
@@ -53,4 +53,4 @@ jobs:
           app-name: 'fyi-learning-solutions'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BAFD20D118B245BC8177EEC6A9380D3E }}
-          package: .
+          package: 'build'
