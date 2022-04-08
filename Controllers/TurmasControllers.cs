@@ -7,102 +7,107 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FYI.web.Api.Contexts;
 using FYI.web.Api.Domains;
+using Microsoft.AspNetCore.Authorization;
+using FYI.web.Api.Interfaces;
+using FYI.web.Api.Repositories;
 
 namespace FYI.web.Api.Controllers
 {
+    [Produces("application/json")]
+
     [Route("api/[controller]")]
     [ApiController]
     public class TurmasControllers : ControllerBase
     {
-        private readonly FYIContext _context;
+        private ITurmaRepository _turmaRepository { get; set; }
 
-        public TurmasControllers(FYIContext context)
+        public TurmasControllers()
         {
-            _context = context;
+            _turmaRepository = new TurmaRepository();
         }
+
 
         // GET: api/TurmasControllers
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TurmaDomain>>> GetTurmas()
+        public IActionResult Get()
         {
-            return await _context.Turmas.ToListAsync();
+            try
+            {
+                return Ok(_turmaRepository.Listar());
+            }
+
+            catch (Exception Erro)
+            {
+                return BadRequest(Erro);
+            }
         }
 
         // GET: api/TurmasControllers/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<TurmaDomain>> GetTurma(byte id)
+        public IActionResult GetById(byte id)
         {
-            var turma = await _context.Turmas.FindAsync(id);
-
-            if (turma == null)
+            try
             {
-                return NotFound();
+                return Ok(_turmaRepository.BuscarPorId(id));
             }
 
-            return turma;
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
         }
 
         // PUT: api/TurmasControllers/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTurma(byte id, TurmaDomain turma)
+        public IActionResult Put(byte id, TurmaDomain turmaAtualizada)
         {
-            if (id != turma.IdTurma)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(turma).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!TurmaExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                _turmaRepository.Atualizar(id, turmaAtualizada);
+
+                return StatusCode(204);
             }
 
-            return NoContent();
+            catch (Exception x)
+            {
+                return BadRequest(x);
+            }
         }
 
         // POST: api/TurmasControllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<TurmaDomain>> PostTurma(TurmaDomain turma)
+        public IActionResult Post(TurmaDomain novaTurma)
         {
-            _context.Turmas.Add(turma);
-            await _context.SaveChangesAsync();
+            try
+            {
+                _turmaRepository.Cadastrar(novaTurma);
 
-            return CreatedAtAction("GetTurma", new { id = turma.IdTurma }, turma);
+                return StatusCode(201);
+            }
+
+            catch (Exception x)
+            {
+                return BadRequest(x);
+            }
         }
 
         // DELETE: api/TurmasControllers/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTurma(byte id)
+        public IActionResult Delete(byte id)
         {
-            var turma = await _context.Turmas.FindAsync(id);
-            if (turma == null)
+            try
             {
-                return NotFound();
+                _turmaRepository.Deletar(id);
+
+                return StatusCode(204);
             }
 
-            _context.Turmas.Remove(turma);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool TurmaExists(byte id)
-        {
-            return _context.Turmas.Any(e => e.IdTurma == id);
+            catch (Exception x)
+            {
+                return BadRequest(x);
+            }
         }
     }
 }

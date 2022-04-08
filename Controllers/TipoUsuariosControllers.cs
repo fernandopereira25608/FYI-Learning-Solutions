@@ -7,102 +7,108 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FYI.web.Api.Contexts;
 using FYI.web.Api.Domains;
+using Microsoft.AspNetCore.Authorization;
+using FYI.web.Api.Interfaces;
+using FYI.web.Api.Repositories;
 
 namespace FYI.web.Api.Controllers
 {
+    [Produces("application/json")]
+
     [Route("api/[controller]")]
     [ApiController]
+
     public class TipoUsuariosControllers : ControllerBase
     {
-        private readonly FYIContext _context;
+        
+        private ITipoUsuarioRepository _tipoUsuarioRepository { get; set; }
 
-        public TipoUsuariosControllers(FYIContext context)
+        public TipoUsuariosControllers()
         {
-            _context = context;
+            _tipoUsuarioRepository = new TipoUsuarioRepository();
         }
 
         // GET: api/TipoUsuariosControllers
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TipoUsuarioDomain>>> GetTipoUsuarios()
+        public IActionResult Get()
         {
-            return await _context.TipoUsuarios.ToListAsync();
+            try
+            {
+                return Ok(_tipoUsuarioRepository.Listar());
+            }
+
+            catch (Exception Erro)
+            {
+                return BadRequest(Erro);
+            }
         }
 
         // GET: api/TipoUsuariosControllers/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<TipoUsuarioDomain>> GetTipoUsuario(byte id)
+        public IActionResult GetById(byte id)
         {
-            var tipoUsuario = await _context.TipoUsuarios.FindAsync(id);
-
-            if (tipoUsuario == null)
+            try
             {
-                return NotFound();
+                return Ok(_tipoUsuarioRepository.BuscarPorId(id));
             }
 
-            return tipoUsuario;
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
         }
 
         // PUT: api/TipoUsuariosControllers/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTipoUsuario(byte id, TipoUsuarioDomain tipoUsuario)
+        public IActionResult Put(byte id, TipoUsuarioDomain tipoUsuarioAtualizado)
         {
-            if (id != tipoUsuario.IdTipoUsuario)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(tipoUsuario).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!TipoUsuarioExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                _tipoUsuarioRepository.Atualizar(id, tipoUsuarioAtualizado);
+
+                return StatusCode(204);
             }
 
-            return NoContent();
+            catch (Exception x)
+            {
+                return BadRequest(x);
+            }
         }
 
         // POST: api/TipoUsuariosControllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<TipoUsuarioDomain>> PostTipoUsuario(TipoUsuarioDomain tipoUsuario)
+        public IActionResult Post(TipoUsuarioDomain novoTipousuario)
         {
-            _context.TipoUsuarios.Add(tipoUsuario);
-            await _context.SaveChangesAsync();
+            try
+            {
+                _tipoUsuarioRepository.Cadastrar(novoTipousuario);
 
-            return CreatedAtAction("GetTipoUsuario", new { id = tipoUsuario.IdTipoUsuario }, tipoUsuario);
+                return StatusCode(201);
+            }
+
+            catch (Exception x)
+            {
+                return BadRequest(x);
+            }
         }
 
         // DELETE: api/TipoUsuariosControllers/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTipoUsuario(byte id)
+        public IActionResult Delete(byte id)
         {
-            var tipoUsuario = await _context.TipoUsuarios.FindAsync(id);
-            if (tipoUsuario == null)
+            try
             {
-                return NotFound();
+                _tipoUsuarioRepository.Deletar(id);
+
+                return StatusCode(204);
             }
 
-            _context.TipoUsuarios.Remove(tipoUsuario);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool TipoUsuarioExists(byte id)
-        {
-            return _context.TipoUsuarios.Any(e => e.IdTipoUsuario == id);
+            catch (Exception x)
+            {
+                return BadRequest(x);
+            }
         }
     }
 }

@@ -7,102 +7,107 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FYI.web.Api.Contexts;
 using FYI.web.Api.Domains;
+using Microsoft.AspNetCore.Authorization;
+using FYI.web.Api.Interfaces;
+using FYI.web.Api.Repositories;
 
 namespace FYI.web.Api.Controllers
 {
+    [Produces("application/json")]
+
     [Route("api/[controller]")]
     [ApiController]
     public class InscricoesControllers : ControllerBase
     {
-        private readonly FYIContext _context;
+        private IInscricaoRepository _inscricaoRepository { get; set; }
 
-        public InscricoesControllers(FYIContext context)
+        public InscricoesControllers()
         {
-            _context = context;
+            _inscricaoRepository = new InscricaoRepository();
         }
 
         // GET: api/InscricoesControllers
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<InscricaoDomain>>> GetInscricaos()
+        public IActionResult Get()
         {
-            return await _context.Inscricaos.ToListAsync();
+            try
+            {
+                return Ok(_inscricaoRepository.Listar());
+            }
+
+            catch (Exception Erro)
+            {
+                return BadRequest(Erro);
+            }
         }
 
         // GET: api/InscricoesControllers/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<InscricaoDomain>> GetInscricao(int id)
+        public IActionResult GetById(int id)
         {
-            var inscricao = await _context.Inscricaos.FindAsync(id);
-
-            if (inscricao == null)
+            try
             {
-                return NotFound();
+                return Ok(_inscricaoRepository.BuscarPorId(id));
             }
 
-            return inscricao;
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
         }
 
         // PUT: api/InscricoesControllers/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutInscricao(int id, InscricaoDomain inscricao)
+        public IActionResult Put(int id, InscricaoDomain inscricaoAtualizada)
         {
-            if (id != inscricao.IdInscricao)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(inscricao).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!InscricaoExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                _inscricaoRepository.Atualizar(id, inscricaoAtualizada);
+
+                return StatusCode(204);
             }
 
-            return NoContent();
+            catch (Exception x)
+            {
+                return BadRequest(x);
+            }
         }
 
         // POST: api/InscricoesControllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<InscricaoDomain>> PostInscricao(InscricaoDomain inscricao)
+        public IActionResult Post(InscricaoDomain novaInscricao)
         {
-            _context.Inscricaos.Add(inscricao);
-            await _context.SaveChangesAsync();
+            try
+            {
+                _inscricaoRepository.Cadastrar(novaInscricao);
 
-            return CreatedAtAction("GetInscricao", new { id = inscricao.IdInscricao }, inscricao);
+                return StatusCode(201);
+            }
+
+            catch (Exception x)
+            {
+                return BadRequest(x);
+            }
         }
 
         // DELETE: api/InscricoesControllers/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteInscricao(int id)
+        public IActionResult Delete(int id)
         {
-            var inscricao = await _context.Inscricaos.FindAsync(id);
-            if (inscricao == null)
+            try
             {
-                return NotFound();
+                _inscricaoRepository.Deletar(id);
+
+                return StatusCode(204);
             }
 
-            _context.Inscricaos.Remove(inscricao);
-            await _context.SaveChangesAsync();
+            catch (Exception x)
+            {
+                return BadRequest(x);
+            }
 
-            return NoContent();
-        }
-
-        private bool InscricaoExists(int id)
-        {
-            return _context.Inscricaos.Any(e => e.IdInscricao == id);
         }
     }
 }
