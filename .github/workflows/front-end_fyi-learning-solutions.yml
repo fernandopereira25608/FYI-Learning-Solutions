@@ -22,10 +22,13 @@ jobs:
           node-version: '16.x'
 
       - name: npm install, build, and test
-        run: |
+        run: 
           npm install
           npm run build --if-present
           npm run test --if-present
+          npm i
+          npm run build
+          npm run test
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -53,4 +56,4 @@ jobs:
           app-name: 'fyi-learning-solutions'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_747BC8788C0D48A18CF989C100BCDE82 }}
-          package: .
+          package: 'build'
