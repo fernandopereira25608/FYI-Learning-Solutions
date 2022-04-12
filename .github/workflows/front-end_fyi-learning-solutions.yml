@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - fyilearning-solutions
+name: Build and deploy Node.js app to Azure Web App - fyi-learning-solutions
 
 on:
   push:
@@ -22,10 +22,12 @@ jobs:
           node-version: '16.x'
 
       - name: npm install, build, and test
-        run:
+        run: 
+          npm install
+          npm run build --if-present
+          npm run test --if-present
           npm i
-          npm run build 
-          npm run test 
+          
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -50,7 +52,8 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'fyilearning-solutions'
+          app-name: 'fyi-learning-solutions'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_55CBD8A0FC134D4080663FCD09F7DBA6 }}
-          package: build
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_747BC8788C0D48A18CF989C100BCDE82 }}
+          package: 'build'
+         
