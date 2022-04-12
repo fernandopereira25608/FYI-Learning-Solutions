@@ -57,4 +57,4 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_747BC8788C0D48A18CF989C100BCDE82 }}
           package: 'build'
-          task: PublishBuildArtifacts@1
+         
