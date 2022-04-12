@@ -17,7 +17,7 @@ function Footer() {
                     <img src={logo} />
                 </div>
 
-                <form class="footer-contente" action="">
+                <div class="footer-contente">
                     <div >
                         <h3>Contato</h3>
                     </div>
@@ -31,7 +31,7 @@ function Footer() {
                         <img src={TelefoneFooter} class="cellphone-footer" />
                         <p>+55 (11) 3253-2529</p>
                     </div>
-                </form>
+                </div>
 
                 <div >
 

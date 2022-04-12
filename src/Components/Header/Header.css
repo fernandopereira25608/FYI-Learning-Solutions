@@ -22,6 +22,10 @@
     width: 300px;
     height: 60px;
   }
+
+  .header-links a{
+    cursor: pointer;
+  }
   
   .header-content .header-links{
     display: flex;
@@ -45,9 +49,11 @@
     width: 200px;
     height: 60px;
     margin-left: 100px;
+    cursor: pointer;
   }
   
   .login-button:hover{
+    cursor: pointer;
     transition: 2s;
     box-shadow: #404040;
   }

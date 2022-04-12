@@ -8,7 +8,9 @@ import Even from '../../Images/empressas/even.svg'
 import Ibmec from '../../Images/empressas/ibmec.svg'
 import Ipetec from '../../Images/empressas/ipetec.svg'
 
-import './App.css';
+import './Inicial.css';
+
+
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
 import Card from '../../Components/Cursos-Card/Card';
@@ -18,48 +20,47 @@ function Inicial() {
     <div>
      <Header/>
       <div>
-        <div class="image-content">
-          <img src={banner} class="banner" />
+        <div class="inicial-image-content">
+          <img src={banner} class="inicial-banner" />
         </div>
-        <div class="frase">
+        <div class="inicial-frase">
           <p>DESDE 2009 O PRINCIPAL CENTRO DE TREINAMENTOS OFICIAL PARA MICROSOFTS DYNAMICS 365</p>
         </div>
-        <div class="info-empresa">
-          <div class="container-info">
-            <div class="info-content">
-              <img src={Medal} class="medal-icon" />
+        <div class="inicial-info-empresa">
+          <div class="inicial-container-info">
+            <div class="inicial-info-content">
+              <img src={Medal} class="inicial-medal-icon" />
               <h2>10000+</h2>
-              <p>Horas de treinamento</p>
+              <p>Horas treinamento</p>
             </div>
-            <div class="info-content">
+            <div class="inicial-info-content">
               <img src={Student} />
               <h2>1000+</h2>
               <p>Alunos treinados</p>
             </div>
-            <div class="info-content">
+            <div class="inicial-info-content">
               <img src={Construct} />
               <h2>50+</h2>
               <p>Empresas atendidas</p>
             </div>
           </div>
         </div>
-        <div class="empresas-carrosel">
-          <img src={Cavalcante} />
-          <img src={Empz} />
-          <img src={Even} />
-          <img src={Ibmec} />
-          <img src={Ipetec} />
+        <div class="inicial-empresas-carrosel">
+          <img src={Cavalcante} class="Cavalcante-img"/>
+          <img src={Even} class="Even-img"/>
+          <img src={Empz} class="Empz-img"/>
+          <img src={Ibmec} class="Ibmec-img"/>
+          <img src={Ipetec} class="Ipetec-img"/>
         </div>
-        <div class="cursos-main">
-          <div class="cursos-content">
+        <div class="inicial-cursos-main">
+          <div class="inicial-cursos-content">
             <h1>Cursos:</h1>
-            <div class="cursos-container">
+            
               <Card />
               <Card />
-            </div>
+            
           </div>
         </div>
-
       </div>
       <Footer/>
     </div>

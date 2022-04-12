@@ -44,8 +44,18 @@
     justify-content: space-evenly;
     margin-left: 10px;
   }
+
+  .info-itens h3{
+    font-family: ;
+  }
   
   .clock-icon{
     width: 25px;
     height: 25px;
+  }
+
+  .curso-card:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 3s;
   }

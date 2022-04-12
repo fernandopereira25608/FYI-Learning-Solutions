@@ -4,6 +4,7 @@ import Imagep05 from "../../Images/InfoEmpresa/Imagep05.svg";
 import Imagep06 from "../../Images/InfoEmpresa/Imagep06.svg";
 import Imagep07 from "../../Images/InfoEmpresa/Imagep07.svg";
 import Header from "../../Components/Header/Header.jsx";
+import Banner from "../../Images/banner.svg";
 import Footer from "../../Components/Footer/Footer.jsx"
 
 const InfoEmpresa = () => {
@@ -11,9 +12,10 @@ const InfoEmpresa = () => {
     <>
     <Header/>
 
-    <section class="Content-info">
-          <div class="Content-info-article">
-            <article class="info-empresa">
+      <img src={Banner} class="banner-sobre"/>
+    <section class="sobre-Content-info">
+          <div class="sobre-Content-info-article">
+            <article class="sobre-info-empresa">
     
               <p>
                 A FYI nasceu em 2009 com a missão de formar excelentes
@@ -45,8 +47,8 @@ const InfoEmpresa = () => {
               </p>
               <br />
 
-              <div class="content-paragrafo">
-                <figure class="content-image-paragrafo">
+              <div class="sobre-content-paragrafo">
+                <figure class="sobre-content-image-paragrafo">
                   <img
                     src={Imagep05}
                     alt="Pessoas na sala tirando dúvida"
@@ -71,7 +73,7 @@ const InfoEmpresa = () => {
                 </div>
               </div>
 
-              <div class="content-paragrafo">
+              <div class="sobre-content-paragrafo">
                 <div>
                   <p>
                     Inaugurando uma nova modalidade de CPLS (Microsoft Certified
@@ -89,7 +91,7 @@ const InfoEmpresa = () => {
                   </p>
                 </div>
 
-                <figure class="content-image-paragrafo">
+                <figure class="sobre-content-image-paragrafo">
                   <img
                     src={Imagep06}
                     alt="Pessoas na sala tirando dúvida"
@@ -97,8 +99,8 @@ const InfoEmpresa = () => {
                 </figure>
               </div>
 
-              <div class="content-paragrafo">
-                <figure class="content-image-paragrafo">
+              <div class="sobre-content-paragrafo">
+                <figure class="sobre-content-image-paragrafo">
                   <img
                     src={Imagep07}
                     alt="Pessoas na sala tirando dúvida"

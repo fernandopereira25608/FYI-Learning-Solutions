@@ -17,7 +17,7 @@ function HideContent() {
     var x = document.getElementById("right-box")
 
     if (x.style.display === "none") {
-        x.style.transition = "2s"
+        x.style.transition = "2s";
         x.style.display = "flex";
     } else {
         x.style.display = "none";
@@ -43,7 +43,7 @@ function Admin() {
                     <div class="left-content">
                         <img src={LogoSmall} class="logo-small" />
                         <div class="home-link">
-                           <img src={Home} class="home-icon"/> 
+                           <img src={Home} class="home-icon" /> 
                             <a><p>Home</p></a>
                         </div>
                     </div>

@@ -6,98 +6,31 @@
   box-sizing: border-box;
 }
 
-.header{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100px;
-  background-color: #8150A3;
-
-}
-
-.header-nav{
-width: 100%;
-max-width: 1200px;
-margin: 0 auto;
-height: 100%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-
-}
-
-.header-content{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1000px;
-}
-
-.header-links{
-  font-family: 'Poppins', sans-serif;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  width: 300px;
-  height: 60px;
-}
-
-.header-content .header-links{
-  display: flex;
-  align-items: center;
-}
-
-.login-button{
-  margin-left: 200px;
-  width: 120px;
-  height: 40px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  background-color: #404040;
-  color: white;
-  border-style: none;
-  border-radius: 25px;
-  letter-spacing: 2px;
-}
-
-.logo-inicial{
-  width: 200px;
-  height: 60px;
-  margin-left: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-button:hover{
-  transition: 2s;
-  transform: scale(1.2);
-}
-
-  .Content-info{
+  .cursos-Content-info{
     width: 100%;
     height: auto;
     background-color: #FFFFFF;
   }
 
-  .box-conteudo{
+  .cursos-box-conteudo{
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 4vh;
   }
 
-  h1{
+  .cursos-box-conteudo h1{
     margin-left: 9vh;
   }
 
-  .box-conteudo-card{
+  .cursos-box-conteudo-card{
+    width: 100%;
     display: flex;
     justify-content: space-around;
   }
   
 
-  .Content-info-card{
+  .cursos-Content-info-card{
     background-color: #8150A3;
     width: 3vh;
     height: 65vh;
@@ -106,7 +39,7 @@ align-items: center;
   
   }
 
-  .Content-info-card2{
+  .cursos-Content-info-card2{
     background-color: #8150A3;
     width: 3vh;
     height: 65vh;
@@ -115,13 +48,13 @@ align-items: center;
   
   }
 
-  .conteudo-card{
+  .cursos-conteudo-card{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
   
-  .curso-card{
+  .cursos-curso-card{
     width: 475px;
     height: 120px;
     background-color: rgba(95, 75, 139, 1);
@@ -133,99 +66,7 @@ align-items: center;
     border-radius: 25px;
   }
 
-  h3{
+  .cursos-curso-card h3{
     color: #FFFFFF;
     text-transform: uppercase;
-
-  }
-
-  footer{
-    width: 100%;
-    height: 180px;
-    background-color: #8150A3;
-    display: flex;
-    justify-content: center;
-    margin-top: 5vh;
-  }
-  
-  .footer-containers{
-    width: 90%; 
-    display: flex;
-    justify-content: space-between;
-    color: white;
-  }
-  
-  .footer-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .footer-contente{
-    width: 35vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .box-conteudos{
-    display: flex;
-    align-items: center;
-  }
-  
-  .box-conteudoss{
-    display: flex;
-    align-items: center;
-    margin-left: -8vh;
-  }
-  
-  
-  
-  .cellphone-footer{
-    width: 15vh;
-    height: 8vh;
-  }
-  
-  .email-footer{
-    margin-right: 30px;
-  }
-  
-  .siga{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 4vh;
-  }
-  
-  .siga h3{
-    text-transform: uppercase;
-  }
-  
-  .conteudo-img{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2vh;
-  }
-  
-  .footer-contents{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .social-icon{
-    width: 5vh;
-    height: 5vh;
-  }
-  
-  .social-icons{
-    width: 6vh;
-    height: 6vh;
-  }
-  
-  .social-iconss{
-    width: 7vh;
-    height: 7vh;
   }

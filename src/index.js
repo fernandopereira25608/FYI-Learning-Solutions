@@ -20,7 +20,7 @@ const routing = (
         <Route exact path="/" component={Inicial} />
         <Route path="/Admin" component={Admin} />
         <Route path="/Login" component={Login} />
-        <Route path="/Info" component={InfoEmpresa} />
+        <Route path="/Sobre" component={InfoEmpresa} />
         <Route path="/Cadastro" component={Cadastro} />
         <Route path="/Contato" component={Contato} />
         <Route path="/Cursos" component={Cursos} />

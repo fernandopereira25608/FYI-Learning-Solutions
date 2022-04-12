@@ -1,5 +1,5 @@
 
-.titulo-contato{
+.contact-titulo-contato{
 color:#9355A9;
 font-size: 36px;
 width: 100%;
@@ -10,7 +10,7 @@ margin-bottom: 38px;
 }
 
 
-.contato{
+.contact-contato{
 width: 425px;
 height: 725px;
 background-color: #ebeaec;
@@ -27,7 +27,7 @@ margin-bottom: 4%;
 
 }
 
-.form-contato{
+.contact-form-contato{
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -35,13 +35,17 @@ align-items: center;
 width: 100%;
 }
 
-.form-contato label{
+.contact-form-contato label{
 margin-bottom: 30px;
 
 
 }
 
-.label-form{
+.banner-sobre{
+    width: 100%;
+}
+
+.contact-label-form{
 width: 100%;
 max-width: 328px;
 height: 50px;
@@ -55,7 +59,7 @@ padding-right: 20px;
 
 }
 
-.label-form input{
+.contact-label-form input{
 width: 100%;
 height: 100%;
 border-radius: 30px;
@@ -68,7 +72,7 @@ font-size: 20px;
 
 }
 
-.form-mensagem{
+.contact-form-mensagem{
 background-color: #ebeaec;
 width: 100%;
 max-width: 328px;
@@ -88,7 +92,7 @@ color: #9355A9;
 
 }
 
-.form-mensagem::placeholder{
+.contact-form-mensagem::placeholder{
 color: #9355A9;
 
 }
@@ -97,7 +101,7 @@ input:checked{
 color: #9355A9;
 }
 
-.form-content-checkbox{
+.contact-form-content-checkbox{
 width: 328px;
 margin: 0 auto;
 gap: 3px;
@@ -108,17 +112,17 @@ flex-direction: column;
 
 }
 
-.form-content-checkbox label{
+.contact-form-content-checkbox label{
 display: flex;
 align-items: center;
 margin-bottom: 5px;
 }
 
-.form-content-checkbox span{
+.contact-form-content-checkbox span{
 padding-left: 5px;
 }
 
-.button-form{
+.contact-button-form{
 margin-top: 31px;
 border: none;
 background-color: #9355A9;

@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 
-.Content-info{
+.sobre-Content-info{
   width: 100%;
   height: auto;
   background-color: #FFFFFF;
 }
 
-.Content-info-article{
+.sobre-Content-info-article{
   background-color: #8150A3;
   padding: 0 40px;
   width: 100%;
@@ -17,12 +17,12 @@
 
 }
 
-.info-empresa{
+.sobre-info-empresa{
   background-color: #FFFFFF;
   padding: 15px;
 }
 
-.info-empresa p {
+.sobre-info-empresa p {
   font-size: 17px;
 
 }
@@ -35,11 +35,11 @@ p{
   
 }
 
-.frase h1{
+.sobre-frase h1{
   font-size: 36px;
 }
 
-.frase h2{
+.sobre-frase h2{
   font-size: 18px;
   font-weight: normal;
   padding-bottom: 10px;
@@ -47,11 +47,11 @@ p{
   letter-spacing: 1px;
 }
 
-.content-paragrafo{
+.sobre-content-paragrafo{
   display: flex;
 }
 
-.content-paragrafo div{
+.sobre-content-paragrafo div{
   padding-left: 15px;
   display: flex;
   flex-direction: column;
@@ -59,7 +59,7 @@ p{
   justify-content: center;
 }
 
-.content-paragrafo div p{
+.sobre-content-paragrafo div p{
   font-size: 17px;
 }
 

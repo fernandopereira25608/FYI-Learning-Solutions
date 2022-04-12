@@ -7,35 +7,35 @@ function Login() {
     return (
 
         <main>
-            <section className='cor-fundo'>
+            <section className='login-cor-fundo'>
 
-                <div className='img-login'><img src={imgLogin} alt="img" /></div>
+                <div className='login-img-login'><img src={imgLogin} alt="img" /></div>
 
-                <div className='box-fundo'>
-                    <div className='espaco-entre'>
-                        <img className='img-logo' src={Logo} alt="" />
+                <div className='login-box-fundo'>
+                    <div className='login-espaco-entre'>
+                        <img className='login-img-logo' src={Logo} alt="" />
 
-                        <form action="">
+                        <form>
 
 
 
-                            <div className=" box-inputs ">
+                            <div className="login-box-inputs">
                                 <label for=""> </label> <input type="email" name=" emailJ " placeholder=" Email: " />
                             </div>
 
-                            <div className=" box-inputs ">
+                            <div className="login-box-inputs">
                                 <label for=""> </label> <input type="password" name=" senhaJ " placeholder=" Senha: " />
                             </div>
                             {/* <div className='conteudo'> */}
-                            <div>
+                            <div class="login-text">
                                 <h3>Esqueceu a senha?</h3>
                             </div>
 
                             <div>
-                                <button className="btn-entrar"> Entrar </button>
+                                <button className="login-btn-entrar"> Entrar </button>
                             </div>
 
-                            <div className='conteudinho'>
+                            <div className='login-conteudinho'>
 
                                 <p>ou</p>
 

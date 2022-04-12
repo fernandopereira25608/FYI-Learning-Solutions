@@ -13,32 +13,32 @@ function Cursos() {
             <Header />
 
             <main>
-                <div className='box-conteudo'>
+                <div className='cursos-box-conteudo'>
                     <h1>Categorias:</h1>
-                    <div className='box-conteudo-card '>
-                        <div class="Content-info-card"></div>
-                        <div className='conteudo-card'>
-                            <div class="curso-card">
+                    <div className='cursos-box-conteudo-card '>
+                        <div class="cursos-Content-info-card"></div>
+                        <div className='cursos-conteudo-card'>
+                            <div class="cursos-curso-card">
                                 <h3>microsoft</h3>
                             </div>
 
-                            <div class="curso-card">
+                            <div class="cursos-curso-card">
                                 <h3>back-end</h3>
                             </div>
                         </div>
 
-                        <div className='conteudo-card'>
+                        <div className='cursos-conteudo-card'>
 
-                            <div class="curso-card">
+                            <div class="cursos-curso-card">
                                 <h3>banco de dados</h3>
                             </div>
 
-                            <div class="curso-card">
+                            <div class="cursos-curso-card">
                                 <h3>front-end</h3>
                             </div>
                         </div>
 
-                        <div class="Content-info-card2"></div>
+                        <div class="cursos-Content-info-card2"></div>
 
                     </div>
 

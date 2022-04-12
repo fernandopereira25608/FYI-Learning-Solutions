@@ -1,13 +1,15 @@
 footer{
     width: 100%;
-    height: 180px;
+    height: 200px;
     background-color: #8150A3;
     display: flex;
     justify-content: center;
+    align-self: flex-end;
   }
   
   .footer-containers{
     width: 90%; 
+    height: 100%;
     display: flex;
     justify-content: space-between;
     color: white;

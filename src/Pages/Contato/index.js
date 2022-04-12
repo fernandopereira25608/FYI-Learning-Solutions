@@ -13,31 +13,31 @@ const Contato = () => {
 
       <Header/>
 
-      <div class="contato">
-        <h1 class="titulo-contato">Fale Conosco</h1>
-        <form class="form-contato">
-          <label class="label-form">
+      <div class="contact-contato">
+        <h1 class="contact-titulo-contato">Fale Conosco</h1>
+        <form class="contact-form-contato">
+          <label class="contact-label-form">
             <input type="text" placeholder="Nome" />
           </label>
 
-          <label class="label-form">
+          <label class="contact-label-form">
             <input type="text" placeholder="Email" />
             <span>
               <img src={IconPessoa}></img>
             </span>
           </label>
 
-          <label class="label-form">
+          <label class="contact-label-form">
             <input type="text" placeholder="Telefone" />
             <span>
               <img src={IconTelefone}></img>
             </span>
           </label>
 
-          <textarea class="form-mensagem" placeholder="Mensagem" > </textarea> 
+          <textarea class="contact-form-mensagem" placeholder="Mensagem" > </textarea> 
 
 
-          <div class="form-content-checkbox">
+          <div class="contact-form-content-checkbox">
             <label>
               <input type="radio" />
               <span>Deseja receber informações e promoções da FYI?</span>
@@ -51,7 +51,7 @@ const Contato = () => {
             </label>
         </div>
 
-        <button class="button-form">
+        <button class="contact-button-form">
             ENVIAR
         </button>
 

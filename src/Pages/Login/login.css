@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Average+Sans&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,23 +7,22 @@
 }
 
  
-.cor-fundo{
+.login-cor-fundo{
     background-color: rgba(95, 75, 139, 1);
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.espaco-entre{
+.login-espaco-entre{
     display : flex;
     flex-direction: column;
     justify-content : space-between;
     align-items: center;
 }
 
-.box-fundo {
+.login-box-fundo {
     margin-top: 23px;
     background-color:  rgba(235, 234, 236, 1);
     height: 78vh;
@@ -33,6 +34,10 @@
     border-radius: 20px;
 }
 
+.login-text h3{
+    font-family: 'Average Sans', sans-serif;
+    color: #985EAD;
+}
 
 form {
     display : flex;
@@ -43,13 +48,13 @@ form {
     height: 50vh;
 }
 
-.img-logo{
+.login-img-logo{
     margin-top: 6vh;
     height: 15vh;
 
 }
 
-.box-inputs  input {
+.login-box-inputs  input {
     background-color:  rgba(235, 234, 236, 1);
     height: 6vh;
     width: 32vh;
@@ -58,16 +63,16 @@ form {
     border-color: rgba(129, 80, 163, 0.89);
 }
 
-.box-inputs h3{
+.login-box-inputs h3{
     color: rgba(129, 80, 163, 0.89);
     font-size: 2vh;
 }
 
-.conteudinho p{
+.login-conteudinho p{
     color: rgba(129, 80, 163, 0.89);
 }
 
-.btn-entrar  {
+.login-btn-entrar  {
     width: 20vh;
     height: 7vh;
     background-color: rgba(101, 8, 134, 0.66);
@@ -80,10 +85,11 @@ form {
     border: none;
 }
 
-.conteudinho{
+.login-conteudinho{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
     margin-top: -2vh;
+    color: #985EAD  ;
 }

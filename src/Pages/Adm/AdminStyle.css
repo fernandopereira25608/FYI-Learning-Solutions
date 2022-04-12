@@ -128,3 +128,22 @@ hr{
     align-items: center;
 }
 
+#plus-icon:hover{
+    cursor: pointer;
+    transform: rotate(270deg) scale(1.3);
+    transition: 1s;
+}
+
+/* .rotation{
+    animation: rotation 2s infinite linear;
+} */
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+  }
+
