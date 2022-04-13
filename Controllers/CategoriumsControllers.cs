@@ -29,7 +29,6 @@ namespace FYI.web.Api.Controllers
         {
             try
             {
-                // Retorna a resposta da requisição fazendo a chamada para o método
                 return Ok(_categoriaRepository.Listar());
             }
             catch (Exception erro)
@@ -44,7 +43,6 @@ namespace FYI.web.Api.Controllers
         {
             try
             {
-                // Retora a resposta da requisição fazendo a chamada para o método
                 return Ok(_categoriaRepository.BuscarPorId(id));
             }
             catch (Exception erro)
@@ -65,9 +63,9 @@ namespace FYI.web.Api.Controllers
                 // Retorna um status code
                 return StatusCode(201);
             }
-            catch (Exception ex)
+            catch (Exception x)
             {
-                return BadRequest(ex);
+                return BadRequest(x);
             }
         }
 
@@ -75,16 +73,14 @@ namespace FYI.web.Api.Controllers
         public IActionResult Atualizar(byte id, CategoriumDomain CategoriaAtualizada)
         {
             try
-            {
-                // Faz a chamada para o método
+            {                
                 _categoriaRepository.Atualizar(id, CategoriaAtualizada);
 
-                // Retorna um status code
                 return StatusCode(204);
             }
-            catch (Exception ex)
+            catch (Exception x)
             {
-                return BadRequest(ex);
+                return BadRequest(x);
             }
         }
 
@@ -94,23 +90,16 @@ namespace FYI.web.Api.Controllers
         {
             try
             {
-                // Faz a chamada para o método
                 _categoriaRepository.Deletar(id);
 
-                // Retorna um status code
                 return StatusCode(204);
             }
-            catch (Exception ex)
+            catch (Exception x)
             {
-                return BadRequest(ex);
+                return BadRequest(x);
 
             }
 
         }
-
-        /*private bool CategoriumExists(byte id)
-        {
-            return _context.Categoria.Any(e => e.IdCategoria == id);
-        }*/
     }
 }

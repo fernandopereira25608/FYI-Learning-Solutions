@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using FYI.web.Api.Domains;
+using Microsoft.Extensions.Configuration;
 
 #nullable disable
 
@@ -29,7 +30,12 @@ namespace FYI.web.Api.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=servidorfyi.database.windows.net; initial catalog=DBFYI; user Id=administrador; pwd=FYIlearningsolutions@5;");
+                IConfigurationRoot configuration = new ConfigurationBuilder()
+                 .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                 .AddJsonFile("appsettings.json")
+                 .Build();
+                // Pc do Senai
+                optionsBuilder.UseSqlServer(configuration.GetConnectionString("DBFYI"));
             }
         }
 

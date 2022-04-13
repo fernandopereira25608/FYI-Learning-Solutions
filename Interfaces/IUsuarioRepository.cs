@@ -17,5 +17,7 @@ namespace FYI.web.Api.Interfaces
         void Deletar(short id);
 
         UsuarioDomain BuscarPorId(short id);
+
+        UsuarioDomain BuscarPorEmail(string Email);
     }
 }

@@ -51,6 +51,5 @@ namespace FYI.web.Api.Repositories
         {
             return ctx.Turmas.FirstOrDefault(tu => tu.IdTurma == id);
         }
-
     }
 }

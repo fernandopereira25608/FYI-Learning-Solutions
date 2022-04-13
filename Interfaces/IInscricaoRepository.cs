@@ -19,5 +19,7 @@ namespace FYI.web.Api.Interfaces
         void Atualizar(int id, InscricaoDomain inscricaoAtualizada);
 
         InscricaoDomain BuscarPorId(int id);
+
+        InscricaoDomain BuscarPorTurma(byte idt);
     }
 }

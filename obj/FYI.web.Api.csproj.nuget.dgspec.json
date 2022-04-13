@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\48345049800.INFOSCS\\Desktop\\FYI-Learning-Solutions\\FYI.web.Api.csproj": {}
+    "C:\\Users\\39044547810.INFOSCS\\Desktop\\teste\\FYI-Learning-Solutions\\FYI.web.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\48345049800.INFOSCS\\Desktop\\FYI-Learning-Solutions\\FYI.web.Api.csproj": {
+    "C:\\Users\\39044547810.INFOSCS\\Desktop\\teste\\FYI-Learning-Solutions\\FYI.web.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\48345049800.INFOSCS\\Desktop\\FYI-Learning-Solutions\\FYI.web.Api.csproj",
+        "projectUniqueName": "C:\\Users\\39044547810.INFOSCS\\Desktop\\teste\\FYI-Learning-Solutions\\FYI.web.Api.csproj",
         "projectName": "FYI.web.Api",
-        "projectPath": "C:\\Users\\48345049800.INFOSCS\\Desktop\\FYI-Learning-Solutions\\FYI.web.Api.csproj",
-        "packagesPath": "C:\\Users\\48345049800.INFOSCS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\48345049800.INFOSCS\\Desktop\\FYI-Learning-Solutions\\obj\\",
+        "projectPath": "C:\\Users\\39044547810.INFOSCS\\Desktop\\teste\\FYI-Learning-Solutions\\FYI.web.Api.csproj",
+        "packagesPath": "C:\\Users\\39044547810.INFOSCS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\39044547810.INFOSCS\\Desktop\\teste\\FYI-Learning-Solutions\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\48345049800.INFOSCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\39044547810.INFOSCS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -97,6 +97,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.12, 5.0.12]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -105,7 +111,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

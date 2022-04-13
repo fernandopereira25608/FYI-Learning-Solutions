@@ -56,6 +56,19 @@ namespace FYI.web.Api.Controllers
             }
         }
 
+        [HttpGet("{idt}")]
+        public IActionResult GetByIdt(byte idt)
+        {
+            try
+            {
+                return Ok(_inscricaoRepository.BuscarPorTurma(idt));
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
+        }
+
         // PUT: api/InscricoesControllers/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
@@ -107,7 +120,6 @@ namespace FYI.web.Api.Controllers
             {
                 return BadRequest(x);
             }
-
         }
     }
 }

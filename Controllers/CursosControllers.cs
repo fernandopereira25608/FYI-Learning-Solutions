@@ -31,7 +31,6 @@ namespace FYI.web.Api.Controllers
         {
             try
             {
-                // Retorna a resposta da requisição fazendo a chamada para o método
                 return Ok(_cursoRepository.Listar());
             }
             catch (Exception erro)
@@ -46,7 +45,6 @@ namespace FYI.web.Api.Controllers
         {
             try
             {
-                // Retora a resposta da requisição fazendo a chamada para o método
                 return Ok(_cursoRepository.BuscarPorId(id));
             }
             catch (Exception erro)
@@ -61,10 +59,8 @@ namespace FYI.web.Api.Controllers
         {
             try
             {
-                // Faz a chamada para o método
                 _cursoRepository.Cadastrar(novoCurso);
 
-                // Retorna um status code
                 return StatusCode(201);
             }
             catch (Exception ex)
@@ -79,10 +75,8 @@ namespace FYI.web.Api.Controllers
         {
             try
             {
-                // Faz a chamada para o método
                 _cursoRepository.Atualizar(id, CursoAtualizado);
 
-                // Retorna um status code
                 return StatusCode(204);
             }
             catch (Exception ex)
@@ -97,10 +91,8 @@ namespace FYI.web.Api.Controllers
         {
             try
             {
-                // Faz a chamada para o método
                 _cursoRepository.Deletar(id);
 
-                // Retorna um status code
                 return StatusCode(204);
             }
             catch (Exception ex)
