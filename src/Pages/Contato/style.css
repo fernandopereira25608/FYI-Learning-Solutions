@@ -1,3 +1,8 @@
+.box-conteudo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 .contact-titulo-contato{
 color:#9355A9;
@@ -11,8 +16,8 @@ margin-bottom: 38px;
 
 
 .contact-contato{
-width: 425px;
-height: 725px;
+width: 439px;
+height: 545px;
 background-color: #ebeaec;
 border-radius: 30px;
 display: flex;
@@ -33,12 +38,17 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 width: 100%;
+height: 80%;
 }
 
 .contact-form-contato label{
 margin-bottom: 30px;
 
 
+}
+.spanzinho{
+    display: flex;
+    align-items: center;
 }
 
 .banner-sobre{
@@ -55,7 +65,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 background-color: #ebeaec;
-padding-right: 20px;
+padding-right: 16px;
 
 }
 
@@ -68,7 +78,7 @@ border: none;
 background-color: #ebeaec;
 outline: 0;
 color: #9355A9;
-font-size: 20px;
+font-size: 16px;
 
 }
 
@@ -84,7 +94,12 @@ border: 1px solid #9355A9;
 outline: 0;
 font-size: 20px;
 margin-bottom: 16px;
+font-family: 'Courier New', Courier, monospace;
+}
 
+.contact-form-mensagem::placeholder
+{
+    font-family: 'Times New Roman', Times, serif;
 }
 
 input::placeholder{
@@ -127,15 +142,23 @@ margin-top: 31px;
 border: none;
 background-color: #9355A9;
 border-radius: 30px;
-width: 234px;
+width: 200px;
 height: 68px;
 color: #FFFF;
 display: flex;
 justify-content: center;
 align-items: center;
-font-size: 24px;
-font-weight: 600;
+font-size: 20px;
+text-transform: uppercase;
+}
 
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.map{
+    display: flex;
 }
 
 

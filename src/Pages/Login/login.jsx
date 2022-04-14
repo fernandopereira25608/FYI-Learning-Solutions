@@ -2,20 +2,24 @@ import './login.css';
 import imgLogin from "../../Images/Login/imgLogin.png"
 import Logo from "../../Images/Login/Logo.png"
 
+import { useHistory } from 'react-router-dom';
+
 function Login() {
+    
+    const history = useHistory();
 
     return (
 
         <main>
             <section className='login-cor-fundo'>
 
-                <div className='login-img-login'><img src={imgLogin} alt="img" /></div>
+                <div className='login-img-login' ><img src={imgLogin} alt="img" /></div>
 
                 <div className='login-box-fundo'>
                     <div className='login-espaco-entre'>
-                        <img className='login-img-logo' src={Logo} alt="" />
+                        <img className='login-img-logo' src={Logo} alt="" onClick={() => history.push('/')}/>
 
-                        <form>
+                        <form className='form-box'>
 
 
 
@@ -39,7 +43,9 @@ function Login() {
 
                                 <p>ou</p>
 
-                                <h3>Cadastre-se agora</h3>
+                                {/* <h3 onClick={() => history.push('/Cadastro')}>Cadastre-se agora</h3> */}
+                                <a onClick={() => history.push('/Cadastro')}>Cadastre-se agora</a>
+                                
 
                             </div>
                         </form>

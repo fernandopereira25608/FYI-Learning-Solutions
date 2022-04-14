@@ -39,13 +39,13 @@
     color: #985EAD;
 }
 
-form {
+.form-box {
     display : flex;
     flex-direction: column;
     justify-content : space-between;
     align-items: center;
     padding: 6vh;
-    height: 50vh;
+    height: 55vh;
 }
 
 .login-img-logo{
@@ -56,8 +56,8 @@ form {
 
 .login-box-inputs  input {
     background-color:  rgba(235, 234, 236, 1);
-    height: 6vh;
-    width: 32vh;
+    height: 7vh;
+    width: 22vw;
     padding-left: 10px ;
     border-radius: 2vh ;
     border-color: rgba(129, 80, 163, 0.89);
@@ -92,4 +92,5 @@ form {
     flex-direction: column;
     margin-top: -2vh;
     color: #985EAD  ;
+    font-size: 22px;
 }

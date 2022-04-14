@@ -40,10 +40,10 @@ function Footer() {
                     </div>
 
                     <div className='conteudo-img'>
-                        <img src={Instagram} class="social-icon" />
-                        <img src={Youtube} class="social-iconss" />
-                        <img src={LinkdIn} class="social-icons" />
-                        <img src={Facebook} class="social-iconss" />
+                        <a href="https://www.instagram.com/fyibrasil/"> <img src={Instagram} class="social-icon" /> </a>
+                        <a href="https://www.youtube.com/channel/UCF4AwPhPju8tJTyFcHlZwsQ"> <img src={Youtube} class="social-iconss" /> </a>
+                        <a href="https://br.linkedin.com/company/fyi-learning-solutions"> <img src={LinkdIn} class="social-icons" /> </a>
+                        <a href="https://pt-br.facebook.com/FYIBrasil/"> <img src={Facebook} class="social-iconss" /> </a>
                     </div>
                 </div>
             </div>
