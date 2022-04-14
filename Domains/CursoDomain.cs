@@ -22,7 +22,10 @@ namespace FYI.web.Api.Domains
         [StringLength(2048)]
         public string Descricao { get; set; }
 
+        [Required(ErrorMessage = "Insira a quantidade de vagas restantes!!!!")]
         public byte VagasDisponiveis { get; set; }
+
+        [Required(ErrorMessage = "Insira a quantidade de vagas preenchidas!!!!")]
         public byte VagasPreenchidas { get; set; }
 
         [Required(ErrorMessage = "Informe a duração do curso!!!!")]

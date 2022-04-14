@@ -12,12 +12,12 @@ using FYI.web.Api.Repositories;
 
 namespace FYI.web.Api.Controllers
 {
+    [Produces("application/json")]
+
     [Route("api/[controller]")]
     [ApiController]
     public class CursosControllers : ControllerBase
     {
-        private readonly FYIContext _context;
-
         private ICursoRepository _cursoRepository { get; set; }
 
         public CursosControllers()

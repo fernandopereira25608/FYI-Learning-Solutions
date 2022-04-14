@@ -12,6 +12,8 @@ using FYI.web.Api.Repositories;
 
 namespace FYI.web.Api.Controllers
 {
+    [Produces("application/json")]
+
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriumsControllers : ControllerBase
