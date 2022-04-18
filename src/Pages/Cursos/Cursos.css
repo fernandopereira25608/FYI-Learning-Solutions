@@ -16,7 +16,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 4vh;
+    margin-top: 55px;
   }
 
   .cursos-box-conteudo h1{
@@ -27,21 +27,23 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 55px;
   }
   
 
   .cursos-Content-info-card{
     background-color: #8150A3;
-    width: 3vh;
+    width: 1vw;
     height: 65vh;
     margin: 5px;
     float: left;
+    
   
   }
 
   .cursos-Content-info-card2{
     background-color: #8150A3;
-    width: 3vh;
+    width: 1vw;
     height: 65vh;
     margin: 5px;
     float: right;
