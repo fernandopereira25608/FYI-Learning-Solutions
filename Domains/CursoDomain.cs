@@ -29,6 +29,7 @@ namespace FYI.web.Api.Domains
         public byte VagasPreenchidas { get; set; }
 
         [Required(ErrorMessage = "Informe a duração do curso!!!!")]
+        [DataType(DataType.Duration)]
         public byte CargaHoraria { get; set; }
         public byte? IdCategoria { get; set; }
 
