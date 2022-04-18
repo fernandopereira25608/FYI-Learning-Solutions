@@ -20,19 +20,19 @@ function Cadastro() {
                         <form action="" className='cadastro-form'>
 
                             <div className="cadastro-box-inputs">
-                                <label for=""> </label> <input type="name" name=" nameJ " placeholder=" Nome: " />
+                                <label for=""> </label> <input type="name" name=" nameJ " placeholder=" Nome " />
                             </div>
 
                             <div className="cadastro-box-inputs">
-                                <label for=""> </label> <input type="text" name=" textJ " placeholder=" Empresa(opicional): " />
+                                <label for=""> </label> <input type="text" name=" textJ " placeholder=" Empresa(opicional) " />
                             </div>
 
                             <div className="cadastro-box-inputs">
-                                <label for=""> </label> <input type="email" name=" emailJ " placeholder=" Email: " />
+                                <label for=""> </label> <input type="email" name=" emailJ " placeholder=" Email " />
                             </div>
 
                             <div className="cadastro-box-inputs">
-                                <label for=""> </label> <input type="password" name=" senhaJ " placeholder=" Senha: " />
+                                <label for=""> </label> <input type="password" name=" senhaJ " placeholder=" Senha " />
                             </div>
                             {/* <div className='conteudo'> */}
 

@@ -60,7 +60,9 @@
     width: 22vw;
     padding-left: 10px ;
     border-radius: 2vh ;
-    border-color: rgba(129, 80, 163, 0.89);
+    border: 2px solid #9355A9;
+    border-top-color:rgba(129, 80, 163, 0.89);
+    font-size: 18px;
 }
 
 .login-box-inputs h3{
@@ -80,7 +82,7 @@
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     color: white;
-    font-size: 15px ;
+    font-size: 19px ;
     font-weight: bold;
     border: none;
 }

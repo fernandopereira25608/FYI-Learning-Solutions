@@ -24,11 +24,11 @@ function Login() {
 
 
                             <div className="login-box-inputs">
-                                <label for=""> </label> <input type="email" name=" emailJ " placeholder=" Email: " />
+                                <label for=""> </label> <input type="email" name=" email " placeholder=" Email: " />
                             </div>
 
                             <div className="login-box-inputs">
-                                <label for=""> </label> <input type="password" name=" senhaJ " placeholder=" Senha: " />
+                                <label for=""> </label> <input type="password" name=" senha " placeholder=" Senha: " />
                             </div>
                             {/* <div className='conteudo'> */}
                             <div class="login-text">
