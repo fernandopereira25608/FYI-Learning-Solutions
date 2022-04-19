@@ -3,6 +3,7 @@ import imgLogin from "../../Images/Login/imgLogin.png"
 import Logo from "../../Images/Login/Logo.png"
 
 import { useHistory } from 'react-router-dom';
+import LoginGoogle from '../../Components/Google-Login/login.js';
 
 function Login() {
     
@@ -30,6 +31,7 @@ function Login() {
                             <div className="login-box-inputs">
                                 <label for=""> </label> <input type="password" name=" senha " placeholder=" Senha: " />
                             </div>
+                            <LoginGoogle />
                             {/* <div className='conteudo'> */}
                             <div class="login-text">
                                 <h3>Esqueceu a senha?</h3>

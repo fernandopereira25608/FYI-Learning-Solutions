@@ -8,8 +8,11 @@ import Hat from '../../Images/icons/Hat.svg'
 import Turmas from '../../Images/icons/Turmas.svg'
 import Users from '../../Images/icons/Users.svg'
 
+import { useHistory } from 'react-router-dom';
+
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
+
 
 
 function HideContent() {
@@ -21,20 +24,21 @@ function HideContent() {
         x.style.display = "flex";
     } else {
         x.style.display = "none";
-    }
+    };
+
+    if (x.style.src == "Plus" ) {
+        x.style.src = "Minus"
+    } else {
+        x.style.src = "Plus";
+    };
 
 }
 
-// function SwitchIcons() {
-    
-//     if (document.getElementById("minus-icon").src == {Minus}) {
-//         document.getElementById("plus-icon").src == {Plus}
-//     } else {
-//         document.getElementById("minus-icon").src == {Minus}
-//     }
-// }
 
 function Admin() {
+
+    const history = useHistory();
+
     return (
 
         <div>
@@ -43,7 +47,7 @@ function Admin() {
                     <div class="left-content">
                         <img src={LogoSmall} class="logo-small" />
                         <div class="home-link">
-                           <img src={Home} class="home-icon" /> 
+                           <img src={Home} class="home-icon" onClick={() => history.push('/')}/> 
                             <a><p>Home</p></a>
                         </div>
                     </div>
