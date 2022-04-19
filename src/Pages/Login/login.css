@@ -25,18 +25,19 @@
 .login-box-fundo {
     margin-top: 23px;
     background-color:  rgba(235, 234, 236, 1);
-    height: 78vh;
+    height: 85vh;
     width: 66vh;
     display : flex;
     flex-direction: column;
     align-items: center;
-    justify-content : space-between;
+    justify-content : space-evenly;
     border-radius: 20px;
 }
 
 .login-text h3{
     font-family: 'Average Sans', sans-serif;
     color: #985EAD;
+    cursor: pointer;
 }
 
 .form-box {
@@ -45,7 +46,7 @@
     justify-content : space-between;
     align-items: center;
     padding: 6vh;
-    height: 55vh;
+    height: 65vh;
 }
 
 .login-img-logo{
@@ -95,4 +96,8 @@
     margin-top: -2vh;
     color: #985EAD  ;
     font-size: 22px;
+}
+
+.login-conteudinho a{
+    cursor: pointer;
 }

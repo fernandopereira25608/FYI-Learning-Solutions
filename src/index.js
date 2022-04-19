@@ -9,6 +9,7 @@ import Cadastro from './Pages/Cadastro/Cadastro';
 import InfoEmpresa from './Pages/InfoEmpresa';
 import Contato from './Pages/Contato';
 import reportWebVitals from './reportWebVitals';
+import PageNotFound from './Pages/404/App';
 
 
 import {  Route, BrowserRouter as Router, Switch } from 'react-router-dom';
@@ -24,6 +25,7 @@ const routing = (
         <Route path="/Cadastro" component={Cadastro} />
         <Route path="/Contato" component={Contato} />
         <Route path="/Cursos" component={Cursos} />
+        <Route component={PageNotFound} />
       </Switch>
     </div>
   </Router>
