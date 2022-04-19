@@ -37,36 +37,31 @@ namespace FYI.web.Api
                                 });
             });
 
+            services
+               .AddAuthentication(options =>
+               {
+                   options.DefaultAuthenticateScheme = "JwtBearer";
+                   options.DefaultChallengeScheme = "JwtBearer";
+               })
 
-
-
-
+               .AddJwtBearer("JwtBearer", options =>
+               {
+                   options.TokenValidationParameters = new TokenValidationParameters
+                   {
+                       ValidateIssuer = true,
+                       ValidateAudience = true,
+                       ValidateLifetime = true,
+                       IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("FYI-key-authentication")),
+                       ClockSkew = TimeSpan.FromMinutes(90),
+                       ValidIssuer = "FYI.web.Api",
+                       ValidAudience = "FYI.web.Api"
+                   };
+               });
 
             services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "FYI.webAPI", Version = "v1" });
-            });
-
-            services
-                .AddAuthentication(options =>
-                {
-                    options.DefaultAuthenticateScheme = "JwtBearer";
-                    options.DefaultChallengeScheme = "JwtBearer";
-                })
-
-                .AddJwtBearer("JwtBearer", options =>
-                {
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuer = true,
-                        ValidateAudience = true,
-                        ValidateLifetime = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("gufi-chave-autenticacao")),
-                        ClockSkew = TimeSpan.FromMinutes(60),
-                        ValidIssuer = "FYI.webAPI",
-                        ValidAudience = "FYI.webAPI"
-                    };
-                });
+               {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "FYI.web.API", Version = "v1" });
+               });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
