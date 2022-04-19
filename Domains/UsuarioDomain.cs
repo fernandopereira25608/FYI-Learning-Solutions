@@ -13,11 +13,11 @@ namespace FYI.web.Api.Domains
             Inscricaos = new HashSet<InscricaoDomain>();
         }
 
-        public short IdUsuario { get; set; }
         public byte? IdTipoUsuario { get; set; }
 
 
         [Required(ErrorMessage = "Insira o nome do usuário!!!!")]
+        public short IdUsuario { get; set; }
         public string Nome { get; set; }
 
         public string Empresa { get; set; }

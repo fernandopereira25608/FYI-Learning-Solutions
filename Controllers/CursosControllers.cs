@@ -63,9 +63,9 @@ namespace FYI.web.Api.Controllers
 
                 return StatusCode(201);
             }
-            catch (Exception ex)
+            catch (Exception x)
             {
-                return BadRequest(ex);
+                return BadRequest(x);
             }
         }
 
@@ -79,9 +79,9 @@ namespace FYI.web.Api.Controllers
 
                 return StatusCode(204);
             }
-            catch (Exception ex)
+            catch (Exception x)
             {
-                return BadRequest(ex);
+                return BadRequest(x);
             }
         }
 
@@ -95,9 +95,9 @@ namespace FYI.web.Api.Controllers
 
                 return StatusCode(204);
             }
-            catch (Exception ex)
+            catch (Exception x)
             {
-                return BadRequest(ex);
+                return BadRequest(x);
 
             }
 
