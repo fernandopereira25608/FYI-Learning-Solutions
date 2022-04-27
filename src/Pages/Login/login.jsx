@@ -1,4 +1,5 @@
 import './login.css';
+import LoginGoogle from '../../Components/Google-Login/login'
 import imgLogin from "../../Images/Login/imgLogin.png"
 import Logo from "../../Images/Login/Logo.png"
 
@@ -62,7 +63,7 @@ export default class Login extends Component {
                             <div className="login-box-inputs">
                                 <label for=""> </label> <input type="password" name=" senha " placeholder=" Senha: " />
                             </div>
-                            {/* <LoginGoogle /> */}
+                            <LoginGoogle />
                             {/* <div className='conteudo'> */}
                             <div class="login-text">
                                 <h3>Esqueceu a senha?</h3>
