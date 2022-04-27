@@ -3,12 +3,43 @@ import imgLogin from "../../Images/Login/imgLogin.png"
 import Logo from "../../Images/Login/Logo.png"
 
 import { useHistory } from 'react-router-dom';
-import LoginGoogle from '../../Components/Google-Login/login.js';
+import axios from 'axios';
+import { Component } from 'react';
 
-function Login() {
+export default class Login extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            email : '',
+            senha : ''
+        };
+    };
     
-    const history = useHistory();
 
+    efetuarLogin = (event) => {
+        event.preventDefault();
+
+        axios.post('http://localhost:5000/api/LoginsControllers', {
+            email : this.state.email,
+            senha : this.state.senha
+        })
+
+        .then(resposta => {
+            if (resposta.status === 200 ) {
+                console.log('Login Realizado com Sucesso')
+            }
+        })
+
+        .catch(() => {
+            this.setState({ erroMensagem : "E-mail e/ou Senha inválidos!"})
+        })
+    }
+
+    atualizaStateCampo = (campo) => {
+        this.setState({ [campo.target.name] : campo.target.value })
+    }
+
+    render(){
     return (
 
         <main>
@@ -18,7 +49,7 @@ function Login() {
 
                 <div className='login-box-fundo'>
                     <div className='login-espaco-entre'>
-                        <img className='login-img-logo' src={Logo} alt="" onClick={() => history.push('/')}/>
+                        <img className='login-img-logo' src={Logo} alt="" />
 
                         <form className='form-box'>
 
@@ -31,7 +62,7 @@ function Login() {
                             <div className="login-box-inputs">
                                 <label for=""> </label> <input type="password" name=" senha " placeholder=" Senha: " />
                             </div>
-                            <LoginGoogle />
+                            {/* <LoginGoogle /> */}
                             {/* <div className='conteudo'> */}
                             <div class="login-text">
                                 <h3>Esqueceu a senha?</h3>
@@ -39,6 +70,7 @@ function Login() {
 
                             <div>
                                 <button className="login-btn-entrar"> Entrar </button>
+                                <p style={{ color : 'red' }}>{this.state.erroMensagem}</p>
                             </div>
 
                             <div className='login-conteudinho'>
@@ -46,7 +78,7 @@ function Login() {
                                 <p>ou</p>
 
                                 {/* <h3 onClick={() => history.push('/Cadastro')}>Cadastre-se agora</h3> */}
-                                <a onClick={() => history.push('/Cadastro')}>Cadastre-se agora</a>
+                                <a>Cadastre-se agora</a>
                                 
 
                             </div>
@@ -61,8 +93,9 @@ function Login() {
     )
 
 }
+}
 
-export default Login;
+
 
 
 
