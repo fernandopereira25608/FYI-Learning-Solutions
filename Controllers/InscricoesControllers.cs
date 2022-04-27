@@ -10,11 +10,13 @@ using FYI.web.Api.Domains;
 using Microsoft.AspNetCore.Authorization;
 using FYI.web.Api.Interfaces;
 using FYI.web.Api.Repositories;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace FYI.web.Api.Controllers
 {
     [Produces("application/json")]
 
+    [Authorize(Roles = "1")]
     [Route("api/[controller]")]
     [ApiController]
     public class InscricoesControllers : ControllerBase
@@ -56,7 +58,8 @@ namespace FYI.web.Api.Controllers
             }
         }
 
-        [HttpGet("{idt}")]
+        [Authorize(Roles = "1,2")]
+        [HttpGet("turma{idt}")]
         public IActionResult GetByIdt(byte idt)
         {
             try
@@ -69,8 +72,29 @@ namespace FYI.web.Api.Controllers
             }
         }
 
+        [Authorize(Roles = "3")]
+        [HttpGet("proprias")]
+        public IActionResult ListarProprias()
+        {
+            try
+            {
+                int idUsuario = Convert.ToInt32(HttpContext.User.Claims.First(b => b.Type == JwtRegisteredClaimNames.Jti).Value);
+
+                return Ok(_inscricaoRepository.ListarProprias(idUsuario));
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(new {
+                    msg = "Não foi possivel encontrar suas inscrições :(, por favor verifique se está logado!!!!", erro
+                });
+            }
+        }
+
+
+
         // PUT: api/InscricoesControllers/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize(Roles = "1,2")]
         [HttpPut("{id}")]
         public IActionResult Put(int id, InscricaoDomain inscricaoAtualizada)
         {
@@ -106,6 +130,7 @@ namespace FYI.web.Api.Controllers
         }
 
         // DELETE: api/InscricoesControllers/5
+        [Authorize(Roles = "1,2")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

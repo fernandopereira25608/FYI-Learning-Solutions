@@ -9,11 +9,13 @@ using FYI.web.Api.Contexts;
 using FYI.web.Api.Domains;
 using FYI.web.Api.Interfaces;
 using FYI.web.Api.Repositories;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FYI.web.Api.Controllers
 {
     [Produces("application/json")]
 
+    [Authorize (Roles= "1")]
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosControllers : ControllerBase

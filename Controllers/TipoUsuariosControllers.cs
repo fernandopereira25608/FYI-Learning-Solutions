@@ -15,6 +15,7 @@ namespace FYI.web.Api.Controllers
 {
     [Produces("application/json")]
 
+    [Authorize(Roles = "1")]
     [Route("api/[controller]")]
     [ApiController]
 

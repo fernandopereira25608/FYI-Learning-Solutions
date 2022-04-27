@@ -12,6 +12,8 @@ namespace FYI.web.Api.Interfaces
 
         List<InscricaoDomain> Listar();
 
+        List<InscricaoDomain> ListarProprias(int idUsuario);
+
         void Cadastrar(InscricaoDomain novaInscricao);
 
         void Deletar(int id);
@@ -21,5 +23,6 @@ namespace FYI.web.Api.Interfaces
         InscricaoDomain BuscarPorId(int id);
 
         InscricaoDomain BuscarPorTurma(byte idt);
+
     }
 }

@@ -15,6 +15,7 @@ namespace FYI.web.Api.Controllers
 {
     [Produces("application/json")]
 
+    [Authorize(Roles = "1,2")]
     [Route("api/[controller]")]
     [ApiController]
     public class TurmasControllers : ControllerBase
@@ -25,7 +26,6 @@ namespace FYI.web.Api.Controllers
         {
             _turmaRepository = new TurmaRepository();
         }
-
 
         // GET: api/TurmasControllers
         [HttpGet]

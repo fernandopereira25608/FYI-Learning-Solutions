@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using FYI.web.Api.Domains;
 using FYI.web.Api.Interfaces;
 using FYI.web.Api.Contexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace FYI.web.Api.Repositories
 {
@@ -24,6 +25,16 @@ namespace FYI.web.Api.Repositories
             ctx.Inscricaos.Add(novaInscricao);
 
             ctx.SaveChanges();
+        }
+
+        public List<InscricaoDomain> ListarProprias(int idUsuario)
+        {
+            return ctx.Inscricaos
+                .Include(u => u.IdUsuarioNavigation)
+                .Include(u => u.IdTurmaNavigation.IdCursoNavigation)
+                .Include(u => u.IdTurmaNavigation)
+                .Where(u => u.IdUsuario == idUsuario)
+                .ToList();
         }
 
         public void Deletar(int id)
