@@ -15,5 +15,7 @@ namespace FYI.web.Api.Interfaces
         void Deletar(byte id);
 
         CategoriumDomain BuscarPorId(byte id);
+
+        CategoriumDomain BuscarPorTitulo(string titulo);
     }
 }

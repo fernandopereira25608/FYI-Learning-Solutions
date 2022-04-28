@@ -29,6 +29,11 @@ namespace FYI.web.Api.Repositories
             return ctx.Categoria.FirstOrDefault(e => e.IdCategoria == id);
         }
 
+        public CategoriumDomain BuscarPorTitulo(string titulo)
+        {
+            return ctx.Categoria.FirstOrDefault(k => k.Titulo == titulo);
+        }
+
         public void Cadastrar(CategoriumDomain novaCategoria)
         {
             ctx.Categoria.Update(novaCategoria);

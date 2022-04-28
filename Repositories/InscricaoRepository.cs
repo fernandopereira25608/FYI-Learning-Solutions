@@ -67,7 +67,7 @@ namespace FYI.web.Api.Repositories
 
         public InscricaoDomain BuscarPorTurma(byte idt)
         {
-            return ctx.Inscricaos.FirstOrDefault(tu => tu.IdTurma == idt);
+            return ctx.Inscricaos.FirstOrDefault(tu => tu.IdTurmaNavigation.IdTurma == idt);
         }
     }
 }

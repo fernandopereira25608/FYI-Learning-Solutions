@@ -16,7 +16,6 @@ namespace FYI.web.Api.Controllers
 {
     [Produces("application/json")]
 
-    [Authorize(Roles = "1")]
     [Route("api/[controller]")]
     [ApiController]
     public class InscricoesControllers : ControllerBase
@@ -28,6 +27,7 @@ namespace FYI.web.Api.Controllers
             _inscricaoRepository = new InscricaoRepository();
         }
 
+        //[Authorize(Roles = "1,2")]
         // GET: api/InscricoesControllers
         [HttpGet]
         public IActionResult Get()
@@ -43,6 +43,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
+        //[Authorize(Roles = "1,2")]
         // GET: api/InscricoesControllers/5
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
@@ -58,7 +59,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
-        [Authorize(Roles = "1,2")]
+        //[Authorize(Roles = "1,2")]
         [HttpGet("turma{idt}")]
         public IActionResult GetByIdt(byte idt)
         {
@@ -72,7 +73,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
-        [Authorize(Roles = "3")]
+        //[Authorize(Roles = "3")]
         [HttpGet("proprias")]
         public IActionResult ListarProprias()
         {
@@ -94,7 +95,7 @@ namespace FYI.web.Api.Controllers
 
         // PUT: api/InscricoesControllers/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [Authorize(Roles = "1,2")]
+        //[Authorize(Roles = "1,2")]
         [HttpPut("{id}")]
         public IActionResult Put(int id, InscricaoDomain inscricaoAtualizada)
         {
@@ -111,6 +112,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
+        //[Authorize(Roles = "1")]
         // POST: api/InscricoesControllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
@@ -130,7 +132,7 @@ namespace FYI.web.Api.Controllers
         }
 
         // DELETE: api/InscricoesControllers/5
-        [Authorize(Roles = "1,2")]
+        //[Authorize(Roles = "1,2")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

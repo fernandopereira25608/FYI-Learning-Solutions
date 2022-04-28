@@ -15,7 +15,6 @@ namespace FYI.web.Api.Controllers
 {
     [Produces("application/json")]
 
-    [Authorize(Roles = "1")]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriumsControllers : ControllerBase
@@ -41,6 +40,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         // GET: api/CategoriumsControllers/5
         [HttpGet("{id}")]
         public IActionResult GetById(byte id)
@@ -55,7 +55,20 @@ namespace FYI.web.Api.Controllers
             }
         }
 
+        [HttpGet("Titulo")]
+        public IActionResult GetByTitulo(string titulo)
+        {
+            try
+            {
+                return Ok(_categoriaRepository.BuscarPorTitulo(titulo));
+            }
+            catch(Exception erro)
+            {
+                return BadRequest(erro);
+            }
+        }
 
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(CategoriumDomain novaCategoria)
         {
@@ -73,6 +86,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         [HttpPut("{id}")]
         public IActionResult Atualizar(byte id, CategoriumDomain CategoriaAtualizada)
         {
@@ -88,6 +102,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         // DELETE: api/CategoriumsControllers/5
         [HttpDelete("{id}")]
         public IActionResult Delete(byte id)

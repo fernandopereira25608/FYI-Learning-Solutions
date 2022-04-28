@@ -15,7 +15,6 @@ namespace FYI.web.Api.Controllers
 {
     [Produces("application/json")]
 
-    [Authorize(Roles = "1,2")]
     [Route("api/[controller]")]
     [ApiController]
     public class TurmasControllers : ControllerBase
@@ -27,6 +26,7 @@ namespace FYI.web.Api.Controllers
             _turmaRepository = new TurmaRepository();
         }
 
+        [Authorize(Roles ="1,2")]
         // GET: api/TurmasControllers
         [HttpGet]
         public IActionResult Get()
@@ -42,6 +42,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
+        [Authorize(Roles = "1,2")]
         // GET: api/TurmasControllers/5
         [HttpGet("{id}")]
         public IActionResult GetById(byte id)
@@ -57,6 +58,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
+        [Authorize(Roles = "1,2")]
         // PUT: api/TurmasControllers/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
@@ -75,6 +77,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
+        [Authorize(Roles = "1,2")]
         // POST: api/TurmasControllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
@@ -93,6 +96,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
+        [Authorize(Roles = "1,2")]
         // DELETE: api/TurmasControllers/5
         [HttpDelete("{id}")]
         public IActionResult Delete(byte id)

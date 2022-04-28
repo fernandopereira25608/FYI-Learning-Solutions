@@ -15,7 +15,6 @@ namespace FYI.web.Api.Controllers
 {
     [Produces("application/json")]
 
-    [Authorize (Roles= "1")]
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosControllers : ControllerBase
@@ -28,6 +27,7 @@ namespace FYI.web.Api.Controllers
             _usuarioRepository = new UsuarioRepository();
         }
 
+        [Authorize (Roles= "1")]
         [HttpGet]
         public IActionResult Get()
         {
@@ -41,7 +41,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
-
+        [Authorize(Roles = "1")]
         [HttpGet("{id}")]
         public IActionResult GetById(short id)
         {
@@ -55,7 +55,8 @@ namespace FYI.web.Api.Controllers
             }
         }
 
-        [HttpGet("{Email}")]
+        [Authorize(Roles = "1")]
+        [HttpGet("Email")]
         public IActionResult GetByEmail(string Email)
         {
             try
@@ -83,6 +84,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         [HttpPut("{id}")]
         public IActionResult Put(short id, UsuarioDomain usuarioAtualizado)
         {
@@ -98,7 +100,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
-
+        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Delete(short id)
         {
