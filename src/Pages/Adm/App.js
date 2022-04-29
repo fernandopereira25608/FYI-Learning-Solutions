@@ -8,6 +8,8 @@ import Hat from '../../Images/icons/Hat.svg'
 import Turmas from '../../Images/icons/Turmas.svg'
 import Users from '../../Images/icons/Users.svg'
 
+import React from 'react';
+
 import { useHistory } from 'react-router-dom';
 
 import Header from '../../Components/Header/Header';

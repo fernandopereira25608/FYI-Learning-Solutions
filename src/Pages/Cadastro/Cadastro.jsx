@@ -2,12 +2,14 @@ import './Cadastro.css';
 import Logo from "../../Images/Cadastro/Logo.png"
 import Photo from "../../Images/Cadastro/Photo.png"
 
+import React from 'react';
+
 import { useHistory } from 'react-router-dom';
 
 
-function Cadastro() {
 
-    const history = useHistory();
+
+function Cadastro() {
 
     return (
 
@@ -15,7 +17,7 @@ function Cadastro() {
             <section className='cadastro-cor-fundo'>
                 <div className='cadastro-box-fundo'>
                     <div className='cadastro-espaco-entre'>
-                        <img className='cadastro-img-logo' src={Logo} alt="" onClick={() => history.push('/')}/>
+                        <img className='cadastro-img-logo' src={Logo} alt="" />
 
                         <form action="" className='cadastro-form'>
 

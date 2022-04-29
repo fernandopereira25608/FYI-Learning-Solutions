@@ -1,6 +1,8 @@
 import logo from '../../Images/Logo.svg'; 
 import LoginButton from '../Google-Login/login';
 
+import React from 'react'
+
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';

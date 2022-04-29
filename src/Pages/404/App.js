@@ -2,6 +2,8 @@ import './404Style.css'
 
 import { useHistory } from 'react-router-dom';
 
+import React from 'react';
+
 import Undraw from '../../Images/404/undraw.png'
 
 function PageNotFound() {

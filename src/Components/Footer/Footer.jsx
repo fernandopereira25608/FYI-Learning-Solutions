@@ -8,6 +8,8 @@ import Instagram from '../../Images/socials/Instagram.png'
 import Youtube from '../../Images/socials/Youtube.png'
 import './Footer.css'
 
+
+
 function Footer() {
     return (
 

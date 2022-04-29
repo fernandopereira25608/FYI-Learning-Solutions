@@ -6,8 +6,11 @@ import Logo from "../../Images/Login/Logo.png"
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { Component } from 'react';
+import React from 'react';
 
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
+
 
 
 export default class Login extends Component {
@@ -41,11 +44,15 @@ export default class Login extends Component {
         })
     }
 
+    
+
     atualizaStateCampo = (campo) => {
         this.setState({ [campo.target.name] : campo.target.value })
     }
 
     render(){
+
+        
     return (
 
         <main>
@@ -83,7 +90,7 @@ export default class Login extends Component {
 
                                 <p>ou</p>
 
-                                {/* <h3 onClick={() => history.push('/Cadastro')}>Cadastre-se agora</h3> */}
+                                {/* <h3>Cadastre-se agora</h3> */}
                                 <a>Cadastre-se agora</a>
                                 
 

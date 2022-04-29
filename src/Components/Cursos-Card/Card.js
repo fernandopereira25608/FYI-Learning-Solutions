@@ -3,6 +3,8 @@ import Clock from "../../Images/icons/Clock.svg"
 
 import Campanha from '../../Images/campaign-creators.png'
 
+import React from 'react'
+
 import './Card.css'
 
 
