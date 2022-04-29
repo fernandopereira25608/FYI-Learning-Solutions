@@ -15,7 +15,6 @@ namespace FYI.web.Api.Controllers
 {
     [Produces("application/json")]
 
-    [Authorize(Roles = "1")]
     [Route("api/[controller]")]
     [ApiController]
     public class CursosControllers : ControllerBase
@@ -27,7 +26,6 @@ namespace FYI.web.Api.Controllers
             _cursoRepository = new CursoRepository();
         }
 
-        [Authorize(Roles = "1,2")]
         // GET: api/CursosControllers
         [HttpGet]
         public IActionResult Get()
@@ -42,6 +40,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
+        [Authorize(Roles ="1")]
         // GET: api/CursosControllers/5
         [HttpGet("{id}")]
         public IActionResult GetById(byte id)
@@ -56,7 +55,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
-
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(CursoDomain novoCurso)
         {
@@ -72,7 +71,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
-
+        [Authorize(Roles = "1")]
         [HttpPut("{id}")]
         public IActionResult Atualizar(byte id, CursoDomain CursoAtualizado)
         {
@@ -80,7 +79,7 @@ namespace FYI.web.Api.Controllers
             {
                 _cursoRepository.Atualizar(id, CursoAtualizado);
 
-                return StatusCode(204);
+                return StatusCode(200);
             }
             catch (Exception x)
             {
@@ -88,6 +87,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         // DELETE: api/CursosControllers/5
         [HttpDelete("{id}")]
         public IActionResult Delete(byte id)

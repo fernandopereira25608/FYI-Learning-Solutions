@@ -13,15 +13,21 @@ namespace FYI.web.Api.Repositories
         FYIContext ctx = new FYIContext();
         public void Atualizar(byte id, CursoDomain CursoAtualizado)
         {
-            CursoDomain CursoBuscado = ctx.Cursos.Find(id);
+            CursoDomain CursoProcurado = ctx.Cursos.Find(id);
 
-            // Verifica se o nome do usuário foi informado
             if (CursoAtualizado.NomeCurso != null)
             {
-                // Atribui os novos valores ao campos existentes
-                CursoBuscado.NomeCurso = CursoAtualizado.NomeCurso;
+                CursoProcurado.NomeCurso = CursoAtualizado.NomeCurso;
             }
 
+            if (CursoProcurado.Descricao != null)
+            {
+                CursoProcurado.Descricao = CursoAtualizado.Descricao;
+            }
+
+            ctx.Cursos.Update(CursoProcurado);
+
+            ctx.SaveChanges();
         }
 
         public CursoDomain BuscarPorId(byte id)

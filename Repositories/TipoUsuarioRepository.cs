@@ -27,23 +27,23 @@ namespace FYI.web.Api.Repositories
 
         public void Deletar(byte id)
         {
-            TipoUsuarioDomain tipoUsuarioBuscado = ctx.TipoUsuarios.Find(id);
+            TipoUsuarioDomain tipoUsuarioProcurado = ctx.TipoUsuarios.Find(id);
 
-            ctx.TipoUsuarios.Remove(tipoUsuarioBuscado);
+            ctx.TipoUsuarios.Remove(tipoUsuarioProcurado);
 
             ctx.SaveChanges();
         }
 
         public void Atualizar(byte id, TipoUsuarioDomain tipoUsuarioAtualizado)
         {
-            TipoUsuarioDomain tipoUsuarioBuscado = ctx.TipoUsuarios.Find(id);
+            TipoUsuarioDomain tipoUsuarioProcurado = ctx.TipoUsuarios.Find(id);
             
             if (tipoUsuarioAtualizado.Titulo != null)
             {
-                tipoUsuarioBuscado.Titulo = tipoUsuarioAtualizado.Titulo;
+                tipoUsuarioProcurado.Titulo = tipoUsuarioAtualizado.Titulo;
             }
 
-            ctx.TipoUsuarios.Update(tipoUsuarioBuscado);
+            ctx.TipoUsuarios.Update(tipoUsuarioProcurado);
 
             ctx.SaveChanges();
         }

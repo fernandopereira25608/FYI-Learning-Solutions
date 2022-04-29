@@ -12,15 +12,15 @@ namespace FYI.web.Api.Repositories
         public void Atualizar(byte id, CategoriumDomain CategoriaAtualizada)
         {
 
-            CategoriumDomain CategoriaBuscada = ctx.Categoria.Find(id);
-
-            // Verifica se o nome do usuário foi informado
+            CategoriumDomain CategoriaProcurada = ctx.Categoria.Find(id);
+           
             if (CategoriaAtualizada.Titulo != null)
             {
-                // Atribui os novos valores ao campos existentes
-                CategoriaBuscada.Titulo = CategoriaAtualizada.Titulo;
+                CategoriaProcurada.Titulo = CategoriaAtualizada.Titulo;
             }
+            ctx.Categoria.Update(CategoriaProcurada);
 
+            ctx.SaveChanges();
         }
 
 

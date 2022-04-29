@@ -48,14 +48,19 @@ namespace FYI.web.Api.Repositories
 
         public void Atualizar(int id, InscricaoDomain inscricaoAtualizada)
         {
-            InscricaoDomain inscricaoBuscada = ctx.Inscricaos.Find(id);
+            InscricaoDomain inscricaoProcurada = ctx.Inscricaos.Find(id);
 
             if (inscricaoAtualizada.DataInscricao != null)
             {
-                inscricaoBuscada.DataInscricao = inscricaoAtualizada.DataInscricao;
+                inscricaoProcurada.DataInscricao = inscricaoAtualizada.DataInscricao;
             }
 
-            ctx.Inscricaos.Update(inscricaoBuscada);
+            if(inscricaoProcurada.IdTurma != null)
+            {
+                inscricaoProcurada.IdTurma = inscricaoAtualizada.IdTurma;
+            }
+
+            ctx.Inscricaos.Update(inscricaoProcurada);
 
             ctx.SaveChanges();
         }

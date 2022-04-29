@@ -94,7 +94,7 @@ namespace FYI.web.Api.Controllers
             {                
                 _categoriaRepository.Atualizar(id, CategoriaAtualizada);
 
-                return StatusCode(204);
+                return StatusCode(200);
             }
             catch (Exception x)
             {
