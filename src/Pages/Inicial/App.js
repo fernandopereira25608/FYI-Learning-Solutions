@@ -54,11 +54,21 @@ function Inicial() {
         </div>
         <div class="inicial-cursos-main">
           <div class="inicial-cursos-content">
-            <h1>Cursos:</h1>
+          <h1>Cursos:</h1>
+            <div class="inicial-cards-container">
+              <div class="inicial-card-content">
+                <Card />
+                <Card />
+              </div>
+              <div class="inicial-card-content">
+                <Card />
+                <Card />
+              </div>
+            </div>
             
-              <Card />
-              <Card />
             
+            
+              
           </div>
         </div>
       </div>

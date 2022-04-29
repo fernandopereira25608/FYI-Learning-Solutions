@@ -77,7 +77,7 @@
 }
 
 .inicial-cursos-content{
-  width: 90%;
+  width: 80%;
   height: 90%;
   display: flex;
   align-items: flex-start;
@@ -88,6 +88,19 @@
 .inicial-cursos-content h1{
   font-family: 'Poppins';
   font-weight: 600;
+}
+
+.inicial-cards-container{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.inicial-card-content{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 .inicial-cursos-container{
@@ -104,6 +117,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  position: inherit;
 }
 
 .Empz-img{

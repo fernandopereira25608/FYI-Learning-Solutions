@@ -7,6 +7,8 @@ import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { Component } from 'react';
 
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
 export default class Login extends Component {
     constructor(props){
         super(props);
