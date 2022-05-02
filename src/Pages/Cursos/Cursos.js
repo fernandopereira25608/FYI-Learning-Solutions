@@ -2,7 +2,6 @@ import './Cursos.css'
 import Header from "../../Components/Header/Header.jsx"
 import Footer from "../../Components/Footer/Footer.jsx"
 
-import Modal from 'react-modal';
 import React from 'react';
 import ReactDOM from 'react-dom';
 

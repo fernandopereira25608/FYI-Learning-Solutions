@@ -1,4 +1,5 @@
 import { GoogleLogin } from 'react-google-login'
+import Header from '../Header/Header'
 
 import React from 'react'
 
@@ -14,7 +15,14 @@ function LoginButton() {
     const onFailure = (res) => {
         console.log("Login Failed! res: ", res)
     }
+
+    var profileObj = profileObj;
+
+    var image_profile = profileObj.imageURL;
      
+    if (GoogleLogin.usuariocheck == true) {
+        
+    }
     
 
     return (

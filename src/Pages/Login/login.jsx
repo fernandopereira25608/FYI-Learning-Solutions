@@ -3,6 +3,8 @@ import LoginGoogle from '../../Components/Google-Login/login'
 import imgLogin from "../../Images/Login/imgLogin.png"
 import Logo from "../../Images/Login/Logo.png"
 
+import LoginButton from '../../Components/Google-Login/login';
+
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { Component } from 'react';

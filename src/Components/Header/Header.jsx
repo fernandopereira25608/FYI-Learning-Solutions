@@ -1,5 +1,6 @@
 import logo from '../../Images/Logo.svg'; 
 import LoginButton from '../Google-Login/login';
+import { GoogleLogin } from 'react-google-login'
 
 import React from 'react'
 
