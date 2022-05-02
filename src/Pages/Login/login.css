@@ -155,4 +155,13 @@
     box-shadow: 1px 1px 3px #000;
 }
 
-.close:hover { background: #00d9ff; }
+.close:hover { background: #8150A3; }
+
+.esqueceusenha-box {
+    display : flex;
+    flex-direction: column;
+    justify-content : space-between;
+    align-items: right;
+    height: 7vh;
+    width: 22vw;
+}

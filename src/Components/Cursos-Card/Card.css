@@ -46,7 +46,7 @@
   }
 
   .info-itens h3{
-    font-family: ;
+    font-family: sans-serif;
   }
   
   .clock-icon{
@@ -59,3 +59,6 @@
     transform: scale(1.1);
     transition: 3s;
   }
+
+
+  

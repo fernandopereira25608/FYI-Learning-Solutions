@@ -85,8 +85,17 @@ export default class Login extends Component {
 <div id="openModal" class="modalDialog">
     <div>
         <a href="#close" title="Close" class="close">X</a>
-        <h2>Descrição</h2>
-        <p>Este curso oferece informações detalhadas e interativas sobre como desenvolver extensões para todas as versões do Microsoft Dynamics, com foco em métodos de extensão documentados no SDK do Microsoft Dynamics. Ele fornece instruções sobre o uso de várias Operações Comuns de Plataforma, sobre como consultar e executar essas operações, assim como sobre o desenvolvimento do entendimento dos fluxos de trabalho e da implementação do processo comercial. Além disso, o curso descreve como usar plug-ins, programação de evento de aplicativo, extensões cliente e recursos da Web. Finalmente, ele inclui uma visão geral resumida da integração entre o Windows Azure e o Microsoft Dynamics.</p>
+        <h2>Trocar a Senha</h2>
+        <p>Identifique-se para receber um e-mail com as instruções e o link para criar uma nova senha.</p>
+        <p>e-mail:</p>
+        <div className="esqueceusenha-box">
+                                <label for=""> </label> <input type="email" name=" email " placeholder=" Email: " />
+                                <div class="modal-footer">
+        
+        <button type="button" class="btn btn-primary">enviar senha</button>
+      </div>
+                            </div>
+        
     </div>
 </div> 
 
