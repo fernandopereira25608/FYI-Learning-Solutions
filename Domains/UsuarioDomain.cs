@@ -13,6 +13,7 @@ namespace FYI.web.Api.Domains
             Inscricaos = new HashSet<InscricaoDomain>();
         }
 
+        [Required(ErrorMessage = "Informe qual tipo de usuário é pertencente desta pessoa!!!!")]
         public byte? IdTipoUsuario { get; set; }
 
 

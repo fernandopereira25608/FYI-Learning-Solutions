@@ -55,6 +55,7 @@ namespace FYI.web.Api.Controllers
             }
         }
 
+        //api/UsuariosControllers/Email?Email=
         [Authorize(Roles = "1")]
         [HttpGet("Email")]
         public IActionResult GetByEmail(string Email)

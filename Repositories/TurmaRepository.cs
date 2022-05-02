@@ -35,14 +35,19 @@ namespace FYI.web.Api.Repositories
 
         public void Atualizar(byte id, TurmaDomain turmaAtualizada)
         {
-            TurmaDomain turmaBuscada = ctx.Turmas.Find(id);
+            TurmaDomain turmaProcurada = ctx.Turmas.Find(id);
+
+            if (turmaAtualizada.IdCurso != null)
+            {
+                turmaProcurada.IdCurso = turmaAtualizada.IdCurso;
+            }
 
             if (turmaAtualizada.NomeTurma != null)
             {
-                turmaBuscada.NomeTurma = turmaAtualizada.NomeTurma;
+                turmaProcurada.NomeTurma = turmaAtualizada.NomeTurma;
             }
 
-            ctx.Turmas.Update(turmaBuscada);
+            ctx.Turmas.Update(turmaProcurada);
 
             ctx.SaveChanges();
         }
@@ -51,5 +56,11 @@ namespace FYI.web.Api.Repositories
         {
             return ctx.Turmas.FirstOrDefault(tu => tu.IdTurma == id);
         }
+
+        public TurmaDomain BuscarPorCurso(byte idc)
+        {
+            return ctx.Turmas.FirstOrDefault(en =>en.IdCursoNavigation.IdCurso == idc);   
+        }
+
     }
 }

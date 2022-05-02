@@ -59,6 +59,21 @@ namespace FYI.web.Api.Controllers
         }
 
         [Authorize(Roles = "1,2")]
+        [HttpGet("Curso{idc}")]
+        public IActionResult GetByIdc(byte idc)
+        {
+            try
+            {
+                return Ok(_turmaRepository.BuscarPorCurso(idc));
+            }
+
+            catch(Exception erro)
+            {
+                return BadRequest(erro);
+            }
+        }
+
+        [Authorize(Roles = "1,2")]
         // PUT: api/TurmasControllers/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

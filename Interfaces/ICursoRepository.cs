@@ -15,5 +15,9 @@ namespace FYI.web.Api.Interfaces
         void Deletar(byte id);
 
         CursoDomain BuscarPorId(byte id);
+
+        CursoDomain BuscarPorCategoria(byte idcat);
+
+        CursoDomain BuscarPorNome(string nomeCurso);
     }
 }

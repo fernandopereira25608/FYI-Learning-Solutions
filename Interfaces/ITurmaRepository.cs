@@ -19,5 +19,7 @@ namespace FYI.web.Api.Interfaces
 
         TurmaDomain BuscarPorId(byte id);
 
+        TurmaDomain BuscarPorCurso(byte idc);
+
     }
 }

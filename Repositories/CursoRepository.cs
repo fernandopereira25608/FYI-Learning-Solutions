@@ -35,6 +35,16 @@ namespace FYI.web.Api.Repositories
             return ctx.Cursos.FirstOrDefault(e => e.IdCurso == id);
         }
 
+        public CursoDomain BuscarPorCategoria(byte idcat)
+        {
+            return ctx.Cursos.FirstOrDefault(k => k.IdCategoriaNavigation.IdCategoria == idcat);
+        }
+
+        public CursoDomain BuscarPorNome(string nomeCurso)
+        {
+            return ctx.Cursos.FirstOrDefault(c => c.NomeCurso == nomeCurso);
+        }
+
         public void Cadastrar(CursoDomain novoCurso)
         {
             ctx.Cursos.Update(novoCurso);

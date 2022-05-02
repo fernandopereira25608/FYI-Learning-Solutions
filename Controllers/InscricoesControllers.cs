@@ -60,7 +60,7 @@ namespace FYI.web.Api.Controllers
         }
 
         [Authorize(Roles = "1,2")]
-        [HttpGet("turma{idt}")]
+        [HttpGet("Turma{idt}")]
         public IActionResult GetByIdt(byte idt)
         {
             try

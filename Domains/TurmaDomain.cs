@@ -14,6 +14,8 @@ namespace FYI.web.Api.Domains
         }
 
         public byte IdTurma { get; set; }
+
+        [Required(ErrorMessage = "Informe o Id do curso o qual pertence esta turma!!!!")]
         public byte? IdCurso { get; set; }
 
         [Required(ErrorMessage = "Informe o nome da turma!!!!")]

@@ -55,6 +55,32 @@ namespace FYI.web.Api.Controllers
             }
         }
 
+        [HttpGet("Categoria{idcat}")]
+        public IActionResult GetByCategoria(byte idcat)
+        {
+            try
+            {
+                return Ok(_cursoRepository.BuscarPorCategoria(idcat));
+            }
+            catch(Exception erro)
+            {
+                return BadRequest(erro);
+            }
+        }
+
+        [HttpGet("nomeCurso")]
+        public IActionResult GetByName(string nomeCurso)
+        {
+            try
+            {
+                return Ok(_cursoRepository.BuscarPorNome(nomeCurso));
+            }
+            catch(Exception erro)
+            {
+                return BadRequest(erro);
+            }
+        }
+
         [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(CursoDomain novoCurso)
