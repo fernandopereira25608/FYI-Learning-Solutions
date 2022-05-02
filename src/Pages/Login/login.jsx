@@ -80,7 +80,16 @@ export default class Login extends Component {
                             <LoginGoogle />
                             {/* <div className='conteudo'> */}
                             <div class="login-text">
-                                <h3>Esqueceu a senha?</h3>
+                                <a href="#openModal">Esqueceu a senha?</a>
+
+<div id="openModal" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <h2>Descrição</h2>
+        <p>Este curso oferece informações detalhadas e interativas sobre como desenvolver extensões para todas as versões do Microsoft Dynamics, com foco em métodos de extensão documentados no SDK do Microsoft Dynamics. Ele fornece instruções sobre o uso de várias Operações Comuns de Plataforma, sobre como consultar e executar essas operações, assim como sobre o desenvolvimento do entendimento dos fluxos de trabalho e da implementação do processo comercial. Além disso, o curso descreve como usar plug-ins, programação de evento de aplicativo, extensões cliente e recursos da Web. Finalmente, ele inclui uma visão geral resumida da integração entre o Windows Azure e o Microsoft Dynamics.</p>
+    </div>
+</div> 
+
                             </div>
 
                             <div>

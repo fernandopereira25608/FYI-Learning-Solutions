@@ -10,7 +10,7 @@ import './Card.css'
 
 function Card() {
     return (
-        <div class="curso-card">
+        <div class="curso-card" onClick="#openmodal">
             <div class="data-content">
                 <h3>31<br /> April</h3>
                 <img src={Calendar} class="calendar-icon" />

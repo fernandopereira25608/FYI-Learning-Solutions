@@ -60,17 +60,14 @@ function Inicial() {
             <div class="inicial-cards-container">
               <div class="inicial-card-content">
                 <Card />
-                <Card />
+                <Card />    
               </div>
               <div class="inicial-card-content">
                 <Card />
                 <Card />
               </div>
+
             </div>
-            
-            
-            
-              
           </div>
         </div>
       </div>
