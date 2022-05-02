@@ -58,6 +58,35 @@ import React from 'react';
                             <form className='form-box'>
 
 
+<<<<<<< HEAD
+=======
+                            <div className="login-box-inputs">
+                                <label for=""> </label> <input type="password" name=" senha " placeholder=" Senha: " />
+                            </div>
+                            <LoginGoogle />
+                            {/* <div className='conteudo'> */}
+                            <div class="login-text">
+                                <a href="#openModal">Esqueceu a senha?</a>
+
+<div id="openModal" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <h2>Trocar a Senha</h2>
+        <p>Identifique-se para receber um e-mail com as instruções e o link para criar uma nova senha.</p>
+        <p>e-mail:</p>
+        <div className="esqueceusenha-box">
+                                <label for=""> </label> <input type="email" name=" email " placeholder=" Email: " />
+                                <div class="modal-footer">
+        
+        <button type="button" class="btn btn-primary">enviar senha</button>
+      </div>
+                            </div>
+        
+    </div>
+</div> 
+
+                            </div>
+>>>>>>> 43c3392d314be8d8d195d2b14fa9cad00af700f7
 
                                 <div className="login-box-inputs">
                                     <label for=""> </label> <input type="email" name=" email " placeholder=" Email: " />
