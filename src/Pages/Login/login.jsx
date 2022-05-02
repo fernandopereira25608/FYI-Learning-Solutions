@@ -15,100 +15,90 @@ import React from 'react';
 
 
 
-export default class Login extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            email : '',
-            senha : ''
-        };
-    };
+    function Login() {
 
-    
-    
+        const history = useHistory();
 
-    efetuarLogin = (event) => {
-        event.preventDefault();
+    // efetuarLogin = (event) => {
+    //     event.preventDefault();
 
-        axios.post('http://localhost:5000/api/LoginsControllers', {
-            email : this.state.email,
-            senha : this.state.senha
-        })
+    //     axios.post('http://localhost:5000/api/LoginsControllers', {
+    //         email: this.state.email,
+    //         senha: this.state.senha
+    //     })
 
-        .then(resposta => {
-            if (resposta.status === 200 ) {
-                console.log('Login Realizado com Sucesso')
-            }
-        })
+    //         .then(resposta => {
+    //             if (resposta.status === 200) {
+    //                 console.log('Login Realizado com Sucesso')
+    //             }
+    //         })
 
-        .catch(() => {
-            this.setState({ erroMensagem : "E-mail e/ou Senha inválidos!"})
-        })
-    }
-
-    
-
-    atualizaStateCampo = (campo) => {
-        this.setState({ [campo.target.name] : campo.target.value })
-    }
-
-    render(){
-
-        
-    return (
-
-        <main>
-            <section className='login-cor-fundo'>
-
-                <div className='login-img-login' ><img src={imgLogin} alt="img" /></div>
-
-                <div className='login-box-fundo'>
-                    <div className='login-espaco-entre'>
-                        <img className='login-img-logo' src={Logo} alt="" />
-
-                        <form className='form-box'>
+    //         .catch(() => {
+    //             this.setState({ erroMensagem: "E-mail e/ou Senha inválidos!" })
+    //         })
+    // }
 
 
 
-                            <div className="login-box-inputs">
-                                <label for=""> </label> <input type="email" name=" email " placeholder=" Email: " />
-                            </div>
+    // atualizaStateCampo = (campo) => {
+    //     this.setState({ [campo.target.name]: campo.target.value })
+    // }
 
-                            <div className="login-box-inputs">
-                                <label for=""> </label> <input type="password" name=" senha " placeholder=" Senha: " />
-                            </div>
-                            <LoginGoogle />
-                            {/* <div className='conteudo'> */}
-                            <div class="login-text">
-                                <h3>Esqueceu a senha?</h3>
-                            </div>
+        return (
 
-                            <div>
-                                <button className="login-btn-entrar"> Entrar </button>
-                                <p style={{ color : 'red' }}>{this.state.erroMensagem}</p>
-                            </div>
+            <main>
+                <section className='login-cor-fundo'>
 
-                            <div className='login-conteudinho'>
+                    <div ><img src={imgLogin} alt="img" /></div>
 
-                                <p>ou</p>
+                    <div className='login-box-fundo'>
+                        <div className='login-espaco-entre'>
+                            <img className='login-img-logo' src={Logo} alt="" className='login-img-login' onClick={() => history.push('/')}/>
 
-                                {/* <h3>Cadastre-se agora</h3> */}
-                                <a>Cadastre-se agora</a>
-                                
+                            <form className='form-box'>
 
-                            </div>
-                        </form>
+
+
+                                <div className="login-box-inputs">
+                                    <label for=""> </label> <input type="email" name=" email " placeholder=" Email: " />
+                                </div>
+
+                                <div className="login-box-inputs">
+                                    <label for=""> </label> <input type="password" name=" senha " placeholder=" Senha: " />
+                                </div>
+                                <LoginGoogle />
+                                {/* <div className='conteudo'> */}
+                                <div class="login-text">
+                                    <h3>Esqueceu a senha?</h3>
+                                </div>
+
+                                <div>
+                                    <button className="login-btn-entrar"> Entrar </button>
+                                    {/* <p style={{ color: 'red' }}>{this.state.erroMensagem}</p> */}
+                                </div>
+
+                                <div className='login-conteudinho'>
+
+                                    <p>ou</p>
+
+                                    {/* <h3>Cadastre-se agora</h3> */}
+                                    <a onClick={() => history.push('/Cadastro')}>Cadastre-se agora</a>
+
+
+                                </div>
+                            </form>
+                        </div>
+
                     </div>
 
-                </div>
 
+                </section>
+            </main>
+        )
 
-            </section>
-        </main>
-    )
+    }
 
-}
-}
+    export default Login;
 
 
 
