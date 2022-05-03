@@ -11,6 +11,8 @@ import { useHistory } from 'react-router-dom';
 
 function Cadastro() {
 
+    document.title = 'FYI - Cadastro'
+
     return (
 
         <main>

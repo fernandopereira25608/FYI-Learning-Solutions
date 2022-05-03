@@ -8,6 +8,8 @@ import './Cursos.css'
 
     function Cursos() {
 
+        document.title = 'FYI - Cursos'
+
     // let subtitle;
     // const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -25,6 +27,7 @@ import './Cursos.css'
     // }
 
     return (
+        
         <div>
 
             <Header />

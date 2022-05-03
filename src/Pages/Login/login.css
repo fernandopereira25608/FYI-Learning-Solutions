@@ -38,6 +38,7 @@
     font-family: 'Average Sans', sans-serif;
     color: #985EAD;
     cursor: pointer;
+    text-decoration: none;
 }
 
 
@@ -53,7 +54,11 @@
 .login-img-logo{
     margin-top: 6vh;
     height: 15vh;
+    cursor: pointer;
+}
 
+.login-img-login{
+    cursor: pointer;
 }
 
 .login-box-inputs  input {

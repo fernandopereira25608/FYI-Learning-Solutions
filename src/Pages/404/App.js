@@ -8,6 +8,8 @@ import Undraw from '../../Images/404/undraw.png'
 
 function PageNotFound() {
 
+    document.title = 'FYI - Not Found Page'
+
     const history = useHistory();
 
     return (

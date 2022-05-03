@@ -1,8 +1,8 @@
 import logo from '../../Images/Logo.svg'; 
-import LoginButton from '../Google-Login/login';
-import { GoogleLogin } from 'react-google-login'
+import { GoogleLogin } from 'react-google-login';
+import App from '../Google-Login/login';
 
-import React from 'react'
+import React, { useEffect, useState } from "react";
 
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
@@ -10,6 +10,16 @@ import { useHistory } from 'react-router-dom';
 
 import './Header.css';
 
+function changeImg() {
+
+  var button = document.getElementsByClassName="login-button"
+
+
+
+  if (App.isLoggedIn = true) {
+    button.style.display="none"
+  }
+}
 
 
 
@@ -17,10 +27,14 @@ function Header() {
 
   const history = useHistory();
 
+  const [profilePic, setProfilePic] = useState()
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+
 
     return (
       
-        <div className="header">
+      <div className="header">
         <img src={logo} class="logo-inicial" onClick={() => history.push('/')}/>
         <div class="header-content">
           <div class="header-links">
@@ -28,7 +42,14 @@ function Header() {
             <a onClick={() => history.push('/Sobre')}>Sobre</a>
             <a onClick={() => history.push('/Contato')}>Contato</a>
           </div>
-          <button type="button" class="login-button" onClick={() => history.push('/Login')}>Login</button>
+          { App.IsLoggedIn ? (
+            <div>
+              <img className="profile" src={profilePic} alt="Profile" />
+            </div>
+          ) : (
+            ""
+          )}
+          <button type="button" className="login-button" onClick={() => history.push('/Login')}>Login</button>
         </div>
       </div>
        );

@@ -8,6 +8,9 @@ import Banner from "../../Images/banner.svg";
 import Footer from "../../Components/Footer/Footer.jsx"
 
 const InfoEmpresa = () => {
+
+  document.title = 'FYI - Sobre'
+
     return (
     <>
     <Header/>
