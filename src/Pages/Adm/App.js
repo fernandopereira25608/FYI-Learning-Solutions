@@ -19,6 +19,8 @@ import Footer from '../../Components/Footer/Footer';
 
 function HideContent() {
 
+    document.title = 'FYI - Admin Page '
+
     var x = document.getElementById("right-box")
 
     if (x.style.display === "none") {

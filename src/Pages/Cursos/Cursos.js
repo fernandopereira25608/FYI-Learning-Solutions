@@ -9,6 +9,8 @@ import ReactDOM from 'react-dom';
 
     function Cursos() {
 
+        document.title = 'FYI - Cursos'
+
     // let subtitle;
     // const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -26,6 +28,7 @@ import ReactDOM from 'react-dom';
     // }
 
     return (
+        
         <div>
 
             <Header />
