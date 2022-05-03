@@ -28,7 +28,7 @@ namespace FYI.web.Api.Controllers
         {
             _usuarioRepository = new UsuarioRepository();
         }
-
+       
         //POST api/LoginsControllers
         [HttpPost]
         public IActionResult Login(LoginViewModel login)
