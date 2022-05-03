@@ -1,10 +1,9 @@
-import './Cursos.css'
 import Header from "../../Components/Header/Header.jsx"
 import Footer from "../../Components/Footer/Footer.jsx"
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import './Cursos.css'
 
 
     function Cursos() {
