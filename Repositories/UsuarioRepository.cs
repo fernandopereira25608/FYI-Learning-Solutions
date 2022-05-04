@@ -1,6 +1,7 @@
 ﻿using FYI.web.Api.Contexts;
 using FYI.web.Api.Domains;
 using FYI.web.Api.Interfaces;
+using FYI.web.Api.Utilidades;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -61,7 +62,11 @@ namespace FYI.web.Api.Repositories
 
         public UsuarioDomain Login(string email, string senha)
         {
-            return ctx.Usuarios.FirstOrDefault(u => u.Email == email && u.Senha == senha);
+            var usuarin = ctx.Usuarios.FirstOrDefault(u => u.Email == email);
+
+            Criptografia.Verificar(senha, usuarin.Senha);
+
+            return usuarin;
         }
 
         public UsuarioDomain BuscarPorEmail(string Email)

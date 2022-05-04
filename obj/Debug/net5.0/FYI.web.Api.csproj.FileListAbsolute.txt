@@ -584,3 +584,4 @@ C:\Users\39044547810.INFOSCS\Desktop\teste\FYI-Learning-Solutions\obj\Debug\net5
 C:\Users\39044547810.INFOSCS\Desktop\teste\FYI-Learning-Solutions\obj\Debug\net5.0\ref\FYI.web.Api.dll
 C:\Users\39044547810.INFOSCS\Desktop\teste\FYI-Learning-Solutions\obj\Debug\net5.0\FYI.web.Api.pdb
 C:\Users\39044547810.INFOSCS\Desktop\teste\FYI-Learning-Solutions\obj\Debug\net5.0\FYI.web.Api.genruntimeconfig.cache
+C:\Users\39044547810.INFOSCS\Desktop\teste\FYI-Learning-Solutions\bin\Debug\net5.0\BCrypt.Net-Next.dll
