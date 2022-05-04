@@ -71,7 +71,7 @@ function Inicial() {
                     <a href="#close" title="Close" class="close">
                       X
                     </a>
-                    <h2>Descrição1</h2>
+                    <h2>Descrição</h2>
                     <p>
                       Este curso oferece informações detalhadas e interativas
                       sobre como desenvolver extensões para todas as versões do
@@ -99,7 +99,7 @@ function Inicial() {
                     <a href="#close" title="Close" class="close">
                       X
                     </a>
-                    <h2>Descrição2</h2>
+                    <h2>Descrição</h2>
                     <p>
                       Este curso oferece informações detalhadas e interativas
                       sobre como desenvolver extensões para todas as versões do
@@ -127,7 +127,7 @@ function Inicial() {
                     <a href="#close" title="Close" class="close">
                       X
                     </a>
-                    <h2>Descrição3</h2>
+                    <h2>Descrição</h2>
                     <p>
                       Este curso oferece informações detalhadas e interativas
                       sobre como desenvolver extensões para todas as versões do
@@ -154,7 +154,7 @@ function Inicial() {
                     <a href="#close" title="Close" class="close">
                       X
                     </a>
-                    <h2>Descrição4</h2>
+                    <h2>Descrição</h2>
                     <p>
                       Este curso oferece informações detalhadas e interativas
                       sobre como desenvolver extensões para todas as versões do

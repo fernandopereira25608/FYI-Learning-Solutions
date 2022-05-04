@@ -74,6 +74,7 @@
 
 .login-box-inputs h3{
     color: rgba(129, 80, 163, 0.89);
+    height: 33px;
     font-size: 2vh;
 }
 
@@ -170,3 +171,4 @@
     height: 7vh;
     width: 22vw;
 }
+

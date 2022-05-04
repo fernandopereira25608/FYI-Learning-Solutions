@@ -129,12 +129,12 @@ export default class Login extends Component {
                             <form onSubmit={this.efetuarLogin} className='form-box'>
 
                                 <div className="login-box-inputs">
-                                    <label for="">Email:</label> <input type="email" name="email" value={this.state.email}
+                                    <label for=""></label> <input type="email" name="email" value={this.state.email}
                                         onChange={this.atualizaStateCampo} placeholder=" Email: " />
                                 </div>
 
                                 <div className="login-box-inputs">
-                                    <label for="">Senha</label> <input type="password" name="senha" value={this.state.senha}
+                                    <label for=""></label> <input type="password" name="senha" value={this.state.senha}
                                         onChange={this.atualizaStateCampo} placeholder=" Senha: " />
                                 </div>
                                 <LoginGoogle />
@@ -143,7 +143,22 @@ export default class Login extends Component {
                                 </a>
                                 {/* <div className='conteudo'>  */}
                                 <div class="login-text">
-                                    <h3>Esqueceu a senha?</h3>
+                                    
+                                <a href="#openModal">Esqueceu a senha?</a>
+
+<div id="openModal" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <h2>Trocar a Senha</h2>
+        <p>Identifique-se para receber um e-mail com as instruções e o link para criar uma nova senha.</p>
+
+        <label for="User"></label>
+<input type="text" id="User" name="Email" />
+
+    </div>
+</div>
+
+
                                 </div>
 
                                 <div>
