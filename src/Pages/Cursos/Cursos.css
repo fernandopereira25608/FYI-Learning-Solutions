@@ -18,7 +18,9 @@
   }
 
   .cursos-box-conteudo h1{
-    margin-left: 9vh;
+    font-family: 'Poppins';
+    font-weight: 600;
+    
   }
 
   .cursos-box-conteudo-card{
@@ -35,8 +37,7 @@
     height: 65vh;
     margin: 5px;
     float: left;
-
-
+    
   }
 
   .cursos-Content-info-card2{
