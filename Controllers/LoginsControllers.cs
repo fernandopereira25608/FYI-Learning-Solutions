@@ -35,6 +35,7 @@ namespace FYI.web.Api.Controllers
         {
             try
             {
+
                 UsuarioDomain usuarioProcurado = _usuarioRepository.Login(login.Email, login.Senha);
 
                 if (usuarioProcurado == null)

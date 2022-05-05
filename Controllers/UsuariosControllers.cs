@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using FYI.web.Api.Contexts;
 using FYI.web.Api.Domains;
 using FYI.web.Api.Interfaces;
 using FYI.web.Api.Repositories;
 using Microsoft.AspNetCore.Authorization;
+using static FYI.web.Api.Repositories.UsuarioRepository;
 
 namespace FYI.web.Api.Controllers
 {
@@ -75,7 +75,7 @@ namespace FYI.web.Api.Controllers
         {
             try
             {   
-                _usuarioRepository.Cadastrar(novoUsuario);
+                _usuarioRepository.Cadastrar(novoUsuario);              
 
                 return StatusCode(201);
             }

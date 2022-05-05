@@ -1,7 +1,6 @@
 ﻿using FYI.web.Api.Contexts;
 using FYI.web.Api.Domains;
 using FYI.web.Api.Interfaces;
-using FYI.web.Api.Utilidades;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,6 +9,19 @@ namespace FYI.web.Api.Repositories
     public class UsuarioRepository : IUsuarioRepository
     {
         FYIContext ctx = new FYIContext();
+
+        public string ConstruirHash(string Senha)
+        {
+            string salt = BCrypt.Net.BCrypt.GenerateSalt(12);
+
+            return BCrypt.Net.BCrypt.HashPassword(Senha, salt);
+        }
+
+        public bool Verificar(string Senha, string hash)
+        {
+            return BCrypt.Net.BCrypt.Verify(Senha, hash);
+        }
+
         public void Atualizar(short id, UsuarioDomain usuarioAtualizado)
         {
             UsuarioDomain usuarioBuscado = ctx.Usuarios.Find(id);
@@ -41,6 +53,8 @@ namespace FYI.web.Api.Repositories
 
         public void Cadastrar(UsuarioDomain novoUsuario)
         {
+            novoUsuario.Senha = ConstruirHash(novoUsuario.Senha);
+
             ctx.Usuarios.Add(novoUsuario);
 
             ctx.SaveChanges();
@@ -64,7 +78,7 @@ namespace FYI.web.Api.Repositories
         {
             var usuarin = ctx.Usuarios.FirstOrDefault(u => u.Email == email);
 
-            Criptografia.Verificar(senha, usuarin.Senha);
+            Verificar(senha, usuarin.Senha);
 
             return usuarin;
         }

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "25KBQLu4koWCFSJXSd1+KHOPJnJwpSWbgrdZcSuJhyEUTx56BTNUkCVPSagEPkZ57AdewhZPqNw+446h2D55Vg==",
+  "dgSpecHash": "ezSWI43xFy6fPbYdQApaXWIwCpQVBbpf3k4TAkfMc6PunXvCXJhnoB/qfSl2dTvJukujpMbvUbv5Tj7Z4jVEbg==",
   "success": true,
   "projectFilePath": "C:\\Users\\39044547810.INFOSCS\\Desktop\\teste\\FYI-Learning-Solutions\\FYI.web.Api.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\39044547810.INFOSCS\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\39044547810.INFOSCS\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\39044547810.INFOSCS\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\39044547810.INFOSCS\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.23\\microsoft.aspnetcore.authentication.jwtbearer.3.1.23.nupkg.sha512",
     "C:\\Users\\39044547810.INFOSCS\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
