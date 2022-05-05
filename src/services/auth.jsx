@@ -1,8 +1,8 @@
-export const usuarioAutenticado = () =>  localStorage.getItem("usuario-login") !== null;
+export const UsuarioAutenticado = () => localStorage.getItem('usuario-login') != null;
 
-export const parseJWT = () => {
+export const parsejwt = () => {
+    
+    let base64 = localStorage.getItem("usuario-login").split('.')[1];
 
-    let base64 = localStorage.getItem("usuario-login").split(".")[1];
-
-    return JSON.parse( window.atob(base64));
+    return(JSON.parse(window.atob(base64)))
 }
