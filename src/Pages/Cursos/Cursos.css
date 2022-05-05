@@ -70,3 +70,14 @@
     color: #FFFFFF;
     text-transform: uppercase;
   }
+.cursos-curso-card{
+    width: 475px;
+    height: 120px;
+    background-color: rgba(95, 75, 139, 1);
+
+    opacity: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+  }
