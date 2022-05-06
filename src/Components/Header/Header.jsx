@@ -1,4 +1,4 @@
-import logo from '../../Images/Logo.svg'; 
+import logo from '../../Images/Logo.svg';
 import { GoogleLogin } from 'react-google-login';
 import App from '../Google-Login/login';
 
@@ -12,12 +12,12 @@ import './Header.css';
 
 function changeImg() {
 
-  var button = document.getElementsByClassName="login-button"
+  var button = document.getElementsByClassName = "login-button"
 
 
 
   if (App.isLoggedIn = true) {
-    button.style.display="none"
+    button.style.display = "none"
   }
 }
 
@@ -32,27 +32,27 @@ function Header() {
 
 
 
-    return (
-      
-      <div className="header">
-        <img src={logo} class="logo-inicial" onClick={() => history.push('/')}/>
-        <div class="header-content">
-          <div class="header-links">
-            <a onClick={() => history.push('/Cursos')}>Cursos</a>
-            <a onClick={() => history.push('/Sobre')}>Sobre</a>
-            <a onClick={() => history.push('/Contato')}>Contato</a>
-          </div>
-          { App.IsLoggedIn ? (
-            <div>
-              <img className="profile" src={profilePic} alt="Profile" />
-            </div>
-          ) : (
-            ""
-          )}
-          <button type="button" className="login-button" onClick={() => history.push('/Login')}>Login</button>
+  return (
+
+    <div className="header">
+      <img src={logo} class="logo-inicial" onClick={() => history.push('/')} />
+      <div class="header-content">
+        <div class="header-links">
+          <a onClick={() => history.push('/Cursos')}>Cursos</a>
+          <a onClick={() => history.push('/Sobre')}>Sobre</a>
+          <a onClick={() => history.push('/Contato')}>Contato</a>
         </div>
+        {App.IsLoggedIn ? (
+          <div>
+            <img className="profile" src={profilePic} alt="Profile" />
+          </div>
+        ) : (
+          ""
+        )}
+        <button type="button" className="login-button" onClick={() => history.push('/Login')}>Login</button>
       </div>
-       );
-    }
-    
- export default Header;
+    </div>
+  );
+}
+
+export default Header;
