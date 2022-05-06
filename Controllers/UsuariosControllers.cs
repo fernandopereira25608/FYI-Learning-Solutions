@@ -10,6 +10,7 @@ using FYI.web.Api.Interfaces;
 using FYI.web.Api.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using static FYI.web.Api.Repositories.UsuarioRepository;
+using FYI.web.Api.Utilidades;
 
 namespace FYI.web.Api.Controllers
 {
@@ -74,7 +75,9 @@ namespace FYI.web.Api.Controllers
         public IActionResult Post(UsuarioDomain novoUsuario)
         {
             try
-            {   
+            {
+                novoUsuario.Senha = Criptografia.ConstruirHash(novoUsuario.Senha);
+
                 _usuarioRepository.Cadastrar(novoUsuario);              
 
                 return StatusCode(201);
