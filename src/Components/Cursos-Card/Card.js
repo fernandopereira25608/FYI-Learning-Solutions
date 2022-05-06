@@ -11,9 +11,8 @@ import './Card.css'
 function Card() {
     return (
         <div class="curso-card" onClick="#openmodal">
-             
             <div class="data-content">
-                <h3>31<br /> April</h3>
+                <h3>31<br /> Abril</h3>
                 <img src={Calendar} class="calendar-icon" />
             </div>
             <div class="info-card">

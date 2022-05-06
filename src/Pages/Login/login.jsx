@@ -99,20 +99,47 @@ export default class Login extends Component {
                            <img className='login-img-logo' src={Logo} />
                             <form onSubmit={this.efetuarLogin} className='form-box'>
                                 <div className="login-box-inputs">
-                                    <label for="">Email:</label> <input type="email" name="email" value={this.state.email}
+                                    <label for=""></label> <input type="email" name="email" value={this.state.email}
                                         onChange={this.atualizaStateCampo} placeholder=" Email: " />
                                 </div>
 
                                 <div className="login-box-inputs">
+<<<<<<< HEAD
 
                                     <label for="">Senha</label> <input type="password" name="senha" value={this.state.senha}
+=======
+                                    <label for=""></label> <input type="password" name="senha" value={this.state.senha}
+>>>>>>> bf56dee50294e37aa6acc6f53a5fd1b1b4293cb0
                                         onChange={this.atualizaStateCampo} placeholder=" Senha: " />
 
                                 </div>
                                 <LoginGoogle />
                                 <div class="login-text">
+<<<<<<< HEAD
 
                                     <h3>Esqueceu a senha?</h3>
+=======
+                                    
+                                <a href="#openModal">Esqueceu a senha?</a>
+
+<div id="openModal" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <h2>Trocar a Senha</h2>
+        <p>Identifique-se para receber um e-mail com as instruções e o link para criar uma nova senha.</p>
+
+        <label class="contact-label-form2">
+        <input placeholder="Email" />
+        </label>
+        <button class="botao-enviar">
+        ENVIAR
+        </button>
+    </div>
+</div>
+
+
+                                </div>
+>>>>>>> bf56dee50294e37aa6acc6f53a5fd1b1b4293cb0
 
                                 </div>
                                 <div>
