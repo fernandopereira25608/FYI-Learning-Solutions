@@ -14,8 +14,8 @@ export default class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            email: 'petersondopagode@gmail.com',
-            senha: '98765432',
+            email: '',
+            senha: '',
 
             // ADM
             // petersondopagode@gmail.com,98765432
@@ -105,8 +105,13 @@ export default class Login extends Component {
 
                                 <div className="login-box-inputs">
 
+<<<<<<< HEAD
                                     <label for=""></label> <input type="password" name="senha" value={this.state.senha}
                                         onChange={this.atualizaStateCampo} placeholder=" Senha: " />
+=======
+                                    <input type="password" name="senha" value={this.state.senha}
+                                    onChange={this.atualizaStateCampo} placeholder=" Senha: " />
+>>>>>>> a1e3b275b1b92d0419caa4459ff2e0ec55ca8712
 
                                 </div>
                                 <LoginGoogle />
