@@ -152,9 +152,12 @@ export default class Login extends Component {
         <h2>Trocar a Senha</h2>
         <p>Identifique-se para receber um e-mail com as instruções e o link para criar uma nova senha.</p>
 
-        <label class="contact-label-form2">
-        <input placeholder="Email" />
-        </label>
+        
+
+        <input placeholder="Email" class="email-estilizar" />
+
+        
+
         <button class="botao-enviar">
         ENVIAR
         </button>

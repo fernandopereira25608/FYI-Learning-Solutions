@@ -119,18 +119,33 @@
 
 .contact-label-form2{
     width: 100%;
-    max-width: 328px;
+    max-width: 385px;
     height: 33px;
     border-radius: 30px;
     border: 1px solid #9355A9;
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: #ebeaec;
     padding-right: 16px;
-
     }
+
+
+.email-estilizar{
+    width: 100%;
+    max-width: 359px;
+    height: 32px;
+    border-radius: 30px;
+    border: 1px solid #9355A9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebeaec;
+    padding-left: 16px;
+
+}
+
+
 
 .modalDialog {
     position: fixed;
@@ -205,7 +220,7 @@
     border: none;
     background-color: #9355A9;
     border-radius: 19px;
-    width: 330px;
+    width: 360px;
     height: 30px;
     color: #FFFF;
     display: flex;
