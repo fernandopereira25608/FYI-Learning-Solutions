@@ -105,16 +105,27 @@ export default class Login extends Component {
 
                                 <div className="login-box-inputs">
 
-                                    <label for="">Senha</label> <input type="password" name="senha" value={this.state.senha}
+                                    <label for=""></label> <input type="password" name="senha" value={this.state.senha}
                                         onChange={this.atualizaStateCampo} placeholder=" Senha: " />
 
                                 </div>
                                 <LoginGoogle />
-                                <div class="login-text">
+                                
+                                <a href="#openModal">Esqueceu a senha?</a>
 
-                                    <h3>Esqueceu a senha?</h3>
+<div id="openModal" class="modalDialog">
+    <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <h2>Trocar a Senha</h2>
+        <p>Identifique-se para receber um e-mail com as instruções e o link para criar uma nova senha.</p>
 
-                                </div>
+        <label for="User"></label>
+<input type="text" id="User" name="Email" />
+
+    </div>
+</div>
+
+
                                 <div>
                                     <span className="Mensagem_erro">{this.state.MensagemErro}</span>
                                     {
