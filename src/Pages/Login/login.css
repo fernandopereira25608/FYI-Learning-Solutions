@@ -85,7 +85,11 @@
 
 .login-conteudinho p{
     color: rgba(129, 80, 163, 0.89);
+<<<<<<< HEAD
+    padding: 0.9em;
+=======
     
+>>>>>>> bf56dee50294e37aa6acc6f53a5fd1b1b4293cb0
 }
 
 .login-btn-entrar  {
