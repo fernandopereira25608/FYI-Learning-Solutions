@@ -105,8 +105,8 @@ export default class Login extends Component {
 
                                 <div className="login-box-inputs">
 
-                                    <label for="">Senha</label> <input type="password" name="senha" value={this.state.senha}
-                                        onChange={this.atualizaStateCampo} placeholder=" Senha: " />
+                                    <input type="password" name="senha" value={this.state.senha}
+                                    onChange={this.atualizaStateCampo} placeholder=" Senha: " />
 
                                 </div>
                                 <LoginGoogle />
