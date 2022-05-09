@@ -124,47 +124,47 @@
 }
 
 .Empz-img{
-  /*  50%; */
+  opacity: 50%;
 }
 
 .Cavalcante-img{
- 
+  opacity: 50%;
 }
 
 .Even-img{
-  
+  opacity: 50%;
 }
 
 .Ipetec-img{
-
+  opacity: 50%;
 }
 
 .Ibmec-img{
-  /*  50%; */
+   opacity: 50%;
 }
 
 .Empz-img:hover{
-  /*  150%; */
+  opacity: 150%;
   transition: 1s;
 }
 
 .Cavalcante-img:hover{
-  /*  150%; */
+  opacity: 150%;
   transition: 1s;
 } 
 
 .Even-img:hover{
-  /*  150%; */
+  opacity: 150%;
   transition: 1s;
 }
 
 .Ibmec-img:hover{
-  /*  150%; */
+  opacity: 150%;
   transition: 1s;
 }
 
 .Ipetec-img:hover{
-  /*  150%; */
+  opacity: 150%;
   transition: 1s;
 }
 

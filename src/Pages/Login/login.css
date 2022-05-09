@@ -215,12 +215,26 @@
     text-decoration: none;
 }
 
+.recuperar-senha{
+    width: 100%;
+    max-width: 355px;
+    height: 35px;
+    border-radius: 30px;
+    border: 1px solid #9355A9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebeaec;
+    padding-right: 16px;
+
+}
+
 .botao-enviar{
     margin-top: 7px;
     border: none;
     background-color: #9355A9;
     border-radius: 19px;
-    width: 360px;
+    width: 369px;
     height: 30px;
     color: #FFFF;
     display: flex;
@@ -230,4 +244,6 @@
     text-transform: uppercase;
 
 }
+
+
 
