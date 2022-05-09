@@ -3,18 +3,19 @@ import React, { Component } from 'react';
 
 
 export default class CursosAdm extends Component {
+    
     constructor(props) {
         super(props);
 
         this.state = {
             titulo: '',
             Descricao: '',
-            CargaHoraria: new Date(),
             VagasDisponiveis: '',
-            VagasPrenchidas: '',
+            VagasPreenchidas: '',
+            CargaHoraria: new Date(),
             IdCategoriums: 0,
 
-            lstaCurso: [],
+            listarCurso: [],
             isLoading: false,
 
         };
@@ -30,7 +31,7 @@ export default class CursosAdm extends Component {
             .then((resposta) => {
                 if (resposta.status === 200) {
                     this.setState({ listaCategoriums: resposta.data });
-                    console.log(this.state.listaCtegoriums)
+                    console.log(this.state.listaCategoriums)
                 }
             })
             .catch((erro) => console.log(erro));
@@ -39,8 +40,8 @@ export default class CursosAdm extends Component {
         axios('http://localhost:5000/api/CursosControllers')
             .then((resposta) => {
                 if (resposta.status === 200) {
-                    this.setState({ listaCursos: resposta.data });
-                    console.log(this.state.listaCursos);
+                    this.setState({  listarCurso: resposta.data });
+                    console.log(this.state. listarCurso);
                 }
             })
             .catch((erro) => console.log(erro));
@@ -61,10 +62,10 @@ export default class CursosAdm extends Component {
         let curso = {
             NomeCurso: this.state.titulo,
             Descricao: this.state.Descricao,
-            CargaHoraria: this.state.CargaHoraria,
             VagasDisponiveis: this.state.VagasDisponiveis,
-            VagasPrenchidas: this.state.VagasPrenchidas,
-            IdCategoriums: this.state.idCategoriums,
+            VagasPrenchidas: this.state.VagasPreenchidas,
+            CargaHoraria: this.state.CargaHoraria,
+            IdCategoriums: this.state.IdCategoriums,
         };
 
 
@@ -90,122 +91,47 @@ export default class CursosAdm extends Component {
 
     render() {
         return (
-
-            <div>
-
+            <>
                 <main>
                     <section>
-                        <h2>Lista de cursos</h2>
+                        {/* Lista de Cusos*/}
+                        <h2>Lista de Cursos</h2>
                         <table style={{ borderCollapse: 'separate', borderSpacing: 30 }}>
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Cursos</th>
+                                    <th>Curso</th>
                                     <th>Descrição</th>
+                                    <th>Vagas Disponiveis</th>
+                                    <th>Vagas Preenchidas</th>
                                     <th>Carga Horaria</th>
-                                    <th>Vagas disponiveis</th>
-                                    <th>Vagas prenchidas</th>
-                                    <th>Tipo de categoria</th>
+                                    <th>Tipo de curso</th>
                                 </tr>
                             </thead>
 
-                            {/* <tbody> */}
-                                {this.state.listarCursos.map((Curso) => {
+                            <tbody>
+                                {/* Preenche o corpo da tabela utilizando a funcao map(). */}
+
+                                {/* <tr><td>teste de linha</td></tr>  */}
+                                {this.state. listarCurso.map((evento) => {
                                     return (
-                                        <tr key={Curso.IdCurso}>
-                                            <td>{Curso.IdCurso}</td>
-                                            <td>{Curso.NomeCurso}</td>
-                                            <td>{Curso.CargaHoraria}</td>
-                                            <td>{Curso.Descriao}</td>
-                                            <td>{Curso.VagasDisponiveis}</td>
-                                            <td>{Curso.VagasPrenchidas}</td>
-                                            <td>{Curso.IdCategoriaNavigation}</td>
-
+                                        <tr key={evento.idCurso}>
+                                            <td>{evento.idCurso}</td>
+                                            <td>{evento.nomeCurso}</td>
+                                            <td>{evento.descricao}</td>
+                                            <td>{evento.VagasDisponiveis}</td>
+                                            <td>{evento.VagasPreenchidas}</td>
+                                            <td>{evento.CargaHoraria}</td>
+                                            {/* <td>{evento.IdCategoriaNavigation.titulo}</td> */}
                                         </tr>
-                                    );
+                                    );  
                                 })}
-                            {/* </tbody> */}
-
+                            </tbody>
                         </table>
                     </section>
-
-                    <section>
-                        <h2>Cadastro de cursos</h2>
-                        <form onSubmit={this.cadastrarCursos} action="">
-                            <div
-                                style={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    width: '20vw'
-                                }}
-                            >
-
-                                <input
-                                    required
-                                    type="text"
-                                    name="titulo"
-                                    value={this.state.titulo}
-                                    onChange={this.atualizaStateCampo}
-                                    placeholder="Titulo do curso"
-                                />
-
-                                <input
-                                    required
-                                    type="text"
-                                    name="Descricao"
-                                    value={this.state.Descricao}
-                                    onChange={this.atualizaStateCampo}
-                                    placeholder="Descrição do curso"
-                                />
-
-                                <input
-                                    type="date"
-                                    name="CargaHoraria"
-                                    value={this.state.CargaHoraria}
-                                    onChange={this.atualizaStateCampo}
-                                />
-
-                                <input
-                                    type="text"
-                                    name="VagasDisponiveis"
-                                    value={this.state.VagasDisponiveis}
-                                    onChange={this.atualizaStateCampo}
-                                />
-
-                                <input
-                                    type="text"
-                                    name="Vagasprenchidas"
-                                    value={this.state.VagasPrenchidas}
-                                    onChange={this.atualizaStateCampo}
-                                />
-
-                                <select
-                                    name="idCategoriums"
-                                    value={this.state.IdCategoriums}
-                                    onChange={this.atualizaStateCampo}
-                                >
-
-                                    <option value="0" selected disabled>
-                                        Selecione o nome do curso
-                                    </option>
-
-                                    {this.state.listaCategoriums.map((Tema) => {
-                                        return (
-                                            <option key={Tema.idCategoriums} value={Tema.idCategoriums}>
-                                                {Tema.tituloCategoriums}
-                                            </option>
-                                        );
-                                    })}
-
-                                </select>
-                            </div>
-                        </form>
-                    </section>
                 </main>
+            </>
 
-
-            </div>
         )
     }
-
 }
