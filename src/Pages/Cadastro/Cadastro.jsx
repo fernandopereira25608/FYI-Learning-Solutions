@@ -3,7 +3,7 @@ import Logo from "../../Images/Cadastro/Logo.png"
 import Photo from "../../Images/Cadastro/Photo.png"
 
 import React from 'react';
-
+import { Routes, Route, Link } from "react-router-dom";
 import { useHistory } from 'react-router-dom';
 
 
@@ -42,11 +42,12 @@ function Cadastro() {
 
                             <div>
                                 <button className="cadastro-btn-cadastrar"> Cadastrar </button>
-                            </div>
 
+                                
+                            </div>
+                            <Link to="">Voltar para Inicial</Link>
                         </form>
                     </div>
-
                 </div>
                 <div className='cadastro-text'>
                     <img className='cadastro-box-photo' src={Photo} alt="img" />

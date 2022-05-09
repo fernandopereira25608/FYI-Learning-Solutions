@@ -136,13 +136,12 @@ export default class Login extends Component {
                       o link para criar uma nova senha.
                     </p>
 
-                    
                     <div className="cadastro-box-inputs">
                                 <label for=""> </label> <input type="email" name=" emailJ " placeholder=" Email " />
                             </div>
                 <span className="spanzinho">
                 </span>
-                    
+
                     <button type="submit" className="botao-enviar">
                       ENVIAR 
                     </button>
