@@ -31,6 +31,9 @@ namespace FYI.web.Api.Domains
         [Required(ErrorMessage = "Informe a duração do curso!!!!")]
         [DataType(DataType.Duration)]
         public byte CargaHoraria { get; set; }
+
+        public string Imagem { get; set; }
+
         public byte? IdCategoria { get; set; }
 
         public virtual CategoriumDomain IdCategoriaNavigation { get; set; }
