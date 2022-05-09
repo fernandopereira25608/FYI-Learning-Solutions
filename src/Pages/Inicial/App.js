@@ -58,7 +58,7 @@ function Inicial() {
         </div>
         <div class="inicial-cursos-main">
           <div class="inicial-cursos-content">
-            <h1>Cursos:</h1>
+            <h1>Principais Cursos:</h1>
             <div class="inicial-cards-container">
               <div class="inicial-card-content">
                 <a href="#openModal1">
