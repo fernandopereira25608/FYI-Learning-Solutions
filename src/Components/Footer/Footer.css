@@ -89,3 +89,7 @@ footer{
     width: 7vh;
     height: 7vh;
   }
+
+  @media screen and (max-width: 480px){
+    
+  }

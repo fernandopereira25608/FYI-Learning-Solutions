@@ -28,7 +28,7 @@ function Cadastro() {
                             </div>
 
                             <div className="cadastro-box-inputs">
-                                <label for=""> </label> <input type="text" name=" textJ " placeholder=" Empresa(opicional) " />
+                                <label for=""> </label> <input type="text" name=" textJ " placeholder=" Empresa (opcional) " />
                             </div>
 
                             <div className="cadastro-box-inputs">
