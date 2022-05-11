@@ -10,13 +10,16 @@ export default class CursosAdm extends Component {
         this.state = {
             titulo: '',
             Descricao: '',
-            VagasDisponiveis: '',
-            VagasPreenchidas: '',
-            CargaHoraria: new Date(),
-            IdCategoriums: 0,
-
+            vagasDisponiveis: '',
+            vagasPreenchidas: '',
+            cargaHoraria: new Date(),
+            IdCategoria : 0,
+            
             listarCurso: [],
+            listaCategoriums: {},
             isLoading: false,
+            Titulo:''
+            
 
         };
     };
@@ -62,10 +65,12 @@ export default class CursosAdm extends Component {
         let curso = {
             NomeCurso: this.state.titulo,
             Descricao: this.state.Descricao,
-            VagasDisponiveis: this.state.VagasDisponiveis,
-            VagasPrenchidas: this.state.VagasPreenchidas,
-            CargaHoraria: this.state.CargaHoraria,
-            IdCategoriums: this.state.IdCategoriums,
+            vagasDisponiveis: this.state.vagasDisponiveis,
+            vagasPrenchidas: this.state.vagasPreenchidas,
+            cargaHoraria: this.state.cargaHoraria,
+            idCategoria : this.state.idCategoria ,
+            
+            
         };
 
 
@@ -119,10 +124,11 @@ export default class CursosAdm extends Component {
                                             <td>{evento.idCurso}</td>
                                             <td>{evento.nomeCurso}</td>
                                             <td>{evento.descricao}</td>
-                                            <td>{evento.VagasDisponiveis}</td>
-                                            <td>{evento.VagasPreenchidas}</td>
-                                            <td>{evento.CargaHoraria}</td>
-                                            {/* <td>{evento.IdCategoriaNavigation.titulo}</td> */}
+                                            <td>{evento.vagasDisponiveis}</td>
+                                            <td>{evento.vagasPreenchidas}</td>
+                                            <td>{evento.cargaHoraria}</td>
+                                            <td>{evento.idCategoria}</td>
+                                            {/* <td>{evento.IdCategoriaNavigation.Titulo}</td> */}
                                         </tr>
                                     );  
                                 })}
