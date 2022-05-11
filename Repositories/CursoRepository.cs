@@ -25,10 +25,10 @@ namespace FYI.web.Api.Repositories
                 CursoProcurado.Descricao = CursoAtualizado.Descricao;
             }
 
-            if (CursoProcurado.CargaHoraria != null)
-            {
-                CursoProcurado.CargaHoraria = CursoAtualizado.CargaHoraria;
-            }
+          //  if (CursoProcurado.CargaHoraria != null)
+            //{
+              //  CursoProcurado.CargaHoraria = CursoAtualizado.CargaHoraria;
+            //}
 
             if (CursoProcurado.Imagem != null)
             {

@@ -37,6 +37,9 @@ namespace FYI.web.Api.Domains
         public byte? IdCategoria { get; set; }
 
         public virtual CategoriumDomain IdCategoriaNavigation { get; set; }
+
+        public virtual CategoriumDomain TituloNavigation { get; set; }
+
         public virtual ICollection<TurmaDomain> Turmas { get; set; }
     }
 }
