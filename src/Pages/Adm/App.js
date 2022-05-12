@@ -77,11 +77,11 @@ function Admin() {
                         </div>
                         <div class="navigation-container">
                             <div class="navigation-links">
-                                <img src={Hat} class="hat-icon"/>
-                                <h3>Cursos</h3>
+                                <img src={Hat} class="hat-icon"  onClick={() => history.push('/CursosAdm')}/>
+                                <h3 >Cursos</h3>
                             </div>
                             <div class="navigation-links">
-                                <img src={Turmas} class="turmas-icon"/>
+                                <img src={Turmas} class="turmas-icon"  onClick={() => history.push('/TurmasAdm')}/>
                                 <h3>Turmas</h3>
                             </div>
                             <div class="navigation-links">

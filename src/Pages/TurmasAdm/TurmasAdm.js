@@ -8,6 +8,7 @@ export default class TurmasAdm extends Component{
         this.state = {
             nomeTurma: '',
             inscricaos: [],
+            dataInscricao:'',
 
             idTurma: 0,
             idCurso: 0,
@@ -21,7 +22,7 @@ export default class TurmasAdm extends Component{
     buscarTurmas = () => {
         axios('http://localhost:5000/api/TurmasControllers',{
             headers:{
-                Autorization: 'Beaner' + localStorage.getItem('usuario-login'),
+                Autorization: 'Bearer' + localStorage.getItem('usuario-login'),
             },
         })
 
@@ -56,6 +57,39 @@ export default class TurmasAdm extends Component{
     render() {
         return(
             <>
+            <main>
+                <section>
+                    <h2>Lista de turmas</h2>
+                    <table style={{borderCollapse: 'separate', borderSpacing: 30 }}>
+                    <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>id turma</th>
+                                    <th>id curso</th>
+                                    <th>Nome turma</th>
+                                    <th>Inscrições</th>
+                                    <th>Data incrição</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {this.state.ListarTurmas.map((evento)=>{
+                                    return(
+                                        <tr key={evento.idTurma}>
+                                            <td>{evento.idTurma}</td>
+                                            <td>{evento.idTurma}</td>
+                                            <td>{evento.idCurso}</td>
+                                            <td>{evento.nomeTurma}</td>
+                                            <td>{evento.idInscricao}</td>
+                                            <td>{evento.dataInscricao}</td>
+
+                                        </tr>
+                                    )
+                                })}
+                            </tbody>
+                    </table>
+                </section>
+            </main>
             </>
         )
     }
