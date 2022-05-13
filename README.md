@@ -1,78 +1,70 @@
-# <p align="center"> Grupo 5 - FYI Learning Solutions💻 </p>
-&nbsp;
+# Getting Started with Create React App
 
-# <p align="center">Sobre o projeto </p>
-## <p align="center">1. Contexto 📝 :
-  <br>
-  Por conta da carência de funcionários com o conhecimento das plataformas de serviços da Microsoft, os usuários buscariam em premissa a desenvolver as habilidades nesses cursos. Usuários Administrativos que possam gerenciar seus usuários interessados e seus respectivos cursos.
-  <br>
-</p>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## <p align="center">2. Objetivo 🧐 :
-  <br>
- A criação de um site institucional de cursos ofertados contendo a possibilidade de inscrição de interessados nos mesmos, e um painel administrativo para gerenciamento de cursos e também dos interessados.
-</p>
+## Available Scripts
 
-## <p align="center">3. Publico Alvo 👥 :
-  <br>
- Usuários em busca de formação em cursos da Microsoft e aqueles que buscam aperfeiçoar as habilidades na área de tecnologia
-</p>
+In the project directory, you can run:
 
+### `npm start`
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-&nbsp;
-&nbsp;
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## <p align="center">Professores 👨‍🏫👨‍🏫</p>
-<table align="center">
-  <tr>
-    <th>Professor</th>
-    <th>Github</th>
-  </tr>
-  <tr>
-    <td>Carlos Augusto</td>
-    <td><a href="https://github.com/Saulomsantos"> <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /> </a> </td>
-  </tr>
-  <tr>
-    <td>Priscila Medeiro</td>
-    <td><a href="https://github.com/priscilahms"> <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /> </a> </td>
-  </tr>
-</table>
+### `npm test`
 
-&nbsp;
-&nbsp;
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## <p align="center">Participantes 👦</p>
-<table align="center">
-  <tr>
-    <th>Integrantes</th>
-    <th>Github</th>
-    <th>E-mail</th>
-  </tr>
-  <tr>
-    <td>Lucas Reis</td>
-    <td> <a href="https://github.com/Sidoria"> <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /> </a> </td>
-    <td><a href="krawkercontato@gmail.com"> <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /> </a></td>
-  </tr>
-  <tr>
-    <td>Rafael Mitsuo</td>
-    <td><a href="https://github.com/Mitsuo781"> <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /> </a></td>
-    <td><a href="rafael.mitsuo7@gmail.com"> <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /> </a></td>
-  </tr>
-   <tr>
-    <td>Matheus Gomes</td>
-    <td><a href="https://github.com/Matheus-O-G-do-Nascimento"> <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /> </a> </td>
-    <td><a href="mogens@gmail.com"> <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /> </a></td>
-  </tr>
-  <tr>
-    <td>Fernando Pereira</td>
-    <td><a href="https://github.com/fernandopereira25608"> <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /> </a> </td>
-    <td><a href="fernandospereira27@gmail.com"> <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /> </a></td>
-  </tr>
-  <tr>
-    <td>Denis Alexandre</td>
-    <td> <a href="https://github.com/Denis-kingod"> <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /> </a> </td>
-    <td><a href="denis.alexandre200295@gmail.com"> <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /> </a></td>
-  </tr>
-</table>
+### `npm run build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

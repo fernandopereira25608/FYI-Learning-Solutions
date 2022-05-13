@@ -1,0 +1,20 @@
+<configuration>
+  <system.webServer>
+    
+    
+    <handlers>
+      <add name="iisnode" path="./src/App.js" verb="*" modules="iisnode" />
+    </handlers>
+    
+    
+    <defaultDocument enabled="true">
+      <files>
+        <add value="App.js" />
+      </files>
+    </defaultDocument>
+    <customErrors mode="Off" />
+
+    <httpsErrors errorMode="Detailed"></httpsErrors>
+  </system.webServer>
+  
+</configuration>

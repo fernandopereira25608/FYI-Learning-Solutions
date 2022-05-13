@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Average+Sans');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+
+
+.left-box{
+    width: 25%;
+    height: 100vh;
+    background-color: #5F4B8B;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-content{
+    width: 25%;
+    height: 300px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.home-link{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: 'Average Sans', sans-serif;
+}
+
+.home-link img{
+    cursor: pointer;
+}
+
+.open-content{
+    width: 45%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-family: 'Average Sans';
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+.home-link p{
+    margin-left: 19px;
+}
+
+#plus-icon{
+    width: 20px;
+    height: 20px;
+    color: white;
+    align-self: center;
+}
+#minus-icon{
+    width: 20px;
+    height: 20px;
+    color: white;
+    align-self: center;
+}
+
+h5{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    align-self: center;
+}
+
+hr{
+    width: 100%;
+    border: 2px  solid black;
+}
+
+
+#right-box{
+    width: 75%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-container{
+    width: 90%;
+    height: 90%;
+    background-color: #8E62AD;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+
+
+.title-container{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Average Sans';
+    flex-direction: column;
+}
+
+.navigation-container{
+    width: 100%;
+    height: 375px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navigation-links{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#plus-icon:hover{
+    cursor: pointer;
+    transform: rotate(270deg) scale(1.3);
+    transition: 1s;
+}
+
+/* .rotation{
+    animation: rotation 2s infinite linear;
+} */
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+  }
+

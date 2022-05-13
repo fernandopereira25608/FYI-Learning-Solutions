@@ -1,0 +1,178 @@
+.box-conteudo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-titulo-contato{
+color:#9355A9;
+font-size: 36px;
+width: 100%;
+max-width: 328px;
+text-align: start;
+margin-bottom: 38px;
+
+}
+
+
+.contact-contato{
+width: 30vw;
+height: 75vh;
+background-color: #ebeaec;
+border-radius: 30px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 4%;
+margin-left: 100px;
+margin-bottom: 4%;
+
+
+
+}
+
+.contact-form-contato{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 70%;
+}
+
+.contact-form-contato label{
+margin-bottom: 30px;
+
+
+}
+.spanzinho{
+    display: flex;
+    align-items: center;
+}
+
+.banner-sobre{
+    width: 100%;
+}
+
+.contact-label-form{
+width: 100%;
+max-width: 328px;
+height: 120px;
+border-radius: 30px;
+border: 1px solid #9355A9;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #ebeaec;
+padding-right: 16px;
+
+}
+
+.contact-label-form input{
+width: 100%;
+height: 100%;
+border-radius: 30px;
+padding-left: 20px;
+border: none;
+background-color: #ebeaec;
+outline: 0;
+color: #9355A9;
+font-size: 18px;
+
+}
+
+.contact-form-mensagem{
+background-color: #ebeaec;
+width: 100%;
+max-width: 328px;
+border-radius: 30px;
+height: 175px;
+padding: 20px;
+color: #9355A9;
+border: 1px solid #9355A9;
+outline: 0;
+font-size: 20px;
+margin-bottom: 16px;
+font-family: 'Times New Roman', Times, serif;
+font-size: 20px;
+resize: none;
+}
+
+.contact-form-mensagem::placeholder
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+input::placeholder{
+color: #9355A9;
+
+}
+
+.contact-form-mensagem::placeholder{
+color: #9355A9;
+
+}
+
+input:checked{
+color: #9355A9;
+}
+
+.contact-form-content-checkbox{
+width: 328px;
+margin: 0 auto;
+gap: 3px;
+font-size: 10px;
+display: flex;
+flex-direction: column;
+font-size: 13px;
+
+}
+
+.icon-label{
+    width: auto;
+    height: 20px;
+}
+
+.contact-form-content-checkbox label{
+display: flex;
+align-items: center;
+margin-bottom: 5px;
+}
+
+.contact-form-content-checkbox span{
+padding-left: 5px;
+}
+
+.contact-button-form{
+margin-top: 15px;
+border: none;
+background-color: #9355A9;
+border-radius: 30px;
+width: 200px;
+height: 165px;
+color: #FFFF;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 20px;
+text-transform: uppercase;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.map{
+    display: flex;
+    width: 700px;
+    height: 500px;
+
+
+}
+
+
+
+

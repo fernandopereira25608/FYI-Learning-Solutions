@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ 
+.cadastro-cor-fundo{
+    background-color: rgba(95, 75, 139, 1);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cadastro-box-fundo {
+    margin-top: 23px;
+    background-color:  rgba(235, 234, 236, 1);
+    height: 80vh;
+    width: 66vh;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content : space-between;
+    border-radius: 20px;
+}
+
+.cadastro-espaco-entre{
+    display : flex;
+    flex-direction: column;
+    justify-content : space-between;
+    align-items: center;
+}
+
+
+.cadastro-form{
+    display : flex;
+    flex-direction: column;
+    justify-content : space-between;
+    align-items: center;
+    padding: 6vh;
+    height: 59vh;
+}
+
+.cadastro-img-logo{
+    margin-top: 6vh;
+    height: 15vh;
+
+}
+
+.cadastro-box-inputs input {
+    background-color:  rgba(235, 234, 236, 1);
+    height: 6vh;
+    width: 24vw;
+    padding-left: 10px ;
+    border-radius: 2vh ;
+    border: 2px solid #9355A9;
+    border-color: rgba(129, 80, 163, 0.89);
+    font-size: 18px;
+}
+
+.cadastro-btn-cadastrar  {
+    margin-top: 3vh;
+    width: 20vh;
+    height: 7vh;
+    background-color: rgba(101, 8, 134, 0.66);
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 19px ;
+    font-weight: bold;
+    border: none;
+}
+
+.cadastro-box-photo{
+    height: 80vh;
+    width: 87vh;
+    
+}
