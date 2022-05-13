@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Component } from "react";
+import React, { Component } from 'react';
 
 export default class UsuariosAdm extends Component {
     constructor(props) {
@@ -53,5 +53,46 @@ export default class UsuariosAdm extends Component {
         this.buscarTipoUsuario();
         console.log()
         this.buscarUsuario();
+    };
+
+    render() {
+        return (
+            <>
+            <mian>
+                <section>
+                    <h2>Lista de usuarios</h2>
+                    <table  style={{ borderCollapse: 'separate', borderSpacing: 30 }}>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nome</th>
+                                <th>Empresa</th>
+                                <th>Email</th>
+                                <th>Inscrições</th>
+                                <th>Tipo Usuario</th> 
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {this.state.ListarUsuario.map((usuario) => {
+                                return (
+                                    <tr key={usuario.idUsuario}>
+                                        <td>{usuario.idUsuario}</td>
+                                        <td>{usuario.nome}</td>
+                                        <td>{usuario.empresa}</td>
+                                        <td>{usuario.email}</td>
+                                        <td>{usuario.Incricoes}</td>
+                                        <td>{usuario.idTipoUsuario}</td>
+
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
+                    <table/>
+                </section>
+            </mian>
+            </>
+        )
     }
 }

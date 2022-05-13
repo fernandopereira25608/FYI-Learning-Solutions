@@ -12,6 +12,7 @@ import reportWebVitals from './reportWebVitals';
 import PageNotFound from './Pages/404/App';
 import CursosAdm from './Pages/CursosAdm/CursosAdm';
 import TurmasAdm from './Pages/TurmasAdm/TurmasAdm'
+import UsuariosAdm from './Pages/UsuariosAdm/UsuariosAdm';
 
 
 import {  Route, BrowserRouter as Router, Switch } from 'react-router-dom';
@@ -29,6 +30,7 @@ const routing = (
         <Route path="/Cursos" component={Cursos} />
         <Route path="/CursosAdm" component={CursosAdm} />
         <Route path="/TurmasAdm" component={TurmasAdm} />
+        <Route path="/UsuariosAdm" component={UsuariosAdm} />
         <Route component={PageNotFound} />
       </Switch>
     </div>
