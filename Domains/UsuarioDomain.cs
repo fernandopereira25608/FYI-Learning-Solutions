@@ -34,6 +34,7 @@ namespace FYI.web.Api.Domains
         public string Senha { get; set; }
 
         public virtual TipoUsuarioDomain IdTipoUsuarioNavigation { get; set; }
+
         public virtual ICollection<InscricaoDomain> Inscricaos { get; set; }
     }
 }
