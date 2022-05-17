@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { Component } from "react";
 
+import "./TurmasStyle.css"
+
 export default class TurmasAdm extends Component{
     constructor(props) {
         super(props);
@@ -57,16 +59,16 @@ export default class TurmasAdm extends Component{
     render() {
         return(
             <>
-            <main>
-                <section>
-                    <h2>Lista de turmas</h2>
-                    <table style={{borderCollapse: 'separate', borderSpacing: 30 }}>
-                    <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>id turma</th>
-                                    <th>id curso</th>
-                                    <th>Nome turma</th>
+            <div className="Turmas-main">
+                <div className="Turmas-content">
+                    <h1>Listagem Turmas</h1>
+                    <div className="Turmas-container">
+                        <table className="Turmas-table">
+                            <thead className="Turmas-table-container">
+                                <tr className="Turmas-table-content">
+                                    <th>id Turma</th>
+                                    <th>id Curso</th>   
+                                    <th>Turmas</th>
                                     <th>Inscrições</th>
                                     <th>Data incrição</th>
                                 </tr>
@@ -77,19 +79,20 @@ export default class TurmasAdm extends Component{
                                     return(
                                         <tr key={evento.idTurma}>
                                             <td>{evento.idTurma}</td>
-                                            <td>{evento.idTurma}</td>
                                             <td>{evento.idCurso}</td>
                                             <td>{evento.nomeTurma}</td>
                                             <td>{evento.idInscricao}</td>
                                             <td>{evento.dataInscricao}</td>
-
                                         </tr>
                                     )
                                 })}
                             </tbody>
                     </table>
-                </section>
-            </main>
+                    </div>
+                </div>
+               
+               
+            </div>
             </>
         )
     }
