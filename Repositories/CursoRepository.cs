@@ -11,8 +11,6 @@ namespace FYI.web.Api.Repositories
 {
     public class CursoRepository : ICursoRepository
     {
-        private readonly string stringConexao = "Data Source=servidorfyi.database.windows.net; initial catalog=DBFYI;  user Id=administrador; pwd=FYIlearningsolutions@5;";
-
         FYIContext ctx = new FYIContext();
 
         public void Atualizar(byte id, CursoDomain CursoAtualizado)
@@ -74,26 +72,7 @@ namespace FYI.web.Api.Repositories
 
         public List<CursoDomain> Listar()
         {
-
-            List<CursoDomain> listaCursos = new List<CursoDomain>();
-
-            using (SqlConnection con = new SqlConnection(stringConexao))
-            {
-                string querySelectAllCursos = "SELECT  idCurso, nomeCurso, descricao, vagasDisponiveis, vagasPreenchidas, cargaHoraria FROM curso";
-
-                con.Open();
-
-                SqlDataReader readerCursos;
-
-                using (SqlCommand cmd = new SqlCommand(querySelectAllCursos, con))
-                {
-                    readerCursos = cmd.ExecuteReader();
-
-                    return listaCursos;
-
-                }
-            }
-
+            return ctx.Cursos.ToList();
         }
     }
 }
