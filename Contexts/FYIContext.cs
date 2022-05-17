@@ -92,7 +92,6 @@ namespace FYI.web.Api.Contexts
                 entity.Property(e => e.VagasPreenchidas).HasColumnName("vagasPreenchidas");
 
                 entity.Property(e => e.Imagem)
-                    .IsRequired()
                     .HasMaxLength(74)
                     .IsUnicode(false)
                     .HasColumnName("Imagem");
