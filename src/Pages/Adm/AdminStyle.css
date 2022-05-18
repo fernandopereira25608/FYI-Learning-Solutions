@@ -93,6 +93,14 @@ hr{
     align-items: center;
 }
 
+#right-box-2{
+    width: 75%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
 .right-container{
     width: 90%;
     height: 90%;

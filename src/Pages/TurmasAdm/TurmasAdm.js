@@ -61,28 +61,24 @@ export default class TurmasAdm extends Component{
             <>
             <div className="Turmas-main">
                 <div className="Turmas-content">
-                    <h1>Listagem Turmas</h1>
+                    <h1>Lista de Turmas</h1>
                     <div className="Turmas-container">
-                        <table className="Turmas-table">
+                        <table className="Turmas-table" style={{ borderCollapse: 'separate', borderSpacing: 30, width: '100%'}}>
                             <thead className="Turmas-table-container">
-                                <tr className="Turmas-table-content">
-                                    <th>id Turma</th>
+                                <tr>
+                                    <th>#</th>
                                     <th>id Curso</th>   
                                     <th>Turmas</th>
-                                    <th>Inscrições</th>
-                                    <th>Data incrição</th>
                                 </tr>
                             </thead>
 
                             <tbody>
                                 {this.state.ListarTurmas.map((evento)=>{
                                     return(
-                                        <tr key={evento.idTurma}>
+                                        <tr key={evento.idTurma} className="Table-list-content">
                                             <td>{evento.idTurma}</td>
-                                            <td>{evento.idCurso}</td>
+                                            <td className="Table-list-content-td">{evento.idCurso}</td>
                                             <td>{evento.nomeTurma}</td>
-                                            <td>{evento.idInscricao}</td>
-                                            <td>{evento.dataInscricao}</td>
                                         </tr>
                                     )
                                 })}
