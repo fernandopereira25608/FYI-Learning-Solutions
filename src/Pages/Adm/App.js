@@ -36,6 +36,25 @@ function HideContent() {
 
 }
 
+function HideContent2() {
+
+    var x = document.getElementById("right-box-2")
+
+    if (x.style.display === "none") {
+        x.style.transition = "2s";
+        x.style.display = "flex";
+    } else {
+        x.style.display = "none";
+    };
+
+    if (x.style.src == "Plus" ) {
+        x.style.src = "Minus"
+    } else {
+        x.style.src = "Plus";
+    };
+
+}
+
 
 function Admin() {
 
@@ -63,8 +82,8 @@ function Admin() {
                     <hr />
                     <div class="open-content">
                             
-                            <h5>Logs</h5>
-                            <img src={Plus} id="plus-icon"/>
+                            <h5>Cadastro</h5>
+                            <img src={Plus} id="plus-icon" onClick={HideContent2}/>
                             
                         </div>
                     <hr />
@@ -91,6 +110,25 @@ function Admin() {
                         </div>
                     </div>
                 </div>
+                <div id="right-box-2">
+                    <div class="right-container">
+                        <div class="title-container">
+                            <h1>Bem Vindo(a)</h1>
+                            <p>Pagina de Cadastro</p>
+                        </div>
+                        <div class="navigation-container">
+                            <div class="navigation-links">
+                                <img src={Hat} class="hat-icon"  onClick={() => history.push('/CursosAdm')}/>
+                                <h3 >Cursos</h3>
+                            </div>
+                            <div class="navigation-links">
+                                <img src={Turmas} class="turmas-icon"  onClick={() => history.push('/TurmasAdm')}/>
+                                <h3>Turmas</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 
             </main>
         </div>

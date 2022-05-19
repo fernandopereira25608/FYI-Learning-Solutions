@@ -39,7 +39,7 @@ export default class TurmasAdm extends Component{
     buscarInscricoes = () =>{
         axios('http://localhost:5000/api/InscricoesControllers')
         .then((resposta) => {
-            if (resposta.status ===200) {
+            if (resposta.status === 200) {
                 this.setState({ ListarInscricoes: resposta.data});
                 console.log(this.state. ListarInscricoes);
             }
@@ -61,28 +61,53 @@ export default class TurmasAdm extends Component{
             <>
             <div className="Turmas-main">
                 <div className="Turmas-content">
-                    <h1>Listagem Turmas</h1>
+                    <h1>Lista de Turmas</h1>
                     <div className="Turmas-container">
-                        <table className="Turmas-table">
+                        <table className="Turmas-table" style={{ borderCollapse: 'separate', borderSpacing: 30, width: '100%'}}>
                             <thead className="Turmas-table-container">
+<<<<<<< HEAD
                                 <tr className="Turmas-table-content">
                                     <th>id Turma</th>
                                     <th>id Curso</th>   
                                     <th>Turmas</th>
                                     <th>Inscrições</th>
                                     <th>Data inscrição</th>
+=======
+                                <tr>
+
+                                    <div className="Table-list-content-idturma">
+                                        <th>#</th>
+                                    </div>
+
+                                    <div className="Table-list-content-idcurso">
+                                        <th>id Curso</th>
+                                    </div>
+                                    
+                                    <div className="Table-list-content-turma">   
+                                        <th>Turmas</th>
+                                    </div>
+
+>>>>>>> 0386c83f2b6f9b6e8282fef283dd44483e4a6f2a
                                 </tr>
                             </thead>
 
                             <tbody>
                                 {this.state.ListarTurmas.map((evento)=>{
                                     return(
-                                        <tr key={evento.idTurma}>
-                                            <td>{evento.idTurma}</td>
-                                            <td>{evento.idCurso}</td>
-                                            <td>{evento.nomeTurma}</td>
-                                            <td>{evento.idInscricao}</td>
-                                            <td>{evento.dataInscricao}</td>
+                                        <tr key={evento.idTurma} className="Table-list-content">
+
+                                            <div className="Table-list-content-idturma">
+                                                <td>{evento.idTurma}</td>
+                                            </div>
+
+                                            <div className="Table-list-content-idcurso">
+                                                <td>{evento.idCurso}</td>
+                                            </div>
+
+                                            <div className="Table-list-content-turma">
+                                                <td>{evento.nomeTurma}</td>
+                                            </div>
+
                                         </tr>
                                     )
                                 })}
