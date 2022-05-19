@@ -50,19 +50,15 @@
     justify-content: space-between
 }
 
-/* .Turmas-table-list{
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    flex-wrap: wrap;
-    text-align: center;
-    height: 80%;
-} */
-
 .Table-list-content{
     display: flex;
 }
 
 .Table-list-content-td{
     display: flex;
+}
+
+.Table-list-content-idcurso{
+    display: flex;
+    align-items: center;
 }

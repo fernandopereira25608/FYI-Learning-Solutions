@@ -39,7 +39,7 @@ export default class TurmasAdm extends Component{
     buscarInscricoes = () =>{
         axios('http://localhost:5000/api/InscricoesControllers')
         .then((resposta) => {
-            if (resposta.status ===200) {
+            if (resposta.status === 200) {
                 this.setState({ ListarInscricoes: resposta.data});
                 console.log(this.state. ListarInscricoes);
             }
@@ -66,9 +66,19 @@ export default class TurmasAdm extends Component{
                         <table className="Turmas-table" style={{ borderCollapse: 'separate', borderSpacing: 30, width: '100%'}}>
                             <thead className="Turmas-table-container">
                                 <tr>
-                                    <th>#</th>
-                                    <th>id Curso</th>   
-                                    <th>Turmas</th>
+
+                                    <div className="Table-list-content-idturma">
+                                        <th>#</th>
+                                    </div>
+
+                                    <div className="Table-list-content-idcurso">
+                                        <th>id Curso</th>
+                                    </div>
+                                    
+                                    <div className="Table-list-content-turma">   
+                                        <th>Turmas</th>
+                                    </div>
+
                                 </tr>
                             </thead>
 
@@ -76,9 +86,19 @@ export default class TurmasAdm extends Component{
                                 {this.state.ListarTurmas.map((evento)=>{
                                     return(
                                         <tr key={evento.idTurma} className="Table-list-content">
-                                            <td>{evento.idTurma}</td>
-                                            <td className="Table-list-content-td">{evento.idCurso}</td>
-                                            <td>{evento.nomeTurma}</td>
+
+                                            <div className="Table-list-content-idturma">
+                                                <td>{evento.idTurma}</td>
+                                            </div>
+
+                                            <div className="Table-list-content-idcurso">
+                                                <td>{evento.idCurso}</td>
+                                            </div>
+
+                                            <div className="Table-list-content-turma">
+                                                <td>{evento.nomeTurma}</td>
+                                            </div>
+
                                         </tr>
                                     )
                                 })}
