@@ -1,9 +1,9 @@
 ﻿using FYI.web.Api.ViewModels;
 using System.Threading.Tasks;
 
-namespace FYI.web.Api.Utilidades.EnvioDeEmail
+namespace FYI.web.Api.Services
 {
-    public interface IEnvioEmailRepository
+    public interface IEnvioEmailServices
     {
        public void Envio(string from, string to, string subject, string html);
     }

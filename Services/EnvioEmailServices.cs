@@ -1,25 +1,18 @@
-﻿using FYI.web.Api.ViewModels;
-using FYI.web.Api.Utilidades.EnvioDeEmail;
+﻿using FYI.web.Api.Settings;
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using Microsoft.Extensions.Options;
 using MimeKit;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MimeKit.Text;
 
-namespace FYI.web.Api.Utilidades.EnvioDeEmail
+namespace FYI.web.Api.Services
 {
-    public class EnvioEmailRepository : IEnvioEmailRepository
+    public class EnvioEmailServices: IEnvioEmailServices
     {
 
             private readonly EnvioEmailConfiguracoes _emailConfiguracoes;
 
-            public EnvioEmailRepository(IOptions<EnvioEmailConfiguracoes> emailConfiguracoes)
+            public EnvioEmailServices(IOptions<EnvioEmailConfiguracoes> emailConfiguracoes)
             {
                 _emailConfiguracoes = emailConfiguracoes.Value;
             }
@@ -33,7 +26,6 @@ namespace FYI.web.Api.Utilidades.EnvioDeEmail
             email.Subject = subject;
             email.Body = new TextPart(TextFormat.Html) { Text = html };
 
-            // send email
             using var smtp = new SmtpClient();
             smtp.Connect(_emailConfiguracoes.Host, _emailConfiguracoes.Port, SecureSocketOptions.StartTls);
             smtp.Authenticate(_emailConfiguracoes.From, _emailConfiguracoes.Password);

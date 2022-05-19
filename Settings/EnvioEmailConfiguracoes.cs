@@ -1,4 +1,4 @@
-﻿namespace FYI.web.Api.Utilidades.EnvioDeEmail
+﻿namespace FYI.web.Api.Settings
 {
     public class EnvioEmailConfiguracoes
     {
