@@ -1,4 +1,7 @@
-import { Component } from "react";
+import axios from "axios";
+import React, { Component } from "react";
+
+import './CadastroCurso.css'
 
 export default class CadastroCurso extends Component{
     constructor(props){
@@ -9,8 +12,13 @@ export default class CadastroCurso extends Component{
     render() {
         return(
             <>
-            <div>
-                
+            <div className="cadastro-curso-main">
+                <div className="cadastro-curso-title">
+                    <h1>Cadastro de Cursos</h1>
+                    <div className="cadastro-curso-container">
+                        
+                    </div>
+                </div>
             </div>
             </>
         )

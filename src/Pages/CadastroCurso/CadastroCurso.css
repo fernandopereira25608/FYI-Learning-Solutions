@@ -1,0 +1,33 @@
+.cadastro-curso-main{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(95, 75, 139, 1);
+}
+
+.cadastro-curso-title{
+    width: 100vw;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cadastro-curso-title h1{
+    color: white;
+    padding: 20px;
+    font-family: 'Poppins';
+}
+
+.cadastro-curso-container{
+    margin-top: 23px;
+    background-color:  rgba(235, 234, 236, 1);
+    height: 80vh;
+    width: 66vh;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content : space-between;
+    border-radius: 20px;
+
+}
