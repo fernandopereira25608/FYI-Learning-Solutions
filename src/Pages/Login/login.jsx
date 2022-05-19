@@ -3,16 +3,11 @@ import LoginGoogle from '../../Components/Google-Login/login'
 import imgLogin from "../../Images/Login/imgLogin.png"
 import Logo from "../../Images/Login/Logo.png"
 
-import LoginButton from '../../Components/Google-Login/login';
-
-import { useHistory } from 'react-router-dom';
 import { parsejwt, UsuarioAutenticado} from "../../services/auth";
 import axios from 'axios';
 import { Component } from 'react';
 import React from 'react';
-
-
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -20,8 +15,8 @@ export default class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            email: 'petersondopagode@gmail.com',
-            senha: '98765432',
+            email: '',
+            senha: '',
 
             // ADM
             // petersondopagode@gmail.com,98765432
@@ -97,6 +92,7 @@ export default class Login extends Component {
         this.setState({ [campo.target.name]: campo.target.value })
     }
 
+
     render() {
 
 
@@ -152,7 +148,7 @@ export default class Login extends Component {
                                     <p>ou</p>
 
                                     {/* <h3>Cadastre-se agora</h3> */}
-                                    <a>Cadastre-se agora</a>
+                                    <Link to="/Cadastro"><a >Cadastre-se agora</a></Link>
 
 
                                 </div>
