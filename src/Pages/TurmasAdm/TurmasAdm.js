@@ -65,6 +65,14 @@ export default class TurmasAdm extends Component{
                     <div className="Turmas-container">
                         <table className="Turmas-table" style={{ borderCollapse: 'separate', borderSpacing: 30, width: '100%'}}>
                             <thead className="Turmas-table-container">
+<<<<<<< HEAD
+                                <tr className="Turmas-table-content">
+                                    <th>id Turma</th>
+                                    <th>id Curso</th>   
+                                    <th>Turmas</th>
+                                    <th>Inscrições</th>
+                                    <th>Data inscrição</th>
+=======
                                 <tr>
 
                                     <div className="Table-list-content-idturma">
@@ -79,6 +87,7 @@ export default class TurmasAdm extends Component{
                                         <th>Turmas</th>
                                     </div>
 
+>>>>>>> 0386c83f2b6f9b6e8282fef283dd44483e4a6f2a
                                 </tr>
                             </thead>
 
