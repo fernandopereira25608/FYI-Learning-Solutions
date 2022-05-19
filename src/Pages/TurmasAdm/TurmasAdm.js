@@ -70,7 +70,7 @@ export default class TurmasAdm extends Component{
                                     <th>id Curso</th>   
                                     <th>Turmas</th>
                                     <th>Inscrições</th>
-                                    <th>Data incrição</th>
+                                    <th>Data inscrição</th>
                                 </tr>
                             </thead>
 
