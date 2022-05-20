@@ -101,7 +101,7 @@ export default class CursosAdm extends Component {
                       <th>#</th>
                       <th>Curso</th>
                       <th>Vagas Disponíveis</th>
-                      <th>Vagas Preenchidas</th>
+                      {/* <th>Vagas Preenchidas</th> */}
                       <th>Carga Horária</th>
                     </tr>
                   </thead>
@@ -113,7 +113,7 @@ export default class CursosAdm extends Component {
                           <td>{evento.idCurso}</td>
                           <td>{evento.nomeCurso}</td>
                           <td>{evento.vagasDisponiveis}</td>
-                          <td>{evento.vagasPreenchidas}</td>
+                          {/* <td>{evento.vagasPreenchidas}</td> */}
                           <td>{evento.cargaHoraria}</td>
                         </tr>
                       );

@@ -29,5 +29,40 @@
     align-items: center;
     justify-content : space-between;
     border-radius: 20px;
+}
 
+.cadastro-curso-container-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cadastro-curso-container-items-logo{
+    width: 300px;
+    padding: 1em;
+}
+
+.cadastro-curso-container-items-button  {
+    margin-top: 3vh;
+    width: 20vh;
+    height: 7vh;
+    background-color: rgba(101, 8, 134, 0.66);
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 19px ;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.cadastro-curso-container-form{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
 }

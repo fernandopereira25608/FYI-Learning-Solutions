@@ -1,0 +1,61 @@
+.cadastro-turma-main{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(95, 75, 139, 1);
+}
+
+.cadastro-turma-title{
+    width: 100vw;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cadastro-turma-title h1{
+    color: white;
+    padding: 20px;
+    font-family: 'Poppins';
+}
+
+.cadastro-turma-container{
+    margin-top: 23px;
+    background-color:  rgba(235, 234, 236, 1);
+    height: 80vh;
+    width: 66vh;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content : space-between;
+    border-radius: 20px;
+    box-shadow: 10 10 #5F5B9B;
+}
+
+.cadastro-turma-container-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cadastro-turma-container-items-logo{
+    width: 300px;
+    padding: 1em;
+}
+
+.cadastro-turma-container-items-button  {
+    margin-top: 3vh;
+    width: 20vh;
+    height: 7vh;
+    background-color: rgba(101, 8, 134, 0.66);
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 19px ;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
