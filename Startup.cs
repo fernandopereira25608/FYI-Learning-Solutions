@@ -1,3 +1,5 @@
+using FYI.web.Api.Services;
+using FYI.web.Api.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -8,6 +10,7 @@ using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -19,12 +22,17 @@ namespace FYI.web.Api
     {
         public void ConfigureServices(IServiceCollection services)
         {
+           // services.Configure<EnvioEmailConfiguracoes>(Configuration.("EnvioEmailConfiguracoes"));
+
+            services.AddTransient<IEnvioEmailServices, EnvioEmailServices>();
+
             services
                 .AddControllers()
                 .AddNewtonsoftJson(options => {
                     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
                     options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
                 });
+
 
             services.AddCors(options =>
             {
@@ -82,6 +90,8 @@ namespace FYI.web.Api
             app.UseRouting();
 
             app.UseCors("CorPolicy");
+
+            app.UseHttpsRedirection();
 
             app.UseAuthentication();
 

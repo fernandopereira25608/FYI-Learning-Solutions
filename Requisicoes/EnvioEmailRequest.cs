@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 
-namespace FYI.web.Api.ViewModels
+namespace FYI.web.Api.Requisicoes
 {
-    public class EnvioEmailViewModel
+    public class EnvioEmailRequest
     {
         public string Email { get; set; }
         public string Senha { get; set; }

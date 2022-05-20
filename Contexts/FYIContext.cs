@@ -91,11 +91,6 @@ namespace FYI.web.Api.Contexts
 
                 entity.Property(e => e.VagasPreenchidas).HasColumnName("vagasPreenchidas");
 
-                entity.Property(e => e.Imagem)
-                    .HasMaxLength(74)
-                    .IsUnicode(false)
-                    .HasColumnName("Imagem");
-
                 entity.HasOne(d => d.IdCategoriaNavigation)
                     .WithMany(p => p.Cursos)
                     .HasForeignKey(d => d.IdCategoria)
