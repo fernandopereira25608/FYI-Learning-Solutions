@@ -29,8 +29,6 @@ function App() {
 				<div style={{ textAlign: "center" }}>
 					<h1>User Information</h1>
 					<img className="profile" src={profilePic} alt="Profile" />
-					<p>Name: {name}</p>
-					<p>Email: {email}</p>
 				</div>
 			) : (
 				""

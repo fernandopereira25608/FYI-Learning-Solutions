@@ -74,6 +74,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .inicial-cursos-content{
@@ -112,6 +113,8 @@
   justify-content: space-around;
 }
 
+
+
 .inicial-empresas-carrosel{
   width: 100%;
   display: flex;
@@ -121,47 +124,47 @@
 }
 
 .Empz-img{
-  opacity: 50%;
+  /* opacity: 50%; */
 }
 
 .Cavalcante-img{
-  opacity: 50%;
+  /* opacity: 50%; */
 }
 
 .Even-img{
-  opacity: 50%;
+  /* opacity: 50%; */
 }
 
 .Ipetec-img{
-  opacity: 50%;
+  /* opacity: 50%; */
 }
 
 .Ibmec-img{
-  opacity: 50%;
+   /* opacity: 50%; */
 }
 
 .Empz-img:hover{
-  opacity: 150%;
+  /* opacity: 150%; */
   transition: 1s;
 }
 
 .Cavalcante-img:hover{
-  opacity: 150%;
+  /* opacity: 150%; */
   transition: 1s;
 } 
 
 .Even-img:hover{
-  opacity: 150%;
+  /* opacity: 150%; */
   transition: 1s;
 }
 
 .Ibmec-img:hover{
-  opacity: 150%;
+  /* opacity: 150%; */
   transition: 1s;
 }
 
 .Ipetec-img:hover{
-  opacity: 150%;
+  /* opacity: 150%; */
   transition: 1s;
 }
 
@@ -174,7 +177,7 @@
 	left: 0;
 	background: rgba(0,0,0,0.8);
 	z-index: 99999;
-	opacity:0;
+	/* 0; */ 
 	-webkit-transition: opacity 400ms ease-in;
 	-moz-transition: opacity 400ms ease-in;
 	transition: opacity 400ms ease-in;
@@ -182,7 +185,7 @@
 }
 
 .modalDialog:target {
-	opacity:1;
+	/* 1; */
 	pointer-events: auto;
 }
 
@@ -219,4 +222,9 @@
 
 .close:hover { background: #8150A3; }
 
-
+@media screen and (max-width: 992px){
+  .inicial-card-content{
+    flex-direction: column;
+    display: flex;
+  }
+}

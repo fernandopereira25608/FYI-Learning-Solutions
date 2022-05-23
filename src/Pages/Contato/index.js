@@ -7,10 +7,9 @@ import Foooter from "../../Components/Footer/Footer.jsx"
 
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api'
 
-
-
 const Contato = () => {
   
+  document.title = 'FYI - Contato'
 
   return (
     <>
