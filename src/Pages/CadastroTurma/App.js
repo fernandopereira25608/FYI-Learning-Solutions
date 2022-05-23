@@ -1,9 +1,12 @@
 import axios from "axios";
 import React, { Component } from "react";
+import { useHistory } from 'react-router-dom';
 
 import Logo from "../../Images/Cadastro/Logo.png";
 
 import './CadastroTurma.css'
+
+import BackPage from '../../Images/Cadastro/back-page.svg';
 
 export default class CadastroTurma extends Component{
     constructor(props){
@@ -68,10 +71,11 @@ export default class CadastroTurma extends Component{
             <div className="cadastro-turma-main">
             <div className="cadastro-turma-title">
                     <h1>Cadastro de Turmas</h1>
+                    <img src={BackPage} className="cadastro-turma-backpage-icon" onClick={() => useHistory.push('/Admin')}/>
                     <div className="cadastro-turma-container">
                         <div className="cadastro-turma-container-items">
 
-                            <for className="cadastro-turma-form" onSubmit={this.cadastrarTurma} action="">
+                            <form className="cadastro-turma-form" onSubmit={this.cadastrarTurma} action="">
 
                                 <img src={Logo} className="cadastro-curso-container-items-logo"/>
 
@@ -87,7 +91,7 @@ export default class CadastroTurma extends Component{
                                     <button className="cadastro-turma-container-items-button" type="submit"> Cadastrar </button>
                                 </div>
 
-                            </for>
+                            </form>
 
                         </div>
                     </div>
