@@ -90,7 +90,7 @@ export default class CadastroCurso extends Component{
                             <div className="cadastro-box-inputs">
                                 <label for=""> </label> 
                                     <select name="TipoCategoria" placeholder=" Categoria " value={this.state.nomeCategoria} onChange={this.atualizaStateCampo}>
-                                        <option value={this.state.nomeCategoria}>Microsft</option>
+                                        <option value={this.state.nomeCategoria}>Microsoft</option>
                                         <option value={this.state.nomeCategoria}>Back-End</option>
                                         <option value={this.state.nomeCategoria}>Front-End</option>
                                         <option value={this.state.nomeCategoria}>Database</option>
