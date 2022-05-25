@@ -67,7 +67,6 @@ namespace FYI.web.Api.Repositories
             var usuario = ctx.Usuarios.FirstOrDefault(u => u.Email == email);
             var usuarin = ctx.Usuarios.FirstOrDefault(u => u.Email == email && u.Senha == senha);
 
-
             if (usuarin != null)
             {
                 if (usuarin.Senha.Length != 60)
@@ -96,7 +95,7 @@ namespace FYI.web.Api.Repositories
 
         public UsuarioDomain BuscarPorEmail(string Email)
         {
-            return ctx.Usuarios.FirstOrDefault(u => u.Email ==Email);
+            return ctx.Usuarios.FirstOrDefault(u => u.Email == Email);
         }
     }
 }

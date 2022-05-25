@@ -83,6 +83,7 @@ namespace FYI.web.Api.Controllers
 
                 return Ok(_inscricaoRepository.ListarProprias(idUsuario));
             }
+
             catch (Exception erro)
             {
                 return BadRequest(new {

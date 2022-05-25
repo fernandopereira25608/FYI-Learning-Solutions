@@ -32,11 +32,6 @@ namespace FYI.web.Api.Repositories
                 CursoProcurado.CargaHoraria = CursoAtualizado.CargaHoraria;
             }
 
-            if (CursoProcurado.Imagem != null)
-            {
-                CursoProcurado.Imagem = CursoAtualizado.Imagem;
-            }
-
             ctx.Cursos.Update(CursoProcurado);
 
             ctx.SaveChanges();

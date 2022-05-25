@@ -32,8 +32,6 @@ namespace FYI.web.Api.Domains
         [DataType(DataType.Duration)]
         public byte CargaHoraria { get; set; }
 
-        public string Imagem { get; set; }
-
         public byte? IdCategoria { get; set; }
 
         public virtual CategoriumDomain IdCategoriaNavigation { get; set; }

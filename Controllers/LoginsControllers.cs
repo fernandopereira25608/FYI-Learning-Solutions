@@ -1,9 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Linq;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using FYI.web.Api.Interfaces;
 using FYI.web.Api.Repositories;
 using FYI.web.Api.ViewModels;
@@ -70,7 +66,6 @@ namespace FYI.web.Api.Controllers
                 {
                     token = new JwtSecurityTokenHandler().WriteToken(_Token)
                 });
-
             }
 
             catch (Exception x)
