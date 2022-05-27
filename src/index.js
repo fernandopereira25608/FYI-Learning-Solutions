@@ -15,6 +15,7 @@ import TurmasAdm from './Pages/TurmasAdm/TurmasAdm'
 import UsuariosAdm from './Pages/UsuariosAdm/UsuariosAdm';
 import CadastroCurso from './Pages/CadastroCurso/App';
 import CadastroTurma from './Pages/CadastroTurma/App';
+import CadastroUsuario from './Pages/CadastroUsuario/App';
 
 
 import {  Route, BrowserRouter as Router, Switch } from 'react-router-dom';
@@ -35,6 +36,7 @@ const routing = (
         <Route path="/UsuariosAdm" component={UsuariosAdm} />
         <Route path="/CadastroTurma" component={CadastroTurma} />
         <Route path="/CadastroCurso" component={CadastroCurso} />
+        <Route path="/CadastroUsuario" component={CadastroUsuario} />
         <Route component={PageNotFound} />
       </Switch>
     </div>

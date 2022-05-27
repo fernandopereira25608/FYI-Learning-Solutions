@@ -125,6 +125,10 @@ function Admin() {
                                 <img src={Turmas} class="turmas-icon"  onClick={() => history.push('/CadastroTurma')}/>
                                 <h3>Turmas</h3>
                             </div>
+                            <div class="navigation-links">
+                                <img src={Users} class="users-icon"  onClick={() => history.push('/CadastroUsuario')}/>
+                                <h3>Usuarios</h3>
+                            </div>
                         </div>
                     </div>
                 </div>

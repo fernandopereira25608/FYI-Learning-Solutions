@@ -1,0 +1,81 @@
+.cadastro-curso-main{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(95, 75, 139, 1);
+}
+
+.cadastro-curso-title{
+    width: 100vw;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cadastro-curso-title h1{
+    color: white;
+    padding: 20px;
+    font-family: 'Poppins';
+}
+
+.cadastro-curso-container{
+    margin-top: 23px;
+    background-color:  rgba(235, 234, 236, 1);
+    height: 80vh;
+    width: 66vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content : space-between;
+    border-radius: 20px;
+}
+
+.cadastro-curso-container-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cadastro-curso-container-items-logo{
+    width: 300px;
+    padding: 1em;
+}
+
+.cadastro-curso-container-items-button  {
+    margin-top: 3vh;
+    width: 20vh;
+    height: 7vh;
+    background-color: rgba(101, 8, 134, 0.66);
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 19px ;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.cadastro-curso-container-form{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.cadastro-turma-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80%;
+}
+
+.cadastro-turma-backpage-icon{
+    width: 25px;
+    height: 25px;
+}

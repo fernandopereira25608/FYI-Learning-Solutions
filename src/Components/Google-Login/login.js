@@ -27,8 +27,7 @@ function App() {
 			/>
 			{isLoggedIn ? (
 				<div style={{ textAlign: "center" }}>
-					<h1>User Information</h1>
-					<img className="profile" src={profilePic} alt="Profile" />
+					<h1>Sucesso - Bem Vindo {name}</h1>
 				</div>
 			) : (
 				""
