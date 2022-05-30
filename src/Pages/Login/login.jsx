@@ -33,7 +33,7 @@ export default class Login extends Component {
 
     this.setState({ mensagemErro: "", isLoading: true });
     axios
-      .post("https://fyilearningsolutions.azurewebsites.net/api/LoginsControllers", {
+      .post("https://fyiapi.azurewebsites.net/api/Login", {
         email: this.state.email,
         senha: this.state.senha,
       })
