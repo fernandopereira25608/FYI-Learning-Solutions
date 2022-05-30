@@ -51,13 +51,13 @@ export default class Cadastro extends Component {
             senha: this.state.senha,
         };
         axios
-            .post('https://fyiapi.azurewebsites.net/api/Usuario/Listar', usuario, {
+            .post('https://fyiapi.azurewebsites.net/api/Usuario', usuario, {
                 headers: {
                     Authorization: 'Bearer' + localStorage.getItem('usuario-login'),
                 },
             })
             .then((resposta) => {
-                if (resposta.status === 201) {
+                if (resposta.status === 200) {
                     console.log('Usuario cadastrado!');
                     this.setState({ isLoading: false });
                     window.location.href = "/Login";
