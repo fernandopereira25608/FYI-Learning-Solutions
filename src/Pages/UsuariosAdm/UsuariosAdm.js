@@ -23,7 +23,7 @@ export default class UsuariosAdm extends Component {
   }
 
   buscarTipoUsuario = () => {
-    axios("http://localhost:5000/api/TipoUsuariosControllers", {
+    axios("https://fyiapi.azurewebsites.net/api/Usuario/Listar", {
       headers: {
         Autorization: "Bearer" + localStorage.getItem("usuario-login"),
       },
@@ -38,7 +38,7 @@ export default class UsuariosAdm extends Component {
   };
 
   buscarUsuario = () => {
-    axios("http://localhost:5000/api/UsuariosControllers")
+    axios("https://fyiapi.azurewebsites.net/api/Usuario/Listar")
       .then((resposta) => {
         if (resposta.status === 200) {
           this.setState({ ListarUsuario: resposta.data });

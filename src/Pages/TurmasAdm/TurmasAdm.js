@@ -22,7 +22,7 @@ export default class TurmasAdm extends Component{
     };
 
     buscarTurmas = () => {
-        axios('http://localhost:5000/api/TurmasControllers',{
+        axios('https://fyiapi.azurewebsites.net/api/TurmasControllers',{
             headers:{
                 Autorization: 'Bearer' + localStorage.getItem('usuario-login'),
             },
@@ -37,7 +37,7 @@ export default class TurmasAdm extends Component{
         .catch((erro) => console.log(erro));
     };
     buscarInscricoes = () =>{
-        axios('http://localhost:5000/api/InscricoesControllers')
+        axios('https://fyiapi.azurewebsites.net/api/TurmasControllers')
         .then((resposta) => {
             if (resposta.status === 200) {
                 this.setState({ ListarInscricoes: resposta.data});

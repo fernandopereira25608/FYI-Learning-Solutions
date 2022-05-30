@@ -22,7 +22,7 @@ export default class CadastroCurso extends Component{
     };
 
     buscarCurso = () => {
-        axios('http://localhost:5000/api/CursosControllers')
+        axios('https://fyiapi.azurewebsites.net/api/CursosControllers')
             .then((resposta) => {
                 if (resposta.status === 200) {
                     this.setState({ ListarCurso: resposta.data });
@@ -51,7 +51,7 @@ export default class CadastroCurso extends Component{
             vagasPreenchidas: this.state.vagasPreenchidas,
         };
         axios
-            .post('http://localhost:5000/api/CursosControllers', curso, {
+            .post('https://fyiapi.azurewebsites.net/api/CursosControllers', curso, {
                 headers: {
                     Authorization: 'Bearer' + localStorage.getItem('usuario-login'),
                 },

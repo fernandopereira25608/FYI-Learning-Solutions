@@ -23,7 +23,7 @@ export default class CursosAdm extends Component {
   }
 
   buscaCategoriums = () => {
-    axios("http://localhost:5000/api/CategoriumsControllers", {
+    axios("https://fyiapi.azurewebsites.net/api/CursosControllers", {
       headers: {
         Autorization: "Bearer" + localStorage.getItem("usuario-login"),
       },
@@ -37,7 +37,7 @@ export default class CursosAdm extends Component {
       .catch((erro) => console.log(erro));
   };
   buscarCursos = () => {
-    axios("http://localhost:5000/api/CursosControllers")
+    axios("https://fyiapi.azurewebsites.net/api/CursosControllers")
       .then((resposta) => {
         if (resposta.status === 200) {
           this.setState({ listarCurso: resposta.data });
@@ -69,7 +69,7 @@ export default class CursosAdm extends Component {
     };
 
     axios
-      .post("http://localhost:5000/api/CursosControllers", curso, {
+      .post("https://fyiapi.azurewebsites.net/api/CursosControllers", curso, {
         haders: {
           autorization: "Bearer" + localStorage.getItem("usuario-login"),
         },
