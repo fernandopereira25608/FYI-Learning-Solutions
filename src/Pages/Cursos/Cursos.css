@@ -59,8 +59,7 @@
     width: 475px;
     height: 120px;
     background-color: rgba(95, 75, 139, 1);
-
-    /* opacity: 80%; */
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,10 +74,13 @@
     width: 475px;
     height: 120px;
     background-color: rgba(95, 75, 139, 1);
-
-    /* opacity: 80%; */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 25px;
+  }
+
+  .cursos-curso-card:hover{
+    transition: 2s;
+    scale: 1.5;
   }
