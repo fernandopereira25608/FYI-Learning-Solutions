@@ -35,7 +35,7 @@ function Inicial() {
             <div class="inicial-info-content">
               <img src={Medal} class="inicial-medal-icon" />
               <h2>10000+</h2>
-              <p>Horas treinamento</p>
+              <p>Horas de treinamento</p>
             </div>
             <div class="inicial-info-content">
               <img src={Student} />

@@ -16,7 +16,10 @@ function App() {
 		setEmail(email);
 		setProfilePic(imageUrl);
 		setIsLoggedIn(true);
+		window.location.href = "/"
+
 	};
+	
 	return (
 		<div className="container">
 			<GoogleLogin
