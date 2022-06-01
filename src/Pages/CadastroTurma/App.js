@@ -55,7 +55,13 @@ export default class CadastroTurma extends Component{
                 if (resposta.status === 201) {
                     console.log('Turma cadastrado!');
                     this.setState({ isLoading: false });
-                    window.location.href = "/Admin";
+                    // window.location.href = "/Admin";
+
+                    // return(
+                    //     <div>
+                    //         <p>deu certo</p>
+                    //     </div>
+                    // )
                 }
             })
             .catch((erro) => {

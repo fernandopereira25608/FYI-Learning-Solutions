@@ -60,7 +60,7 @@ export default class UsuariosAdm extends Component {
   render() {
     return (
       <>
-        <main>
+        <main className="fund">
           <div className="Usuarios-main">
             <div className="Usuarios-content">
               <h2>Lista de Usuários</h2>

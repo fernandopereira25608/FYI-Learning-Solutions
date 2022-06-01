@@ -10,7 +10,6 @@ export default class CadastroUsuario extends Component{
         super(props)
         this.state = {
             isLoading: false,
-            idUsuario: 0,
             idTipoUsuario: 0,
             nome: '',
             email: '',
@@ -41,11 +40,12 @@ export default class CadastroUsuario extends Component{
         this.setState({ isLoading: true })
 
         let usuario = {
+            idTipoUsuario: 2,
             nome: this.state.nome,
             email: this.state.email,
             senha: this.state.senha,
             empresa: this.state.empresa,
-            idTipoUsuario: this.state.idTipoUsuario,
+            
         };
         axios
             .post('https://fyiapi.azurewebsites.net/api/UsuariosControllers', usuario, {
@@ -54,10 +54,16 @@ export default class CadastroUsuario extends Component{
                 },
             })
             .then((resposta) => {
-                if (resposta.status === 201) {
-                    console.log('Usuario cadastrado!');
+                if (resposta.status === 200) {
+                    console.log('Turma cadastrada!');
                     this.setState({ isLoading: false });
-                    window.location.href = "/Admin";
+                    // window.location.href = "/Admin";
+
+                    return(
+                        <div>
+                            <p>deu certo</p>
+                        </div>
+                    )
                 }
             })
             .catch((erro) => {
@@ -70,6 +76,7 @@ export default class CadastroUsuario extends Component{
     render() {
         return(
             <>
+            
             <div className="cadastro-curso-main">
                 <div className="cadastro-curso-title">
                     <h1>Cadastro de Usuarios</h1>
@@ -90,10 +97,6 @@ export default class CadastroUsuario extends Component{
 
                             <div className="cadastro-box-inputs">
                                 <label for=""> </label> <input type="password" name="senha" placeholder="Senha Usuario" value={this.state.senha} onChange={this.atualizaStateCampo} />
-                            </div>
-
-                            <div className="cadastro-box-inputs">
-                                <label for=""> </label> <input type="number" name="idTipoUsuario" placeholder=" Definir Tipo com Id "  value={this.state.idTipoUsuario}  onChange={this.atualizaStateCampo}/>
                             </div>
 
                             <div>
