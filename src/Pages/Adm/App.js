@@ -2,11 +2,13 @@ import './AdminStyle.css';
 
 import LogoSmall from '../../Images/FYILOGO.svg';
 import Home from '../../Images/icons/house-user.png'
+import Logout from '../../Images/icons/logout.png'
 import Minus from '../../Images/icons/minus-solid.svg'
 import Plus from '../../Images/icons/plus-solid.svg'
 import Hat from '../../Images/icons/Hat.svg'
 import Turmas from '../../Images/icons/Turmas.svg'
 import Users from '../../Images/icons/Users.svg'
+
 
 import React from 'react';
 
@@ -14,6 +16,8 @@ import { useHistory } from 'react-router-dom';
 
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
+import GoogleLogin from 'react-google-login';
+import Inicial from '../Inicial/App';
 
 
 
@@ -36,6 +40,7 @@ function HideContent() {
 
 }
 
+
 function HideContent2() {
 
     var x = document.getElementById("right-box-2")
@@ -56,6 +61,8 @@ function HideContent2() {
 }
 
 
+
+
 function Admin() {
 
     const history = useHistory();
@@ -67,6 +74,7 @@ function Admin() {
                 <div class="left-box">
                     <div class="left-content">
                         <img src={LogoSmall} class="logo-small" />
+
                         <div class="home-link">
                            <img src={Home} class="home-icon" onClick={() => history.push('/')}/> 
                             <a><p>Home</p></a>
@@ -81,12 +89,19 @@ function Admin() {
                         </div>
                     <hr />
                     <div class="open-content">
-                            
                             <h5>Cadastro</h5>
                             <img src={Plus} id="plus-icon" onClick={HideContent2}/>
                             
                         </div>
                     <hr />
+
+                    <div class="logout-link">
+                        
+                    <img src={Logout} class="Logout" onClick={() => history.push('/Login')}/> 
+                    <a><p>Sair</p></a>
+
+                    </div>
+
                 </div>
                 <div id="right-box">
                     <div class="right-container">
@@ -131,9 +146,7 @@ function Admin() {
                             </div>
                         </div>
                     </div>
-                </div>
-
-                
+                </div>        
             </main>
         </div>
        

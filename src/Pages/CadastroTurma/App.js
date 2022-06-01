@@ -21,7 +21,7 @@ export default class CadastroTurma extends Component{
     };
 
     buscarTurma = () => {
-        axios('http://localhost:5000/api/TurmasControllers')
+        axios('https://fyiapi.azurewebsites.net/api/TurmasControllers')
             .then((resposta) => {
                 if (resposta.status === 200) {
                     this.setState({ ListarTurma: resposta.data });
@@ -46,7 +46,7 @@ export default class CadastroTurma extends Component{
             idCurso: this.state.idCurso,
         };
         axios
-            .post('http://localhost:5000/api/TurmasControllers', turma, {
+            .post('https://fyiapi.azurewebsites.net/api/TurmasControllers', turma, {
                 headers: {
                     Authorization: 'Bearer' + localStorage.getItem('usuario-login'),
                 },
@@ -71,7 +71,7 @@ export default class CadastroTurma extends Component{
             <div className="cadastro-turma-main">
             <div className="cadastro-turma-title">
                     <h1>Cadastro de Turmas</h1>
-                    <img src={BackPage} className="cadastro-turma-backpage-icon" onClick={() => useHistory.push('/Admin')}/>
+                    <img src={BackPage} className="cadastro-turma-backpage-icon" onClick={() => useHistory.push('/Adm')}/>
                     <div className="cadastro-turma-container">
                         <div className="cadastro-turma-container-items">
 

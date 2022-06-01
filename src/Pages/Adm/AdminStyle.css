@@ -12,8 +12,6 @@ main{
     display: flex;
 }
 
-
-
 .left-box{
     width: 25%;
     height: 100vh;
@@ -35,12 +33,28 @@ main{
 .home-link{
     display: flex;
     align-items: center;
+    
+    color: white;
+    font-family: 'Average Sans', sans-serif;
+}
+
+.logout-link{
+    display: flex;
+
+    align-items: center;
     color: white;
     font-family: 'Average Sans', sans-serif;
 }
 
 .home-link img{
     cursor: pointer;
+}
+
+.logout-link img{
+    cursor: pointer;
+    margin-top: 70px;
+    height: 36px;
+    width: 33px;
 }
 
 .open-content{
@@ -58,6 +72,12 @@ main{
 .home-link p{
     margin-left: 19px;
 }
+
+.logout-link p{
+    margin-top: 70px;
+    margin-left: 19px;;
+}
+
 
 #plus-icon{
     width: 20px;
