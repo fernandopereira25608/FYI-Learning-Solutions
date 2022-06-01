@@ -57,3 +57,8 @@
     transition: 2s;
     box-shadow: #404040;
   }
+
+  .img-logout{
+    height: 28px;
+    width: 36px;
+  }

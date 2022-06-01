@@ -41,6 +41,10 @@
     line-height: 45px;
 }
 
+.Turmas-table{
+    border-spacing: 10px;
+}
+
 .Turmas-table-container{
     width: 100%;
     height: 10%;

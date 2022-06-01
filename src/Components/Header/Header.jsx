@@ -1,4 +1,5 @@
 import logo from '../../Images/Logo.svg'; 
+import logout from '../../Images/icons/logout.png';
 import LoginButton from '../Google-Login/login';
 import { GoogleLogin } from 'react-google-login'
 
@@ -28,7 +29,8 @@ function Header() {
             <a onClick={() => history.push('/Sobre')}>Sobre</a>
             <a onClick={() => history.push('/Contato')}>Contato</a>
           </div>
-          <button type="button" class="login-button" onClick={() => history.push('/Login')}>Login</button>
+          <button type="button" class="login-button" onClick={() => history.push('/Login')}>Login</button> 
+          <img src={logout} class="img-logout"></img>
         </div>
       </div>
        );
