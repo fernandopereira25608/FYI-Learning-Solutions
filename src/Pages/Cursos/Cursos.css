@@ -79,3 +79,8 @@
     align-items: center;
     border-radius: 25px;
   }
+
+  .cursos-curso-card:hover{
+    transition: 2s;
+    scale: 1.5;
+  }
