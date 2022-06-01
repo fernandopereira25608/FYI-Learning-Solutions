@@ -60,6 +60,13 @@ function HideContent2() {
 
 }
 
+// function Logout() {
+//     logout = localStorage() => {
+//         window.localStorage.removeItem("usuario-login");
+//         window.location.reload();
+//     }
+// }
+
 
 
 
