@@ -63,7 +63,7 @@ export default class TurmasAdm extends Component{
                 <div className="Turmas-content">
                     <h1>Lista de Turmas</h1>
                     <div className="Turmas-container">
-                        <table className="Turmas-table" style={{ borderCollapse: 'separate', borderSpacing: 30, width: '100%'}}>
+                        <table className="Turmas-table" style={{ borderCollapse: 'separate', width: '100%'}}>
                             <thead className="Turmas-table-container">
 
                                 <tr className="Turmas-table-content">
