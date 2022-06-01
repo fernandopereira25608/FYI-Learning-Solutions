@@ -93,7 +93,7 @@ export default class CursosAdm extends Component {
         <main>
           <div className="Cursos-main">
             <div className="Cursos-content">
-              <h2>Lista de Cursos</h2>
+              <h1>Lista de Cursos</h1>
               <div className="Cursos-container">
                 <table className="Cursos-table">
                   <thead className="Cursos-table-container">
