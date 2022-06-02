@@ -19,7 +19,7 @@ export default class CadastroUsuario extends Component{
     };
 
     buscarUsuario = () => {
-        axios('https://fyiapi.azurewebsites.net/api/UsuariosControllers')
+        axios('https://fyiapi.azurewebsites.net/api/Usuario/Listar')
             .then((resposta) => {
                 if (resposta.status === 200) {
                     this.setState({ ListarUsuario: resposta.data });
@@ -48,7 +48,7 @@ export default class CadastroUsuario extends Component{
             
         };
         axios
-            .post('https://fyiapi.azurewebsites.net/api/UsuariosControllers', usuario, {
+            .post('https://fyiapi.azurewebsites.net/api/Usuario', usuario, {
                 headers: {
                     Authorization: 'Bearer' + localStorage.getItem('usuario-login'),
                 },
