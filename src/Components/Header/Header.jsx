@@ -29,8 +29,7 @@ function Header() {
             <a onClick={() => history.push('/Sobre')}>Sobre</a>
             <a onClick={() => history.push('/Contato')}>Contato</a>
           </div>
-          <button type="button" class="login-button" onClick={() => history.push('/Login')}>Login</button> 
-          <img src={logout} class="img-logout"></img>
+          <button type="button" class="login-button" onClick={() => history.push('/Login')}>Login</button>
         </div>
       </div>
        );
