@@ -90,7 +90,7 @@ export default class Cadastro extends Component {
 
                                     <div className="cadastro-box-inputs">
                                         <label for=""> </label> <input type="text" name="empresa" value={this.state.empresa}
-                                            onChange={this.atualizaStateCampo} placeholder=" Empresa(opicional) " />
+                                            onChange={this.atualizaStateCampo} placeholder=" Empresa(opcional) " />
                                     </div>
 
                                     <div className="cadastro-box-inputs">
