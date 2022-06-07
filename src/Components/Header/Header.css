@@ -25,6 +25,7 @@
 
   .header-links a{
     cursor: pointer;
+    color: white;
   }
   
   .header-content .header-links{
