@@ -88,15 +88,15 @@ export default class CadastroUsuario extends Component{
                             <img src={Logo} className="cadastro-curso-container-items-logo"/>
 
                             <div className="cadastro-box-inputs">
-                                <label for=""> </label> <input type="name" name="nome" placeholder=" Nome Usuario " value={this.state.nome} onChange={this.atualizaStateCampo}/>
+                                <label for=""> </label> <input type="name" name="nome" placeholder=" Nome Usuario " required value={this.state.nome} onChange={this.atualizaStateCampo}/>
                             </div>
 
                             <div className="cadastro-box-inputs">
-                                <label for=""> </label> <input type="email" name="email" placeholder=" Email Usuario " value={this.state.email} onChange={this.atualizaStateCampo} />
+                                <label for=""> </label> <input type="email" name="email" placeholder=" Email Usuario " required value={this.state.email} onChange={this.atualizaStateCampo} />
                             </div>
 
                             <div className="cadastro-box-inputs">
-                                <label for=""> </label> <input type="password" name="senha" placeholder="Senha Usuario" value={this.state.senha} onChange={this.atualizaStateCampo} />
+                                <label for=""> </label> <input type="password" name="senha" placeholder="Senha Usuario" required value={this.state.senha} onChange={this.atualizaStateCampo} />
                             </div>
 
                             <div>

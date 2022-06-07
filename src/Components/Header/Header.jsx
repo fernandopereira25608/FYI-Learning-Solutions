@@ -1,9 +1,7 @@
 import logo from '../../Images/Logo.svg'; 
-import logout from '../../Images/icons/logout.png';
-import LoginButton from '../Google-Login/login';
-import { GoogleLogin } from 'react-google-login'
+import sair from "../../Images/icons/logout.svg";
 
-import React from 'react'
+import React, { Component } from 'react'
 
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
@@ -14,25 +12,31 @@ import './Header.css';
 
 
 
-function Header() {
+class Header extends Component {
 
-  const history = useHistory();
+  // const history = useHistory();
+  fazerLogout = () =>{
+    localStorage.clear();
+    // this.props.setUser(null);
+  };
 
-
+render(){
     return (
       
         <div className="header">
-        <img src={logo} class="logo-inicial" onClick={() => history.push('/')}/>
+        <Link to={'/'}> <img src={logo} class="logo-inicial" /></Link>
         <div class="header-content">
           <div class="header-links">
-            <a onClick={() => history.push('/Cursos')}>Cursos</a>
-            <a onClick={() => history.push('/Sobre')}>Sobre</a>
-            <a onClick={() => history.push('/Contato')}>Contato</a>
+           <Link to={'/Cursos'}><a>Cursos</a></Link> 
+           <Link to={'/Sobre'}> <a>Sobre</a></Link>
+           <Link to={'/Contato'}> <a>Contato</a></Link>
           </div>
-          <button type="button" class="login-button" onClick={() => history.push('/Login')}>Login</button>
+          <Link to={'/Login'}><button type="button" class="login-button" >Login</button></Link>
+          <img src={sair} class="sair" onClick={this.fazerLogout} alt="" />
         </div>
       </div>
        );
     }
+  }
     
  export default Header;

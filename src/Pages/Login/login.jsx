@@ -105,10 +105,12 @@ export default class Login extends Component {
                   <input
                     type="email"
                     name="email"
+                    required
                     value={this.state.email}
                     onChange={this.atualizaStateCampo}
                     placeholder=" Email: "
                   />
+                  {/* {efetuarLogin && form["email"]== "" ? <span>o campo precisa ser preenchido</span> : ""} */}
                 </div>
 
                 <div className="login-box-inputs">
@@ -116,6 +118,7 @@ export default class Login extends Component {
                   <input
                     type="password"
                     name="senha"
+                    required
                     value={this.state.senha}
                     onChange={this.atualizaStateCampo}
                     placeholder=" Senha: "
@@ -123,31 +126,10 @@ export default class Login extends Component {
                 </div>
                 <LoginGoogle />
 
-                <a href="#openModal">Esqueceu a senha?</a>
+                <Link to={'/Forgot'}><a>Esqueceu a senha?</a></Link>
+               
 
-                <div id="openModal" class="modalDialog">
-                  <div>
-                    <a href="#close" title="Close" class="close">
-                      X
-                    </a>
-                    <h2>Trocar a Senha</h2>
-                    <p>
-                      Identifique-se para receber um e-mail com as instruções e
-                      o link para criar uma nova senha.
-                    </p>
-
-                    <div className="cadastro-box-inputs">
-                                <label for=""> </label> <input type="email" name=" emailJ " placeholder=" Email " />
-                            </div>
-                <span className="spanzinho">
-                </span>
-
-                    <button type="submit" className="botao-enviar">
-                      ENVIAR 
-                    </button>
-
-                  </div>
-                </div>
+                
 
                 <div>
                   <span className="Mensagem_erro">

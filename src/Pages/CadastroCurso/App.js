@@ -84,7 +84,7 @@ export default class CadastroCurso extends Component{
                             <img src={Logo} className="cadastro-curso-container-items-logo"/>
 
                             <div className="cadastro-box-inputs">
-                                <label for=""> </label> <input type="name" name="nomeCurso" placeholder=" Nome Curso " value={this.state.nomeCurso} onChange={this.atualizaStateCampo}/>
+                                <label for=""> </label> <input type="name" name="nomeCurso" placeholder=" Nome Curso " required value={this.state.nomeCurso} onChange={this.atualizaStateCampo}/>
                             </div>
 
                             <div className="cadastro-box-inputs">

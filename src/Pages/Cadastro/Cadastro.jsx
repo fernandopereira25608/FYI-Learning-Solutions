@@ -84,22 +84,22 @@ export default class Cadastro extends Component {
                                 <form onSubmit={this.cadastrarUsuario} action="" className='cadastro-form'>
 
                                     <div className="cadastro-box-inputs">
-                                        <label for=""> </label> <input type="name" name="nome" value={this.state.nome}
+                                        <label for=""> </label> <input type="name" name="nome" required value={this.state.nome}
                                             onChange={this.atualizaStateCampo} placeholder=" Nome " />
                                     </div>
 
                                     <div className="cadastro-box-inputs">
-                                        <label for=""> </label> <input type="text" name="empresa" value={this.state.empresa}
+                                        <label for=""> </label> <input type="text" name="empresa" required value={this.state.empresa}
                                             onChange={this.atualizaStateCampo} placeholder=" Empresa(opcional) " />
                                     </div>
 
                                     <div className="cadastro-box-inputs">
-                                        <label for=""> </label> <input type="email" name="email" value={this.state.email}
+                                        <label for=""> </label> <input type="email" name="email" required value={this.state.email}
                                             onChange={this.atualizaStateCampo} placeholder=" Email " />
                                     </div>
 
                                     <div className="cadastro-box-inputs">
-                                        <label for=""> </label> <input type="password" name="senha" value={this.state.senha}
+                                        <label for=""> </label> <input type="password" name="senha" required value={this.state.senha}
                                             onChange={this.atualizaStateCampo} placeholder=" Senha " />
                                     </div>
                                     {/* <div className='conteudo'> */}

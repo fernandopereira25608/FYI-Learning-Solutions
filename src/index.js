@@ -16,6 +16,7 @@ import UsuariosAdm from './Pages/UsuariosAdm/UsuariosAdm';
 import CadastroCurso from './Pages/CadastroCurso/App';
 import CadastroTurma from './Pages/CadastroTurma/App';
 import CadastroUsuario from './Pages/CadastroUsuario/App';
+import Forgot from './Pages/Forgot/Forgot.jsx'
 
 
 import {  Route, BrowserRouter as Router, Switch } from 'react-router-dom';
@@ -37,6 +38,7 @@ const routing = (
         <Route path="/CadastroTurma" component={CadastroTurma} />
         <Route path="/CadastroCurso" component={CadastroCurso} />
         <Route path="/CadastroUsuario" component={CadastroUsuario} />
+        <Route path="/Forgot" component={Forgot} />
         <Route component={PageNotFound} />
       </Switch>
     </div>
